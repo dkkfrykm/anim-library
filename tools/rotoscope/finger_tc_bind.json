@@ -1,0 +1,155 @@
+{
+ "_doc": "finger constant translations (tc, Skyrim units, parent-local) matching the Hands mesh bind pose of reiko_body.glb = what handmade HKX clips carry (leito cowgirl_1_f). Dance clips currently carry the skeleton-rest offsets (x0.725) -> knuckles pulled into the palm (cuff).",
+ "tc": {
+  "NPC L Finger00 [LF00]": [
+   -2.86,
+   -0.92,
+   3.167
+  ],
+  "NPC L Finger01 [LF01]": [
+   0.0,
+   0.0,
+   3.236
+  ],
+  "NPC L Finger02 [LF02]": [
+   0.0,
+   0.0,
+   2.837
+  ],
+  "NPC L Finger10 [LF10]": [
+   -2.545,
+   -0.109,
+   8.395
+  ],
+  "NPC L Finger11 [LF11]": [
+   0.0,
+   0.0,
+   2.458
+  ],
+  "NPC L Finger12 [LF12]": [
+   0.0,
+   0.0,
+   1.893
+  ],
+  "NPC L Finger20 [LF20]": [
+   -0.368,
+   -0.083,
+   8.262
+  ],
+  "NPC L Finger21 [LF21]": [
+   0.0,
+   0.0,
+   3.202
+  ],
+  "NPC L Finger22 [LF22]": [
+   0.0,
+   0.0,
+   1.989
+  ],
+  "NPC L Finger30 [LF30]": [
+   1.444,
+   -0.639,
+   7.976
+  ],
+  "NPC L Finger31 [LF31]": [
+   0.0,
+   0.0,
+   2.672
+  ],
+  "NPC L Finger32 [LF32]": [
+   0.0,
+   0.0,
+   2.007
+  ],
+  "NPC L Finger40 [LF40]": [
+   3.0,
+   -1.583,
+   7.421
+  ],
+  "NPC L Finger41 [LF41]": [
+   0.0,
+   0.0,
+   1.761
+  ],
+  "NPC L Finger42 [LF42]": [
+   0.0,
+   0.0,
+   1.783
+  ],
+  "NPC R Finger00 [RF00]": [
+   2.86,
+   -0.92,
+   3.167
+  ],
+  "NPC R Finger01 [RF01]": [
+   0.0,
+   0.0,
+   3.236
+  ],
+  "NPC R Finger02 [RF02]": [
+   0.0,
+   0.0,
+   2.837
+  ],
+  "NPC R Finger10 [RF10]": [
+   2.545,
+   -0.109,
+   8.395
+  ],
+  "NPC R Finger11 [RF11]": [
+   0.0,
+   0.0,
+   2.458
+  ],
+  "NPC R Finger12 [RF12]": [
+   0.0,
+   0.0,
+   1.893
+  ],
+  "NPC R Finger20 [RF20]": [
+   0.368,
+   -0.083,
+   8.262
+  ],
+  "NPC R Finger21 [RF21]": [
+   0.0,
+   0.0,
+   3.202
+  ],
+  "NPC R Finger22 [RF22]": [
+   0.0,
+   0.0,
+   1.989
+  ],
+  "NPC R Finger30 [RF30]": [
+   -1.444,
+   -0.639,
+   7.976
+  ],
+  "NPC R Finger31 [RF31]": [
+   0.0,
+   0.0,
+   2.672
+  ],
+  "NPC R Finger32 [RF32]": [
+   0.0,
+   0.0,
+   2.007
+  ],
+  "NPC R Finger40 [RF40]": [
+   -3.0,
+   -1.583,
+   7.421
+  ],
+  "NPC R Finger41 [RF41]": [
+   0.0,
+   0.0,
+   1.761
+  ],
+  "NPC R Finger42 [RF42]": [
+   0.0,
+   0.0,
+   1.783
+  ]
+ }
+}

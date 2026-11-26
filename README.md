@@ -38,3 +38,8 @@ Locally they live in `C:\Users\mytwo\soulbound\skyrim\`.
 git clone https://github.com/dkkfrykm/anim-library.git
 git -C anim-library pull
 ```
+- `tools/rotoscope/`: video → mocap → game clip pipeline (NLF body + WiLoR hands → constrained solve on XPMSSE → fingers → QA → music). See its README.
+- `tools/blender_anim/`: non-destructive Blender stage (BASE / CORR / POLISH → FINAL, QA-gated promote).
+- `tools/packs/`: HKX packs → game-format clips, and a one-line-per-clip pack inventory.
+- `tools/qa_web/`: Playwright in-game QA harnesses (deterministic shots, staged-clip injection, music sync).
+
