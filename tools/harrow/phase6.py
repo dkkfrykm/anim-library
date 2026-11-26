@@ -1,0 +1,571 @@
+# Phase 6: distinct per-power movesets. Modular reconstruction (footwork / torso / strike components from different
+# HKX clips, aligned on the impact frame) + per-power authored choreography layer (powers6.py) + phase-5 polish/QA.
+# Run: blender --background --python phase6.py -- --powers a,b | --batch B1..B6 [--render] [--out DIR]
+import bpy, sys, os, math, json, zlib
+from mathutils import Matrix, Quaternion, Vector
+
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+import phase5 as P5
+import posecheck
+import powers6 as PW
+import components6 as CL
+P4, P2, S, rig = P5.P4, P5.P2, P5.S, P5.rig
+HOLD = P2.HOLD
+OUT = P5.OUT
+ROOTDIR = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..")
+ARMJ = ["RightShoulder", "RightElbow", "RightWrist", "LeftShoulder", "LeftElbow", "LeftWrist"]
+LEGJ = ["RightHip", "RightKnee", "RightAnkle", "LeftHip", "LeftKnee", "LeftAnkle"]
+
+_ease0 = P4.ease
+def ease6(t, kind):
+    t = max(0.0, min(1.0, t))
+    if kind == "lin":
+        return t
+    if kind == "step":  # mechanical: 3 hard steps
+        return min(1.0, math.floor(t * 3 + 0.35) / 3)
+    if kind == "expo":  # lightning: near-instant
+        return 1 - (1 - t) ** 6
+    if kind == "slow":  # gravity / heavy: resist, then commit
+        return t ** 2.4
+    return _ease0(t, kind)
+P4.ease = ease6
+
+
+class Clip6(P5.Clip5):
+    def __init__(self, target, code, slot, opts, skel, comps=None, anchor=None):
+        super().__init__(target, code, slot, opts, skel)
+        if anchor is not None:
+            self._anchor(self, anchor)
+        self.comps = {}
+        for part, (c2, a2) in (comps or {}).items():
+            sub = P2.Clip(target + "_" + part, c2, slot, dict(opts, loop=False), skel)
+            if a2 is not None:
+                self._anchor(sub, a2)
+            self.comps[part] = sub
+        self._f = None
+
+    @staticmethod
+    def _anchor(c, a):
+        c.si = max(2, min(c.send - 2, int(a)))
+        c.sw_ = max(0, c.si - max(4, (c.si - c.sw_) if c.sw_ < c.si else 8))
+        c.s0 = max(0, c.sw_ - 20)
+        c.sr = min(c.send, c.si + int((c.r - c.i - HOLD) * 1.6))
+
+    def warp(self, f):
+        self._f = f
+        return super().warp(f)
+
+    def sample(self, sf):
+        f, self._f = self._f, None
+        P, p, Wd = super().sample(sf)
+        def at(c):
+            return c.sample(c.warp(f) if f is not None else c.si + (sf - self.si))
+        Wold = P["Waist"].copy()
+        if "foot" in self.comps:
+            Pf, pf, _ = at(self.comps["foot"])
+            for j in ["Root"] + LEGJ:
+                P[j] = Pf[j]
+            p = pf
+        if "torso" in self.comps:
+            Pt, _, _ = at(self.comps["torso"])
+            Wn = P["Root"] @ Pt["Root"].inverted() @ Pt["Waist"]
+            P["Neck"] = Wn @ Pt["Waist"].inverted() @ Pt["Neck"]
+        else:
+            Wn = Wold
+        reb = Wn @ Wold.inverted()
+        for j in ARMJ:
+            P[j] = reb @ P[j]
+        if "torso" not in self.comps:
+            P["Neck"] = reb @ P["Neck"]
+        P["Waist"] = Wn
+        return P, p, Wd
+
+    def post(self):
+        st = getattr(self, "stance0", None)
+        if st is not None and not getattr(self, "_eased", False):
+            # start continuity: ease from the power's own stance (Idle frame 0) into the clip BEFORE planting,
+            # so the foot IK turns the transition into a proper weight shift instead of a slide
+            self._eased = True
+            k0 = max(3, min(self.w, self.i - 2))
+            tgt = dict(self.rows[k0])
+            fa, fb = posecheck.fk(st)[3], posecheck.fk(tgt)[3]
+            kick = (self.tech or {}).get("kick")
+            stepping = [sd for sd in ("Right", "Left") if sd[0] != kick and tgt[sd + "Knee"][0] > -40
+                        and math.hypot(fa[sd][0] - fb[sd][0], fa[sd][2] - fb[sd][2]) > 0.12]
+            for f in range(k0):
+                row = self._blend(dict(st), tgt, rig.ORDER + ["p"], P4.ease(f / k0, "io"))
+                bump = math.sin(math.pi * f / k0)  # feet that must relocate take a quick step (off the ground mid-way)
+                for sd in stepping[:1]:
+                    h, k = row[sd + "Hip"], row[sd + "Knee"]
+                    row[sd + "Hip"] = (h[0] + 22 * bump, h[1], h[2])
+                    row[sd + "Knee"] = (k[0] - 44 * bump, k[1], k[2])
+                self.rows[f] = row
+        super().post()
+        self._defoot()
+
+    def _defoot(self):
+        """short planted-foot glitches (IK pole flips, 1-3 frames): re-interpolate that leg chain between the
+        planted neighbours when the foot is back at the same spot afterwards"""
+        rows = self.rows
+        lo = posecheck.GROUND + 0.12
+        for _ in range(2):
+            ft = [posecheck.fk(r)[3] for r in rows]
+            for k in (1, 2, 3):
+                for f in range(1, len(rows) - k):
+                    for s in ("Right", "Left"):
+                        a, c = ft[f - 1][s], ft[f + k][s]
+                        if not (a[1] < lo and c[1] < lo and math.dist(a, c) < 0.03):
+                            continue
+                        if max(math.dist(a, ft[f + m][s]) for m in range(k)) <= 0.03:
+                            continue
+                        for m in range(k):
+                            t = (m + 1) / (k + 1)
+                            keep = {j: rows[f + m][j] for j in (s + "Hip", s + "Knee", s + "Ankle")}
+                            for j in keep:
+                                qa, qc = P4.eul_q(rows[f - 1][j]), P4.eul_q(rows[f + k][j])
+                                if qa.dot(qc) < 0:
+                                    qc = -qc
+                                e = qa.slerp(qc, t).to_matrix().to_euler("ZYX")
+                                rows[f + m][j] = tuple(math.degrees(v) for v in (e.x, e.y, e.z))
+                            nf = posecheck.fk(rows[f + m])[3]
+                            if math.dist(nf[s], a) < math.dist(ft[f + m][s], a) and math.hypot(nf[s][0] - a[0], nf[s][2] - a[2]) < 0.03:
+                                ft[f + m] = nf
+                            else:  # interpolation would move the foot (pelvis travels): keep the original
+                                rows[f + m].update(keep)
+
+    # ---------------------------------------------------------- repair pass (direct-source clips mainly)
+    @staticmethod
+    def _blend(row, ref, joints, w):
+        out = dict(row)
+        for j in joints:
+            if j == "p":
+                out["p"] = tuple(row["p"][k] + (ref["p"][k] - row["p"][k]) * w for k in range(3))
+                continue
+            qa, qb = P4.eul_q(row[j]), P4.eul_q(ref.get(j, (0, 0, 0)))
+            if qa.dot(qb) < 0:
+                qb = -qb
+            e = qa.slerp(qb, w).to_matrix().to_euler("ZYX")
+            out[j] = tuple(math.degrees(v) for v in (e.x, e.y, e.z))
+        return out
+
+    def repair(self, guard, iters=12):
+        """targeted fixes on flagged frames only: arms toward the guard, crossed legs toward the guard stance,
+        sliding planted feet lifted into a step, pops pulled to the neighbours' mean"""
+        ARMS6 = ARMJ
+        LEGS6 = LEGJ
+        for it in range(iters):
+            fl = self.qa()
+            if not fl:
+                return {}
+            w = min(1.0, 0.3 + 0.12 * it)
+            rows = self.rows
+            for kind, frames in fl.items():
+                lp = kind.startswith("loop_")
+                base = kind[5:] if lp else kind
+                off = self.loop[0] if (lp and self.loop) else 0
+                for f0 in frames:
+                    f = f0 + off
+                    if not (0 <= f < len(rows)):
+                        continue
+                    if base in ("elbow_up", "hands_up", "hand_in_head", "hand_in_torso"):
+                        rows[f] = self._blend(rows[f], guard, ARMS6, w)
+                    elif base == "crossed_knees":
+                        rows[f] = self._blend(rows[f], guard, LEGS6, w)
+                    elif base == "extreme_lean":
+                        rows[f] = self._blend(rows[f], guard, ["Root", "Waist"], w)
+                    elif base == "foot_slide" and f >= 1 and (f, it) not in getattr(self, "_lifted", set()) and len([x for x in getattr(self, "_lifted", set()) if x[0] == f]) < 2:
+                        self._lifted = getattr(self, "_lifted", set()) | {(f, it)}
+                        a, b = posecheck.fk(rows[f - 1])[3], posecheck.fk(rows[f])[3]
+                        for sd in ("Right", "Left"):
+                            if math.hypot(a[sd][0] - b[sd][0], a[sd][2] - b[sd][2]) > 0.03:
+                                # lift into a smooth step around the travel frames (bump, no knee pop)
+                                for d2, bw in ((-3, 0.2), (-2, 0.5), (-1, 0.85), (0, 1.0), (1, 0.85), (2, 0.5), (3, 0.2)):
+                                    g2 = f + d2
+                                    if 0 < g2 < len(rows):
+                                        h = rows[g2][sd + "Hip"]; k = rows[g2][sd + "Knee"]
+                                        rows[g2][sd + "Hip"] = (h[0] + 8 * w * bw, h[1], h[2])
+                                        rows[g2][sd + "Knee"] = (k[0] - 18 * w * bw, k[1], k[2])
+                    elif base == "pop" and 2 <= f < len(rows) - 2:
+                        for g2 in (f - 1, f, f + 1):  # widen the transition over 3 frames
+                            mid = self._blend(rows[g2 - 1], rows[g2 + 1], rig.ORDER + ["p"], 0.5)
+                            rows[g2] = self._blend(rows[g2], mid, rig.ORDER + ["p"], max(0.5, w))
+        return self.qa()
+
+    # ---------------------------------------------------------- final de-kink (polish)
+    def dekink(self, stance0=None):
+        rows = self.rows
+        n = self.n
+        win0, win1 = max(0, self.w - (8 if self.sword else 3)), self.r + (3 if self.sword else 0)  # strike window kept sharp
+        # a2) anatomical clamps: no elbow hyperextension; wrists within ~120 deg outside the strike window
+        for f, r in enumerate(rows):
+            for sd in ("Right", "Left"):
+                e = r[sd + "Elbow"]
+                if e[0] < -4:
+                    r[sd + "Elbow"] = (-4, e[1], e[2])
+                if not (win0 <= f <= win1):
+                    q = P4.eul_q(r[sd + "Wrist"])
+                    a = math.degrees(q.angle) if q.angle <= math.pi else 360 - math.degrees(q.angle)
+                    if a > 120:
+                        r[sd + "Wrist"] = self._blend(r, {sd + "Wrist": (0, 0, 0)}, [sd + "Wrist"], 1 - 120 / a)[sd + "Wrist"]
+        # b) windowed smoothing of velocity/acceleration spikes outside the strike window
+        LIMBS = set(ARMJ + LEGJ)
+        for it in range(12):
+            Rm = [{j: P4.eul_q(r[j]) for j in rig.ORDER} for r in rows[:n + 1]]
+            def ang(a, b):
+                d = abs(a.dot(b)); return math.degrees(2 * math.acos(min(1.0, d)))
+            vel = [None] + [{j: ang(Rm[f - 1][j], Rm[f][j]) for j in rig.ORDER} for f in range(1, len(Rm))]
+            bad = set()
+            for f in range(1, len(Rm)):
+                if win0 <= f <= win1:
+                    continue
+                for j in rig.ORDER:
+                    vt, at = (30, 22) if j in LIMBS else (18, 14)
+                    if vel[f][j] > vt * 0.9 or (f >= 2 and abs(vel[f][j] - vel[f - 1][j]) > at * 0.9):
+                        bad.add(f); break
+            if not bad:
+                break
+            for f in sorted(bad):
+                for g2 in (f - 2, f - 1, f, f + 1, f + 2):
+                    if 1 <= g2 < n and not (win0 <= g2 <= win1) and not (g2 == win1 + 1 and f > win1 + 2):
+                        mid = self._blend(rows[g2 - 1], rows[g2 + 1], rig.ORDER + ["p"], 0.5)
+                        rows[g2] = self._blend(rows[g2], mid, rig.ORDER + ["p"], 0.75)
+        # c) hit-loop seam: the loop wraps la+17.99 -> la, so close lb onto la over the last 5 frames
+        if self.loop:
+            la, lb = self.loop
+            if lb < len(rows):
+                ref = dict(rows[la])
+                for k in range(5):
+                    f = lb - 4 + k
+                    rows[f] = self._blend(rows[f], ref, rig.ORDER + ["p"], P4.ease((k + 1) / 5.0, "io"))
+
+    def keys(self):
+        t = self.tech
+        n, w, i, r = self.n, self.w, self.i, self.r
+        anc = {"0": 0, "w": w, "i": i, "h": i + HOLD, "r": r, "n": n}
+        ks = [(0, t["guard"], "io"), (w, t["chamber"], t.get("ec", "io")), (i, t["strike"], t.get("es", "snap")), (i + HOLD, t["strike"], "hold")]
+        if t.get("retract"):
+            ks.append((i + HOLD + max(3, (r - i - HOLD) // 3), t["retract"], "io"))
+        ks += [(r, t["guard"], "io"), (n, t["guard"], "io")]
+        for a, o, pose, e in t.get("extra", ()):
+            if isinstance(pose, (list, tuple)):
+                pose = P4.M(t["guard"], *pose)
+            fr = max(2, min(n, anc[str(a)] + o))
+            ks = [k for k in ks if k[0] != fr] + [(fr, pose, e)]
+        ks.sort(key=lambda k: k[0])
+        return ks
+
+    def windows(self):
+        w = super().windows()
+        if self.sword:  # direct authored sets: the HKX follow-through runs ~3 frames past the slot's r marker
+            w[0] = (w[0][0], min(self.n, self.r + 3))
+        if self.tech and self.tech.get("wend"):
+            w[0] = (w[0][0], min(self.r, self.i + self.tech["wend"]))
+        return w
+
+    def stylise(self, L, p, f):
+        if self.sword:
+            return super().stylise(L, p, f)
+        ws = (self.tech or {}).get("ws", {})
+        if ws.get("direct"):
+            return L, p
+        wl, wt, wp = ws.get("legs", 0.25), ws.get("torso", 0.22), ws.get("p", 0.25)
+        if f >= 0:
+            tq, tp = P4.pose_at(self.keys(), f, self.tech["guard"])
+            kw = self.kw[f] if (f < len(self.kw) and f > self.r) else 1.0
+        else:
+            lp = self.tech.get("loop") or [(0, self.tech["strike"]), (18, self.tech["strike"])]
+            lk = [(k[0], k[1], "snap" if k[1] is self.tech["strike"] else "io") for k in lp]
+            tq, tp = P4.pose_at(lk, self._lt, self.tech["guard"])
+            self._lt += 1
+            kw = 1.0
+        kick = self.tech.get("kick")
+        out = {}
+        for j in rig.ORDER:
+            src, tch = L[j], tq[j]
+            if tch.dot(src) < 0:
+                tch = -tch
+            if j in P4.ARMS:
+                q = tch.slerp(src, ws.get("arms", 0.0)) if ws.get("arms") else tch
+            elif j in P4.LEGS:
+                side = "R" if j.startswith("Right") else "L"
+                if side == kick:
+                    q = tch
+                else:
+                    ang = math.degrees(src.rotation_difference(tch).angle)
+                    q = tch.slerp(src, wl * max(0.0, 1.0 - ang / 70.0))
+            else:
+                ang = math.degrees(src.rotation_difference(tch).angle)
+                q = tch.slerp(src, (wt if j in ("Root", "Waist") else wt + 0.08) * max(0.0, 1.0 - ang / 60.0))
+            out[j] = Quaternion().slerp(q, kw) if kw < 1 else q
+        pp = (tp * (1 - wp) + p * wp) * kw
+        return out, pp
+
+
+# ------------------------------------------------------------------ combat idle / stance loop
+P2.SLOT["Idle"] = (PW.IDLE_N, 1, 2, PW.IDLE_N, None)
+# Twelfth Hearth slot timings (frames @60: n, windup/telegraph, impact, recover, release)
+P2.SLOT.update({"AttackLight": (42, 8, 18, 32, None), "AttackHeavy": (66, 20, 38, 52, None), "CastBolt": (54, 10, 28, 42, 28),
+                "CastAoE": (72, 18, 42, 58, 42), "CastBuff": (60, 12, 34, 48, 34), "Heal": (66, 14, 38, 52, 38),
+                "Ability": (60, 12, 30, 46, None), "Throw": (48, 10, 24, 36, 24), "UseItem": (54, 8, 30, 44, None),
+                "Dodge": (36, 3, 12, 24, None), "PerfectEvade": (34, 2, 9, 22, None), "Block": (34, 3, 10, 22, None),
+                "Hit": (36, 2, 6, 20, None), "Victory": (90, 20, 50, 80, None)})
+
+
+class IdleClip(Clip6):
+    def keys(self):
+        return [(f, q, "io") for f, q in self.tech["idle_keys"]]
+
+    def windows(self):
+        return [(-5, -5)]
+
+    def post(self):
+        super().post()
+        n = len(self.rows) - 1
+        if self.tech.get("ws", {}).get("direct"):
+            self.rows[0] = dict(self.rows[1])
+        self._defoot()
+        first = self.rows[0]
+        for k in range(12):  # seamless loop: ease the tail into frame 0
+            f = n - 11 + k
+            t = P4.ease((k + 1) / 12.0, "io")
+            a, b = self.rows[f], first
+            row = {}
+            for j in rig.ORDER:
+                qa, qb = P4.eul_q(a[j]), P4.eul_q(b[j])
+                if qa.dot(qb) < 0:
+                    qb = -qb
+                e = qa.slerp(qb, t).to_matrix().to_euler("ZYX")
+                row[j] = tuple(math.degrees(v) for v in (e.x, e.y, e.z))
+            row["p"] = tuple(a["p"][i] + (b["p"][i] - a["p"][i]) * t for i in range(3))
+            self.rows[f] = row
+
+    def qa(self):
+        fl = posecheck.check(self.rows + [self.rows[0]], allow=(), windows=())
+        return fl
+
+
+def idle_job(pid, spec, skel, used):
+    g = spec["guard"] if spec.get("guard") else getattr(P4, spec["guard_p4"])
+    keys = PW.idle_keys(g, **spec.get("idle", {}))
+    tech = dict(guard=g, chamber=g, strike=g, idle_keys=keys, ws=dict(legs=0.0, torso=0.18, p=0.0))
+    wsrc = spec.get("idle_weapon", bool(spec.get("avoid_sets")))
+    if spec.get("idle_direct"):
+        c = find_clip(*spec["idle_direct"])
+        tech["ws"] = dict(direct=True)
+    else:
+        q = lambda sets, av: CL.pick("footwork", need=["idle", "planted"], weapon=wsrc, sets=sets, exclude_sets=tuple(spec.get("avoid_sets", ())) + reserved_for(pid, "Idle"), used=used, avoid_name=av,
+                                     key=lambda c: GLOBAL_USE.get(c["id"], 0) * 50 + zlib.crc32((pid + c["id"]).encode()) % 89, n=1)
+        c = (q(spec.get("idle_sets"), spec.get("idle_avoid")) or q(None, None))[0]  # V7 set-3 idle, else the pre-V7 query
+    used.add(c["id"]); GLOBAL_USE[c["id"]] = GLOBAL_USE.get(c["id"], 0) + 1
+    P2.SRCPATH[c["id"]] = c["source"]
+    clip = IdleClip("Sky_%s_Idle" % pid, c["id"], "Idle", {}, skel)
+    clip.setup_tech(tech)
+    return clip, [dict(part="idle_source", clip=c["source"], anchor60=c["anchor"])]
+
+
+# ------------------------------------------------------------------ component choice per technique
+GLOBAL_USE = {}
+
+
+# user orders: Phantom Blade = bladedancer only; the flying-hero set = divinesaiyan (directly) plus the hero family
+# (ironbody, titanstrength, unitedmight, and supernovagod's slam ult) as a shared base under their own style layers
+RESERVED = {"Phantom Blade": {"bladedancer": None},
+            "Superman": {"divinesaiyan": None, "ironbody": None, "titanstrength": None, "unitedmight": None, "supernovagod": {"Ult"}}}
+HERO_FAMILY = ("ironbody", "titanstrength", "unitedmight")
+
+
+def reserved_for(pid, slot=None):
+    out = []
+    for k, owners in RESERVED.items():
+        if pid not in owners or (owners[pid] is not None and slot not in owners[pid]):
+            out.append(k)
+    return tuple(out)
+
+
+def choose(pid, slot, t, used, avoid_sets=()):
+    avoid_sets = tuple(avoid_sets) + reserved_for(pid, slot)
+    if (pid in HERO_FAMILY or (pid == "supernovagod" and slot == "Ult")) and not t.get("sets"):
+        t = dict(t, sets=["Superman"])  # shared hero base; falls back to any set when a part has no hero segment
+    """returns primary (code, path, anchor) and comps {part: (code, anchor)} + provenance list"""
+    if t.get("src_clip"):  # direct use of one authored HKX clip (e.g. bladedancer = Phantom Blade SANGUINE)
+        cands = t["src_clip"] if isinstance(t["src_clip"], list) else [t["src_clip"]]
+        cands = [x for x in cands if ("clip:" + x) not in used] or cands  # never reuse a clip within one power
+        k = t.get("_try", 0) % len(cands)
+        c = find_clip(cands[k], t.get("src_set"))
+        t["_sel"] = cands[k]
+        P2.SRCPATH[c["id"]] = c["source"]
+        return (c["id"], c["source"], c["anchor"]), {}, [dict(part="whole clip (direct)", clip=c["source"], anchor60=c["anchor"])]
+    limb = (("leg_R" if t.get("kick") == "R" else "leg_L") if t.get("kick") else ("arm_R" if t.get("side", "R") == "R" else "arm_L"))
+    weapon = t.get("weapon_src", False)
+    sets = t.get("sets")
+    pen = lambda c: GLOBAL_USE.get(c["id"], 0) * 50
+    prim = []
+    if t.get("prim_sets"):  # V7: per-part source sets (set-3 libraries are opt-in, see components6.SET3)
+        prim = CL.pick(limb, need=t.get("strike_tags", ["attack"]), weapon=t.get("prim_weapon", weapon), sets=t["prim_sets"], exclude_sets=avoid_sets, used=used, avoid_name=t.get("avoid_name3"),
+                       key=lambda c: pen(c) - c.get("speed", 0) / 10 + (zlib.crc32((pid + slot + c["id"]).encode()) % 97), n=1)
+    prim = prim or CL.pick(limb, need=t.get("strike_tags_fallback", t.get("strike_tags", ["attack"])) if t.get("prim_sets") else t.get("strike_tags", ["attack"]),
+                           weapon=weapon, sets=sets, exclude_sets=avoid_sets, used=used,
+                           key=lambda c: pen(c) - c.get("speed", 0) / 10 + (zlib.crc32((pid + slot + c["id"]).encode()) % 97), n=1)
+    if not prim:
+        prim = CL.pick(limb, need=["attack"], used=used, exclude_sets=avoid_sets, n=1)
+    prim = prim[0]
+    comps, prov = {}, [dict(part=limb, clip=prim["source"], anchor60=prim["anchor"])]
+    for part, tags in (("foot", t.get("foot")), ("torso", t.get("torso"))):
+        if not tags:
+            continue
+        cpart = "footwork" if part == "foot" else "torso"
+        c = []
+        if t.get(part + "_sets"):  # V7 per-part source sets (+ optional extra tags for that query)
+            c = CL.pick(cpart, need=list(t.get(part + "_tags3") or tags), sets=t[part + "_sets"], exclude_sets=avoid_sets, used=used, avoid_name=t.get("avoid_name3"),
+                        key=lambda c: pen(c) + (zlib.crc32((pid + slot + part + c["id"]).encode()) % 101), n=1)
+        c = c or CL.pick(cpart, need=tags, sets=sets if (t.get("same_set") or sets == ["Superman"]) else None, exclude_sets=avoid_sets, used=used,
+                         key=lambda c: pen(c) + (zlib.crc32((pid + slot + part + c["id"]).encode()) % 101), n=1)
+        if not c and sets == ["Superman"]:
+            c = CL.pick(cpart, need=tags, exclude_sets=avoid_sets, used=used,
+                        key=lambda c: pen(c) + (zlib.crc32((pid + slot + part + c["id"]).encode()) % 101), n=1)
+        if c:
+            c = c[0]
+            comps[part] = (c["id"], c["anchor"])
+            prov.append(dict(part=cpart, clip=c["source"], anchor60=c["anchor"]))
+            used.add(c["id"]); GLOBAL_USE[c["id"]] = GLOBAL_USE.get(c["id"], 0) + 1
+            P2.SRCPATH[c["id"]] = c["source"]
+    used.add(prim["id"]); GLOBAL_USE[prim["id"]] = GLOBAL_USE.get(prim["id"], 0) + 1
+    P2.SRCPATH[prim["id"]] = prim["source"]
+    return (prim["id"], prim["source"], prim["anchor"]), comps, prov
+
+
+def find_clip(name, setname=None):
+    CL.pick("footwork")  # loads the library
+    cs = [c for c in CL._C if c["name"] == name and (not setname or setname.lower() in c["set"].lower())]
+    if not setname:  # set-3 sources are opt-in (name the set): keeps pre-V7 direct picks unchanged
+        cs = [c for c in cs if not CL.is_set3(c["set"])] or cs
+    cs.sort(key=lambda c: (c["part"] not in ("arm_R", "footwork"), c["part"] != "arm_R"))
+    if not cs:
+        raise KeyError((name, setname))
+    return cs[0]
+
+
+def guard_from(name, setname, skel):
+    c = find_clip(name, setname)
+    P2.SRCPATH[c["id"]] = c["source"]
+    clip = P2.Clip("guard_" + name, c["id"], "M1", {"loop": False}, skel)
+    Pm, p, _ = clip.sample(0.0)
+    return P2.to_rows(Pm, p)
+
+
+def slotkey(slot):
+    return "M1_4" if slot == "M1_4" else ("M1" if slot.startswith("M1") else slot)
+
+
+def main():
+    argv = sys.argv[sys.argv.index("--") + 1:] if "--" in sys.argv else []
+    opt = lambda k: argv[argv.index(k) + 1] if k in argv else None
+    D6 = opt("--out") or os.path.join(OUT, "phase6")
+    os.makedirs(os.path.join(D6, "renders"), exist_ok=True)
+    rnd = "--render" in argv
+    skel = S.hkx.load(S.SKEL)["skeletons"][0]
+    by, report, renders, rowsout, prov, markers = {}, {}, {}, {}, {}, {}
+    if rnd:
+        ob = S.setup_scene()
+        bpy.context.scene.render.resolution_x = 300; bpy.context.scene.render.resolution_y = 260
+        REST = {b.name: b.matrix_local.to_3x3() for b in ob.data.bones}
+        coll = bpy.data.collections.new("stick"); bpy.context.scene.collection.children.link(coll)
+        mats = {}
+        for k, col in (("r", (0.9, 0.45, 0.2)), ("l", (0.3, 0.75, 0.35)), ("c", (0.85, 0.8, 0.75)), ("s", (0.7, 0.9, 1.0))):
+            mm = bpy.data.materials.new("st_" + k); mm.diffuse_color = (*col, 1); mats[k] = mm
+    PW.load_all()
+    pids = opt("--powers").split(",") if opt("--powers") else PW.BATCHES[opt("--batch")]
+    for pid in pids:
+        spec = PW.POWERS[pid]()
+        used = set()
+        if spec.get("guard") is None and spec.get("guard_src"):
+            spec["guard"] = guard_from(*spec["guard_src"], skel)
+        stance0 = None
+        if "--no-idle" not in argv and not spec.get("no_idle"):
+            c, pv = idle_job(pid, spec, skel, used)
+            c.build(); c.post()
+            name = c.target
+            fl = c.qa()
+            report[name] = {k: len(v) for k, v in fl.items()}
+            by.setdefault("Clips_SkyP_" + pid, []).append(P2.lua_clip(name, c.markers, c.rows))
+            rowsout[name] = c.rows
+            prov[name] = dict(power=pid, slot="Idle", technique="combat stance loop", components=pv)
+            print("QA", name, "FLAGS:", report[name] or 0, "| idle |", os.path.basename(pv[0]["clip"]))
+            stance0 = dict(c.rows[0])
+        for slot, t in spec["slots"].items():
+            name = "Sky_%s_%s" % (pid, slot)
+            if t.get("p4"):  # approved phase-4 technique (karate/boxer/kicker) + phase-6 component queries
+                base = dict(P4.T[t["p4"]])
+                al = ("elbow_up", "hands_up") if t["p4"] in ("lead_hook", "uppercut", "overhand", "axe_kick") else ()
+                al += ("crossed_knees",) if t["p4"] in ("mawashi_geri", "yoko_geri", "roundhouse_l", "side_kick", "double_round") else ()
+                base.update({k: v for k, v in t.items() if k != "p4"}); base["allow"] = al
+                if base.get("kick"):
+                    base["kick"] = P4.T[t["p4"]].get("kick")
+                t = base
+            for attempt in range(max(5, len(t.get("src_clip") or []) if isinstance(t.get("src_clip"), list) else 5)):
+                t["_try"] = attempt  # rework: if QA fails, rebuild with different HKX components (choose() skips used ids)
+                (code, path, anc), comps, pv = choose(pid, slot, t, used, avoid_sets=spec.get("avoid_sets", ()))
+                c = Clip6(name, code, spec.get("timing", {}).get(slot) or slotkey(slot), {}, skel, comps=comps, anchor=anc)
+                c.stance0 = stance0
+                if t.get("sword_direct"):
+                    c.setup_tech(None, sword=True)
+                    P4.SWORD_GUARD.clear(); P4.SWORD_GUARD.update(spec["guard"])
+                else:
+                    c.setup_tech(t)
+                c.build()
+                c.post()
+                if t.get("sword_direct") and stance0 is None:  # (stance0 path eases in post())
+                    g0 = spec["guard"]
+                    k0 = min(5, c.w)
+                    for f in range(k0):
+                        c.rows[f] = c._blend(dict(g0), c.rows[k0], rig.ORDER + ["p"], P4.ease(f / k0, "io"))
+                fl = c.qa()
+                if fl:
+                    fl = c.repair(spec["guard"] if spec.get("guard") else (t.get("guard") or {}))
+                if t.get("sword_direct"):
+                    if not fl or attempt >= len(t["src_clip"]) - 1:
+                        break
+                    print("  retry", name, {k: len(v) for k, v in fl.items()})
+                    continue
+                if not fl or not set(fl) <= {"foot_slide", "pop", "crossed_knees", "loop_foot_slide"}:
+                    break  # pose-type flags need an authoring fix, not different components
+                print("  retry", name, {k: len(v) for k, v in fl.items()})
+            report[name] = {k: len(v) for k, v in fl.items()}
+            if True:  # polish pass for every move
+                c.dekink(stance0)
+                fl = c.qa()
+                if fl:
+                    fl = c.repair(spec["guard"] if spec.get("guard") else (t.get("guard") or {}))
+            if stance0 is not None and spec.get("end_in_stance"):  # TH: recover into the class stance, not the neutral pose
+                r0, n0 = c.r, len(c.rows) - 1
+                for f in range(r0 + 1, n0 + 1):
+                    c.rows[f] = c._blend(dict(c.rows[r0]), stance0, rig.ORDER + ["p"], P4.ease((f - r0) / max(1, n0 - r0), "io"))
+                fl2 = c.qa()
+                if fl2:
+                    report[name] = {k: len(v) for k, v in fl2.items()}
+            if t.get("_sel"):
+                used.add("clip:" + t["_sel"])
+            by.setdefault(spec.get("module") or "Clips_SkyP_" + pid, []).append(P2.lua_clip(name, c.markers, c.rows))
+            rowsout[name] = c.rows
+            prov[name] = dict(power=pid, slot=slot, technique=t.get("name", ""), components=pv)
+            markers[name] = dict(c.markers)
+            print("QA", name, "FLAGS:", report[name] or 0, "|", t.get("name", ""), "|", ", ".join(os.path.basename(x["clip"]) + ":" + x["part"] for x in pv))
+            if rnd:
+                renders[name] = P2.render_clip(c, os.path.join(D6, "renders"), ob, REST, coll, mats)
+    for mod, items in by.items():
+        src = ("-- AUTO-GENERATED by harrow/anim/tools/phase6.py (copied from soulbound): per-power authored movesets built from modular HKX\n"
+               "-- components (footwork/torso/strike) + choreography layer. Provenance: out/phase6/provenance.json\nreturn {\n" + ",\n".join(items) + "\n}\n")
+        open(os.path.join(D6, mod + ".lua"), "w", newline="\n").write(src)
+    for fn, data in (("qa_report.json", report), ("rows.json", rowsout), ("renders.json", renders), ("provenance.json", prov), ("markers.json", markers)):
+        p = os.path.join(D6, fn)
+        old = json.load(open(p)) if os.path.exists(p) else {}
+        old.update(data)
+        json.dump(old, open(p, "w"), indent=0 if fn == "provenance.json" else None)
+    bad = {k: v for k, v in report.items() if v}
+    print("SUMMARY clips", len(report), "with flags", len(bad))
+    for k, v in bad.items():
+        print("  FLAG", k, v)
+
+
+if __name__ == "__main__":
+    main()

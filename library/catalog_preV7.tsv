@@ -1,0 +1,674 @@
+id	set	pool_code	kind	duration	frames	fps	hits	limbs	first_hit	score	source_set	source_file	cond	bvh
+Heavy/mco_attack1	Heavy	Sky_Heavy_1	attack	2.083	64	30.24	[0.5]	['WPN']	0.5	21.19	HeavyBlade Normal and Power For MCO	mco_attack1.hkx	31117051	bvh\Heavy\mco_attack1.bvh
+Heavy/mco_attack2	Heavy	Sky_Heavy_2	attack	1.833	56	30.0	[0.78]	['WPN']	0.78	16.39	HeavyBlade Normal and Power For MCO	mco_attack2.hkx	31117051	bvh\Heavy\mco_attack2.bvh
+Heavy/mco_attack3	Heavy	Sky_Heavy_3	attack	2.0	61	30.0	[0.72]	['WPN']	0.72	17.31	HeavyBlade Normal and Power For MCO	mco_attack3.hkx	31117051	bvh\Heavy\mco_attack3.bvh
+Heavy/mco_attack4	Heavy	Sky_Heavy_4	attack	1.55	48	30.32	[0.66]	['WPN']	0.66	6.43	HeavyBlade Normal and Power For MCO	mco_attack4.hkx	31117051	bvh\Heavy\mco_attack4.bvh
+Heavy/mco_attack5	Heavy	Sky_Heavy_5	attack	2.083	64	30.24	[0.91]	['WPN']	0.91	18.87	HeavyBlade Normal and Power For MCO	mco_attack5.hkx	31117051	bvh\Heavy\mco_attack5.bvh
+Heavy/mco_attack6	Heavy	Sky_Heavy_6	attack	2.083	64	30.24	[0.46]	['WPN']	0.46	24.44	HeavyBlade Normal and Power For MCO	mco_attack6.hkx	31117051	bvh\Heavy\mco_attack6.bvh
+Heavy/mco_powerattack1	Heavy	Sky_Heavy_7	power	3.267	99	30.0	[0.56, 0.9, 1.51, 1.91]	['WPN', 'WPN', 'WPN', 'WPN']	0.56	26.48	HeavyBlade Normal and Power For MCO	mco_powerattack1.hkx	31117051	bvh\Heavy\mco_powerattack1.bvh
+Heavy/mco_powerattack2	Heavy	Sky_Heavy_8	power	2.578	78	29.87	[0.4, 1.64]	['WPN', 'WPN']	0.4	14.75	HeavyBlade Normal and Power For MCO	mco_powerattack2.hkx	31117051	bvh\Heavy\mco_powerattack2.bvh
+Heavy/mco_powerattack3	Heavy	Sky_Heavy_9	power	2.3	70	30.0	[0.9]	['WPN']	0.9	12.55	HeavyBlade Normal and Power For MCO	mco_powerattack3.hkx	31117051	bvh\Heavy\mco_powerattack3.bvh
+Heavy/mco_powerattack4	Heavy	Sky_Heavy_10	power	1.725	53	30.14	[0.91]	['LF']	0.91	8.85	HeavyBlade Normal and Power For MCO	mco_powerattack4.hkx	31117051	bvh\Heavy\mco_powerattack4.bvh
+Heavy/mco_powerattack5	Heavy	Sky_Heavy_11	power	2.375	72	29.89	[0.5, 1.575]	['WPN', 'LH']	0.5	9.94	HeavyBlade Normal and Power For MCO	mco_powerattack5.hkx	31117051	bvh\Heavy\mco_powerattack5.bvh
+Heavy/mco_powerattack6	Heavy	Sky_Heavy_12	power	2.883	88	30.17	[1.11, 1.8]	['WPN', 'WPN']	1.11	11.51	HeavyBlade Normal and Power For MCO	mco_powerattack6.hkx	31117051	bvh\Heavy\mco_powerattack6.bvh
+Heavy/mco_powerattack7	Heavy	Sky_Heavy_13	power	2.867	87	30.0	[1.23, 1.9]	['WPN', 'WPN']	1.23	11.47	HeavyBlade Normal and Power For MCO	mco_powerattack7.hkx	31117051	bvh\Heavy\mco_powerattack7.bvh
+Heavy/mco_powerattack8	Heavy	Sky_Heavy_14	power	2.083	64	30.24	[0.92]	['WPN']	0.92	15.41	HeavyBlade Normal and Power For MCO	mco_powerattack8.hkx	31117051	bvh\Heavy\mco_powerattack8.bvh
+Heavy/mco_powerattack9	Heavy	Sky_Heavy_15	power	1.983	61	30.25	[0.75]	['WPN']	0.75	14.51	HeavyBlade Normal and Power For MCO	mco_powerattack9.hkx	31117051	bvh\Heavy\mco_powerattack9.bvh
+Glaive/mco_attack1	Glaive	Sky_Glaive_1	attack	1.4	43	30.0	[0.34]	['WPN']	0.34	14.45	Kingsglaive Moveset For MCO	mco_attack1.hkx	39888900	bvh\Glaive\mco_attack1.bvh
+Glaive/mco_attack2	Glaive	Sky_Glaive_2	attack	1.983	61	30.25	[0.73]	['WPN']	0.73	29.27	Kingsglaive Moveset For MCO	mco_attack2.hkx	39888900	bvh\Glaive\mco_attack2.bvh
+Glaive/mco_attack3	Glaive	Sky_Glaive_3	attack	1.45	45	30.34	[0.38, 0.68]	['LH', 'LH']	0.38	8.89	Kingsglaive Moveset For MCO	mco_attack3.hkx	39888900	bvh\Glaive\mco_attack3.bvh
+Glaive/mco_attack4	Glaive	Sky_Glaive_4	attack	1.567	48	30.0	[0.26, 0.65]	['WPN', 'WPN']	0.26	30.96	Kingsglaive Moveset For MCO	mco_attack4.hkx	39888900	bvh\Glaive\mco_attack4.bvh
+Glaive/mco_attack5	Glaive	Sky_Glaive_5	attack	1.533	47	30.0	[0.76]	['RH']	0.76	8.06	Kingsglaive Moveset For MCO	mco_attack5.hkx	39888900	bvh\Glaive\mco_attack5.bvh
+Glaive/mco_attack6	Glaive	Sky_Glaive_6	attack	1.767	54	30.0	[0.35, 0.88]	['WPN', 'RH']	0.35	20.73	Kingsglaive Moveset For MCO	mco_attack6.hkx	39888900	bvh\Glaive\mco_attack6.bvh
+Glaive/mco_attack7	Glaive	Sky_Glaive_7	attack	1.533	47	30.0	[0.76]	['RH']	0.76	8.06	Kingsglaive Moveset For MCO	mco_attack7.hkx	39888900	bvh\Glaive\mco_attack7.bvh
+Glaive/mco_attack8	Glaive	Sky_Glaive_8	attack	1.7	52	30.0	[0.45, 0.75]	['WPN', 'WPN']	0.45	10.46	Kingsglaive Moveset For MCO	mco_attack8.hkx	39888900	bvh\Glaive\mco_attack8.bvh
+Glaive/mco_attack9	Glaive	Sky_Glaive_9	attack	1.567	48	30.0	[0.5]	['WPN']	0.5	17.34	Kingsglaive Moveset For MCO	mco_attack9.hkx	39888900	bvh\Glaive\mco_attack9.bvh
+Glaive/mco_powerattack1	Glaive	Sky_Glaive_10	power	1.767	54	30.0	[0.65, 1.08]	['LH', 'LH']	0.65	13.18	Kingsglaive Moveset For MCO	mco_powerattack1.hkx	39888900	bvh\Glaive\mco_powerattack1.bvh
+Glaive/mco_powerattack10	Glaive	Sky_Glaive_11	power	1.9	58	30.0	[0.4, 0.8]	['WPN', 'WPN']	0.4	16.2	Kingsglaive Moveset For MCO	mco_powerattack10.hkx	39888900	bvh\Glaive\mco_powerattack10.bvh
+Glaive/mco_powerattack2	Glaive	Sky_Glaive_12	power	2.5	76	30.0	[0.833, 1.133, 1.366, 1.43]	['WPN', 'WPN', 'WPN', 'WPN']	0.833	16.48	Kingsglaive Moveset For MCO	mco_powerattack2.hkx	39888900	bvh\Glaive\mco_powerattack2.bvh
+Glaive/mco_powerattack3	Glaive	Sky_Glaive_13	power	2.333	71	30.0	[0.3, 0.7]	['WPN', 'RF']	0.3	11.22	Kingsglaive Moveset For MCO	mco_powerattack3.hkx	39888900	bvh\Glaive\mco_powerattack3.bvh
+Glaive/mco_powerattack4	Glaive	Sky_Glaive_14	power	1.883	58	30.27	[0.51, 0.73, 0.98]	['LH', 'WPN', 'WPN']	0.51	27.1	Kingsglaive Moveset For MCO	mco_powerattack4.hkx	39888900	bvh\Glaive\mco_powerattack4.bvh
+Glaive/mco_powerattack5	Glaive	Sky_Glaive_15	power	2.0	61	30.0	[0.8]	['WPN']	0.8	19.74	Kingsglaive Moveset For MCO	mco_powerattack5.hkx	39888900	bvh\Glaive\mco_powerattack5.bvh
+Glaive/mco_powerattack6	Glaive	Sky_Glaive_16	power	2.083	64	30.24	[0.92]	['WPN']	0.92	15.4	Kingsglaive Moveset For MCO	mco_powerattack6.hkx	39888900	bvh\Glaive\mco_powerattack6.bvh
+Glaive/mco_powerattack7	Glaive	Sky_Glaive_17	power	2.578	78	29.87	[0.4, 1.64]	['WPN', 'WPN']	0.4	14.75	Kingsglaive Moveset For MCO	mco_powerattack7.hkx	39888900	bvh\Glaive\mco_powerattack7.bvh
+Glaive/mco_powerattack8	Glaive	Sky_Glaive_18	power	2.667	81	30.0	[0.8, 1.21, 1.73]	['WPN', 'WPN', 'WPN']	0.8	23.28	Kingsglaive Moveset For MCO	mco_powerattack8.hkx	39888900	bvh\Glaive\mco_powerattack8.bvh
+Glaive/mco_powerattack9	Glaive	Sky_Glaive_19	power	2.1	64	30.0	[0.88]	['WPN']	0.88	13.35	Kingsglaive Moveset For MCO	mco_powerattack9.hkx	39888900	bvh\Glaive\mco_powerattack9.bvh
+Glaive/mco_powerattack1__2	Glaive	Sky_Glaive_20	power	3.3	100	30.0	[1.59, 2.016, 2.2]	['WPN', 'WPN', 'WPN']	1.59	22.49	Kingsglaive Moveset For MCO	mco_powerattack1.hkx	39888901	bvh\Glaive\mco_powerattack1__2.bvh
+Glaive/mco_powerattack6__2	Glaive	Sky_Glaive_21	power	1.5	46	30.0	[0.66]	['WPN']	0.66	18.28	Kingsglaive Moveset For MCO	mco_powerattack6.hkx	39888901	bvh\Glaive\mco_powerattack6__2.bvh
+Generic/mco_attack1	Generic	Sky_Generic_1	attack	0.967	30	30.0	[0.416, 0.48]	['LH', 'LH']	0.416	8.92	MCO Normal and Power For MCO	mco_attack1.hkx	31117060	bvh\Generic\mco_attack1.bvh
+Generic/mco_attack2	Generic	Sky_Generic_2	attack	1.367	42	30.0	[0.483, 0.61]	['RH', 'LH']	0.483	7.56	MCO Normal and Power For MCO	mco_attack2.hkx	31117060	bvh\Generic\mco_attack2.bvh
+Generic/mco_attack3	Generic	Sky_Generic_3	attack	1.5	46	30.0	[0.4, 0.48]	['LH', 'LH']	0.4	10.93	MCO Normal and Power For MCO	mco_attack3.hkx	31117060	bvh\Generic\mco_attack3.bvh
+Generic/mco_attack4	Generic	Sky_Generic_4	attack	1.5	46	30.0	[0.383]	['RH']	0.383	9.05	MCO Normal and Power For MCO	mco_attack4.hkx	31117060	bvh\Generic\mco_attack4.bvh
+Generic/mco_powerattack1	Generic	Sky_Generic_5	power	2.317	71	30.22	[0.76, 0.9]	['LH', 'LH']	0.76	9.89	MCO Normal and Power For MCO	mco_powerattack1.hkx	31117060	bvh\Generic\mco_powerattack1.bvh
+Generic/mco_powerattack2	Generic	Sky_Generic_6	power	1.4	43	30.0	[0.31, 0.366]	['RH', 'RH']	0.31	7.29	MCO Normal and Power For MCO	mco_powerattack2.hkx	31117060	bvh\Generic\mco_powerattack2.bvh
+Generic/mco_powerattack3	Generic	Sky_Generic_7	power	1.933	59	30.0	[0.333, 0.9]	['RH', 'WPN']	0.333	18.75	MCO Normal and Power For MCO	mco_powerattack3.hkx	31117060	bvh\Generic\mco_powerattack3.bvh
+Generic/mco_powerattack4	Generic	Sky_Generic_8	power	1.8	55	30.0	[0.48, 0.583]	['RH', 'RH']	0.48	15.1	MCO Normal and Power For MCO	mco_powerattack4.hkx	31117060	bvh\Generic\mco_powerattack4.bvh
+Generic/mco_powerattack5	Generic	Sky_Generic_9	power	2.383	73	30.21	[0.416, 0.56, 1.47]	['RH', 'RH', 'RF']	0.416	8.96	MCO Normal and Power For MCO	mco_powerattack5.hkx	31117060	bvh\Generic\mco_powerattack5.bvh
+Rapier/mco_attack1	Rapier	Sky_Rapier_1	attack	1.733	53	30.0	[0.15, 0.55]	['WPN', 'WPN']	0.15	28.65	Rapier Normal and Power For MCO	mco_attack1.hkx	31117040	bvh\Rapier\mco_attack1.bvh
+Rapier/mco_attack2	Rapier	Sky_Rapier_2	attack	1.667	51	30.0	[0.31]	['WPN']	0.31	15.46	Rapier Normal and Power For MCO	mco_attack2.hkx	31117040	bvh\Rapier\mco_attack2.bvh
+Rapier/mco_attack3	Rapier	Sky_Rapier_3	attack	1.367	42	30.0	[0.18]	['RH']	0.18	6.54	Rapier Normal and Power For MCO	mco_attack3.hkx	31117040	bvh\Rapier\mco_attack3.bvh
+Rapier/mco_attack4	Rapier	Sky_Rapier_4	attack	1.4	43	30.0	[0.38]	['RH']	0.38	8.31	Rapier Normal and Power For MCO	mco_attack4.hkx	31117040	bvh\Rapier\mco_attack4.bvh
+Rapier/mco_attack5	Rapier	Sky_Rapier_5	attack	1.3	40	30.0	[0.3]	['RH']	0.3	11.77	Rapier Normal and Power For MCO	mco_attack5.hkx	31117040	bvh\Rapier\mco_attack5.bvh
+Rapier/mco_powerattack1	Rapier	Sky_Rapier_6	power	2.333	71	30.0	[0.9]	['RH']	0.9	11.54	Rapier Normal and Power For MCO	mco_powerattack1.hkx	31117040	bvh\Rapier\mco_powerattack1.bvh
+Rapier/mco_powerattack2	Rapier	Sky_Rapier_7	power	1.533	47	30.0	[0.7]	['RH']	0.7	5.3	Rapier Normal and Power For MCO	mco_powerattack2.hkx	31117040	bvh\Rapier\mco_powerattack2.bvh
+Rapier/mco_powerattack3	Rapier	Sky_Rapier_8	power	2.2	67	30.0	[0.717, 1.38]	['RH', 'LH']	0.717	6.53	Rapier Normal and Power For MCO	mco_powerattack3.hkx	31117040	bvh\Rapier\mco_powerattack3.bvh
+Rapier/mco_powerattack4	Rapier	Sky_Rapier_9	power	1.567	48	30.0	[0.65]	['WPN']	0.65	14.61	Rapier Normal and Power For MCO	mco_powerattack4.hkx	31117040	bvh\Rapier\mco_powerattack4.bvh
+Rapier/mco_powerattack5	Rapier	Sky_Rapier_10	power	1.767	54	30.0	[0.35, 0.88]	['WPN', 'RH']	0.35	20.73	Rapier Normal and Power For MCO	mco_powerattack5.hkx	31117040	bvh\Rapier\mco_powerattack5.bvh
+Dagger/mco_attack1	Dagger	Sky_Dagger_1	attack	1.433	44	30.0	[0.2, 0.4]	['RH', 'RH']	0.2	10.52	Reversed Dual Dagger Moveset For MCO	mco_attack1.hkx	31117044	bvh\Dagger\mco_attack1.bvh
+Dagger/mco_attack2	Dagger	Sky_Dagger_2	attack	1.367	42	30.0	[0.2, 0.4]	['WPN', 'RH']	0.2	9.92	Reversed Dual Dagger Moveset For MCO	mco_attack2.hkx	31117044	bvh\Dagger\mco_attack2.bvh
+Dagger/mco_attack3	Dagger	Sky_Dagger_3	attack	1.767	54	30.0	[0.2, 0.5]	['WPN', 'WPN']	0.2	17.33	Reversed Dual Dagger Moveset For MCO	mco_attack3.hkx	31117044	bvh\Dagger\mco_attack3.bvh
+Dagger/mco_attack4	Dagger	Sky_Dagger_4	attack	1.9	58	30.0	[0.2, 0.4, 0.6, 0.8]	['LH', 'WPN', 'LH', 'RH']	0.2	16.59	Reversed Dual Dagger Moveset For MCO	mco_attack4.hkx	31117044	bvh\Dagger\mco_attack4.bvh
+Dagger/mco_attack5	Dagger	Sky_Dagger_5	attack	1.233	38	30.0	[0.283, 0.433]	['RH', 'LH']	0.283	10.09	Reversed Dual Dagger Moveset For MCO	mco_attack5.hkx	31117044	bvh\Dagger\mco_attack5.bvh
+Dagger/mco_powerattack1	Dagger	Sky_Dagger_6	power	1.3	40	30.0	[0.16, 0.26, 0.61]	['WPN', 'WPN', 'WPN']	0.16	18.8	Reversed Dual Dagger Moveset For MCO	mco_powerattack1.hkx	31117044	bvh\Dagger\mco_powerattack1.bvh
+Dagger/mco_powerattack2	Dagger	Sky_Dagger_7	power	2.0	61	30.0	[0.2, 0.4, 0.8, 1.2]	['LH', 'RH', 'WPN', 'RH']	0.2	18.94	Reversed Dual Dagger Moveset For MCO	mco_powerattack2.hkx	31117044	bvh\Dagger\mco_powerattack2.bvh
+Dagger/mco_powerattack3	Dagger	Sky_Dagger_8	power	1.533	47	30.0	[0.2, 0.63]	['WPN', 'RH']	0.2	20.47	Reversed Dual Dagger Moveset For MCO	mco_powerattack3.hkx	31117044	bvh\Dagger\mco_powerattack3.bvh
+Dagger/mco_powerattack4	Dagger	Sky_Dagger_9	power	2.25	69	30.22	[0.28, 0.43, 1.33]	['WPN', 'WPN', 'RF']	0.28	16.48	Reversed Dual Dagger Moveset For MCO	mco_powerattack4.hkx	31117044	bvh\Dagger\mco_powerattack4.bvh
+Dagger/mco_powerattack5	Dagger	Sky_Dagger_10	power	2.383	73	30.21	[0.416, 0.56, 1.47]	['RH', 'RH', 'RF']	0.416	8.96	Reversed Dual Dagger Moveset For MCO	mco_powerattack5.hkx	31117044	bvh\Dagger\mco_powerattack5.bvh
+Dagger/mco_powerattack6	Dagger	Sky_Dagger_11	power	1.867	57	30.0	[0.367, 0.68, 0.933]	['RH', 'LH', 'WPN']	0.367	14.75	Reversed Dual Dagger Moveset For MCO	mco_powerattack6.hkx	31117044	bvh\Dagger\mco_powerattack6.bvh
+Scythe/mco_attack1	Scythe	Sky_Scythe_1	attack	1.45	45	30.34	[0.33]	['WPN']	0.33	18.22	Scythe Normal and Power For MCO	MCO_attack1.hkx	31117046	bvh\Scythe\mco_attack1.bvh
+Scythe/mco_attack2	Scythe	Sky_Scythe_2	attack	1.5	46	30.0	[0.33]	['WPN']	0.33	16.83	Scythe Normal and Power For MCO	MCO_attack2.hkx	31117046	bvh\Scythe\mco_attack2.bvh
+Scythe/mco_attack3	Scythe	Sky_Scythe_3	attack	1.725	53	30.14	[0.7]	['WPN']	0.7	17.58	Scythe Normal and Power For MCO	MCO_attack3.hkx	31117046	bvh\Scythe\mco_attack3.bvh
+Scythe/mco_attack4	Scythe	Sky_Scythe_4	attack	1.7	52	30.0	[0.86]	['WPN']	0.86	14.7	Scythe Normal and Power For MCO	MCO_attack4.hkx	31117046	bvh\Scythe\mco_attack4.bvh
+Scythe/mco_attack5	Scythe	Sky_Scythe_5	attack	1.6	49	30.0	[0.84]	['WPN']	0.84	16.41	Scythe Normal and Power For MCO	MCO_attack5.hkx	31117046	bvh\Scythe\mco_attack5.bvh
+Scythe/mco_attack6	Scythe	Sky_Scythe_6	attack	1.767	54	30.0	[0.45, 0.83]	['WPN', 'WPN']	0.45	10.6	Scythe Normal and Power For MCO	MCO_attack6.hkx	31117046	bvh\Scythe\mco_attack6.bvh
+Scythe/mco_attack7	Scythe	Sky_Scythe_7	attack	1.767	54	30.0	[0.633]	['WPN']	0.633	15.75	Scythe Normal and Power For MCO	MCO_attack7.hkx	31117046	bvh\Scythe\mco_attack7.bvh
+Scythe/mco_attack8	Scythe	Sky_Scythe_8	attack	1.45	45	30.34	[0.33]	['WPN']	0.33	18.25	Scythe Normal and Power For MCO	MCO_attack8.hkx	31117046	bvh\Scythe\mco_attack8.bvh
+Scythe/mco_powerattack1	Scythe	Sky_Scythe_9	power	2.1	64	30.0	[0.65, 1.08]	['WPN', 'WPN']	0.65	14.42	Scythe Normal and Power For MCO	MCO_powerattack1.hkx	31117046	bvh\Scythe\mco_powerattack1.bvh
+Scythe/mco_powerattack2	Scythe	Sky_Scythe_10	power	1.4	43	30.0	[0.5]	['WPN']	0.5	17.31	Scythe Normal and Power For MCO	MCO_powerattack2.hkx	31117046	bvh\Scythe\mco_powerattack2.bvh
+Scythe/mco_powerattack3	Scythe	Sky_Scythe_11	power	1.4	43	30.0	[0.6]	['WPN']	0.6	11.12	Scythe Normal and Power For MCO	MCO_powerattack3.hkx	31117046	bvh\Scythe\mco_powerattack3.bvh
+Scythe/mco_powerattack4	Scythe	Sky_Scythe_12	power	2.911	88	29.89	[0.78, 1.24, 1.9]	['WPN', 'WPN', 'WPN']	0.78	25.79	Scythe Normal and Power For MCO	MCO_powerattack4.hkx	31117046	bvh\Scythe\mco_powerattack4.bvh
+Scythe/mco_powerattack5	Scythe	Sky_Scythe_13	power	2.167	66	30.0	[0.64, 1.1]	['LF', 'WPN']	0.64	13.79	Scythe Normal and Power For MCO	MCO_powerattack5.hkx	31117046	bvh\Scythe\mco_powerattack5.bvh
+Scythe/mco_powerattack6	Scythe	Sky_Scythe_14	power	1.833	56	30.0	[0.933]	['WPN']	0.933	20.0	Scythe Normal and Power For MCO	MCO_powerattack6.hkx	31117046	bvh\Scythe\mco_powerattack6.bvh
+Scythe/mco_powerattack1__2	Scythe	Sky_Scythe_15	power	2.783	85	30.18	[0.716, 1.3]	['WPN', 'WPN']	0.716	23.15	Scythe Normal and Power For MCO	MCO_powerattack1.hkx	31117086	bvh\Scythe\mco_powerattack1__2.bvh
+ShinMagic/dodgeback	ShinMagic			0.767	24	30.0					Shinobi Magic Standalone For MCO	DodgeBack.hkx	31117036	bvh\ShinMagic\dodgeback.bvh
+ShinMagic/dodgeleft	ShinMagic			0.767	24	30.0					Shinobi Magic Standalone For MCO	dodgeleft.hkx	31117036	bvh\ShinMagic\dodgeleft.bvh
+ShinMagic/dodgeright	ShinMagic			0.733	23	30.0					Shinobi Magic Standalone For MCO	dodgeright.hkx	31117036	bvh\ShinMagic\dodgeright.bvh
+ShinMagic/mco_attack1	ShinMagic	Sky_ShinMagic_1	attack	1.567	48	30.0	[0.5, 0.68]	['RH', 'RH']	0.5	16.89	Shinobi Magic Standalone For MCO	mco_attack1.hkx	31117036	bvh\ShinMagic\mco_attack1.bvh
+ShinMagic/mco_attack2	ShinMagic	Sky_ShinMagic_2	attack	1.983	61	30.25	[0.41, 0.68, 1.0]	['RH', 'RH', 'RH']	0.41	19.15	Shinobi Magic Standalone For MCO	mco_attack2.hkx	31117036	bvh\ShinMagic\mco_attack2.bvh
+ShinMagic/mco_attack3	ShinMagic	Sky_ShinMagic_3	attack	1.667	51	30.0	[0.316, 0.716]	['RH', 'RH']	0.316	19.09	Shinobi Magic Standalone For MCO	mco_attack3.hkx	31117036	bvh\ShinMagic\mco_attack3.bvh
+ShinMagic/mco_attack4	ShinMagic	Sky_ShinMagic_4	attack	1.733	53	30.0	[0.367, 0.767]	['RH', 'RH']	0.367	35.69	Shinobi Magic Standalone For MCO	mco_attack4.hkx	31117036	bvh\ShinMagic\mco_attack4.bvh
+ShinMagic/mco_attack5	ShinMagic	Sky_ShinMagic_5	attack	1.6	49	30.0	[0.416, 0.75]	['RH', 'RH']	0.416	24.1	Shinobi Magic Standalone For MCO	mco_attack5.hkx	31117036	bvh\ShinMagic\mco_attack5.bvh
+ShinMagic/mco_attack6	ShinMagic	Sky_ShinMagic_6	attack	3.9	118	30.0	[0.85, 1.5, 1.8, 1.97, 2.23, 2.81]	['RH', 'RH', 'RH', 'RH', 'RH', 'RH']	0.85	25.49	Shinobi Magic Standalone For MCO	mco_attack6.hkx	31117036	bvh\ShinMagic\mco_attack6.bvh
+ShinMagic/mco_powerattack1	ShinMagic	Sky_ShinMagic_7	power	1.483	46	30.34	[0.43]	['RH']	0.43	21.8	Shinobi Magic Standalone For MCO	mco_powerattack1.hkx	31117036	bvh\ShinMagic\mco_powerattack1.bvh
+ShinMagic/mco_powerattack2	ShinMagic	Sky_ShinMagic_8	power	1.6	49	30.0	[0.555]	['RH']	0.555	23.92	Shinobi Magic Standalone For MCO	mco_powerattack2.hkx	31117036	bvh\ShinMagic\mco_powerattack2.bvh
+ShinMagic/mco_powerattack3	ShinMagic	Sky_ShinMagic_9	power	1.733	53	30.0	[0.367, 0.767]	['RH', 'RH']	0.367	35.69	Shinobi Magic Standalone For MCO	mco_powerattack3.hkx	31117036	bvh\ShinMagic\mco_powerattack3.bvh
+ShinMagic/mco_powerattack4	ShinMagic	Sky_ShinMagic_10	power	1.867	57	30.0	[0.917, 1.083]	['RH', 'RH']	0.917	26.23	Shinobi Magic Standalone For MCO	mco_powerattack4.hkx	31117036	bvh\ShinMagic\mco_powerattack4.bvh
+ShinMagic/mco_powerattack5	ShinMagic	Sky_ShinMagic_11	power	1.6	49	30.0	[0.416, 0.75]	['RH', 'RH']	0.416	24.1	Shinobi Magic Standalone For MCO	mco_powerattack5.hkx	31117036	bvh\ShinMagic\mco_powerattack5.bvh
+ShinMagic/mco_powerattack6	ShinMagic	Sky_ShinMagic_12	power	3.917	119	30.13	[0.8, 1.03, 2.066, 2.71, 3.067]	['RH', 'RH', 'RH', 'RH', 'RH']	0.8	25.05	Shinobi Magic Standalone For MCO	mco_powerattack6.hkx	31117036	bvh\ShinMagic\mco_powerattack6.bvh
+ShinMagic/mco_powerattack7	ShinMagic	Sky_ShinMagic_13	power	3.1	94	30.0	[0.966, 1.316, 1.516, 1.81]	['RH', 'RH', 'RH', 'RH']	0.966	27.6	Shinobi Magic Standalone For MCO	mco_powerattack7.hkx	31117036	bvh\ShinMagic\mco_powerattack7.bvh
+ShinMagic/sneakrun_forwardroll	ShinMagic			0.833	26	30.0					Shinobi Magic Standalone For MCO	sneakrun_forwardroll.hkx	31117036	bvh\ShinMagic\sneakrun_forwardroll.bvh
+ShinMagic/mco_powerattack7__2	ShinMagic	Sky_ShinMagic_14	power	3.683	112	30.14	[0.75, 1.15, 2.0]	['RH', 'RH', 'RH']	0.75	21.55	Shinobi Magic Standalone For MCO	mco_powerattack7.hkx	31117037	bvh\ShinMagic\mco_powerattack7__2.bvh
+Shinobi/mco_attack1	Shinobi	Sky_Shinobi_1	attack	1.417	44	30.35	[0.55]	['WPN']	0.55	25.77	Shinobi Normal and Power For MCO	mco_attack1.hkx	31117035	bvh\Shinobi\mco_attack1.bvh
+Shinobi/mco_attack2	Shinobi	Sky_Shinobi_2	attack	1.55	48	30.32	[0.267]	['WPN']	0.267	33.28	Shinobi Normal and Power For MCO	mco_attack2.hkx	31117035	bvh\Shinobi\mco_attack2.bvh
+Shinobi/mco_attack3	Shinobi	Sky_Shinobi_3	attack	0.85	27	30.59	[0.2]	['WPN']	0.2	26.93	Shinobi Normal and Power For MCO	mco_attack3.hkx	31117035	bvh\Shinobi\mco_attack3.bvh
+Shinobi/mco_attack5	Shinobi	Sky_Shinobi_4	attack	1.6	49	30.0	[0.416, 0.75]	['WPN', 'WPN']	0.416	24.1	Shinobi Normal and Power For MCO	mco_attack5.hkx	31117035	bvh\Shinobi\mco_attack5.bvh
+Shinobi/mco_attack6	Shinobi	Sky_Shinobi_5	attack	3.9	118	30.0	[0.85, 1.5, 1.8, 1.97, 2.23, 2.81]	['WPN', 'WPN', 'WPN', 'WPN', 'WPN', 'WPN']	0.85	25.49	Shinobi Normal and Power For MCO	mco_attack6.hkx	31117035	bvh\Shinobi\mco_attack6.bvh
+Shinobi/mco_powerattack1	Shinobi	Sky_Shinobi_6	power	1.483	46	30.34	[0.43]	['WPN']	0.43	20.84	Shinobi Normal and Power For MCO	mco_powerattack1.hkx	31117035	bvh\Shinobi\mco_powerattack1.bvh
+Shinobi/mco_powerattack3	Shinobi	Sky_Shinobi_7	power	1.733	53	30.0	[0.367, 0.767]	['WPN', 'WPN']	0.367	35.69	Shinobi Normal and Power For MCO	mco_powerattack3.hkx	31117035	bvh\Shinobi\mco_powerattack3.bvh
+Shinobi/mco_powerattack4	Shinobi	Sky_Shinobi_8	power	1.867	57	30.0	[0.917, 1.083]	['WPN', 'WPN']	0.917	26.23	Shinobi Normal and Power For MCO	mco_powerattack4.hkx	31117035	bvh\Shinobi\mco_powerattack4.bvh
+Shinobi/mco_powerattack6	Shinobi	Sky_Shinobi_9	power	3.917	119	30.13	[0.8, 1.03, 2.066, 2.71, 3.067]	['WPN', 'WPN', 'WPN', 'WPN', 'WPN']	0.8	25.05	Shinobi Normal and Power For MCO	mco_powerattack6.hkx	31117035	bvh\Shinobi\mco_powerattack6.bvh
+Shinobi/mco_powerattack7	Shinobi	Sky_Shinobi_10	power	3.1	94	30.0	[0.966, 1.316, 1.516, 1.81]	['WPN', 'WPN', 'WPN', 'WPN']	0.966	27.6	Shinobi Normal and Power For MCO	mco_powerattack7.hkx	31117035	bvh\Shinobi\mco_powerattack7.bvh
+Sword/mco_attack1	Sword	Sky_Sword_1	attack	1.367	42	30.0	[0.516]	['WPN']	0.516	29.63	Sword Normal and Power For MCO	MCO_attack1.hkx	31117040	bvh\Sword\mco_attack1.bvh
+Sword/mco_attack2	Sword	Sky_Sword_2	attack	1.3	40	30.0	[0.2]	['WPN']	0.2	21.26	Sword Normal and Power For MCO	MCO_attack2.hkx	31117040	bvh\Sword\mco_attack2.bvh
+Sword/mco_attack3	Sword	Sky_Sword_3	attack	1.067	33	30.0	[0.45]	['WPN']	0.45	20.1	Sword Normal and Power For MCO	MCO_attack3.hkx	31117040	bvh\Sword\mco_attack3.bvh
+Sword/mco_attack4	Sword	Sky_Sword_4	attack	1.117	35	30.45	[0.45]	['WPN']	0.45	17.0	Sword Normal and Power For MCO	MCO_attack4.hkx	31117040	bvh\Sword\mco_attack4.bvh
+Sword/mco_attack5	Sword	Sky_Sword_5	attack	1.217	38	30.41	[0.61]	['RH']	0.61	14.04	Sword Normal and Power For MCO	MCO_attack5.hkx	31117040	bvh\Sword\mco_attack5.bvh
+Sword/mco_powerattack1	Sword	Sky_Sword_6	power	2.633	80	30.0	[0.71, 1.38]	['RH', 'WPN']	0.71	22.59	Sword Normal and Power For MCO	MCO_powerattack1.hkx	31117040	bvh\Sword\mco_powerattack1.bvh
+Sword/mco_powerattack2	Sword	Sky_Sword_7	power	2.1	64	30.0	[0.41, 0.8]	['WPN', 'WPN']	0.41	27.79	Sword Normal and Power For MCO	MCO_powerattack2.hkx	31117040	bvh\Sword\mco_powerattack2.bvh
+Sword/mco_powerattack3	Sword	Sky_Sword_8	power	1.617	50	30.31	[0.48, 0.91]	['RH', 'WPN']	0.48	17.17	Sword Normal and Power For MCO	MCO_powerattack3.hkx	31117040	bvh\Sword\mco_powerattack3.bvh
+Sword/mco_powerattack4	Sword	Sky_Sword_9	power	2.0	61	30.0	[0.8]	['WPN']	0.8	19.74	Sword Normal and Power For MCO	MCO_powerattack4.hkx	31117040	bvh\Sword\mco_powerattack4.bvh
+Sword/mco_powerattack5	Sword	Sky_Sword_10	power	1.867	57	30.0	[0.53]	['WPN']	0.53	26.97	Sword Normal and Power For MCO	MCO_powerattack5.hkx	31117040	bvh\Sword\mco_powerattack5.bvh
+Sword/mco_powerattack6	Sword	Sky_Sword_11	power	1.567	48	30.0	[0.26, 0.65]	['WPN', 'WPN']	0.26	30.96	Sword Normal and Power For MCO	MCO_powerattack6.hkx	31117040	bvh\Sword\mco_powerattack6.bvh
+Skysa/skysa_h2h1	Skysa	Sky_Skysa_1	attack	1.166	35	29.15	[0.6]	['RH']	0.6	6.42	Unarmed Normal and Power Combo for Skysa 1.9	skysa_h2h1.hkx	animations	bvh\Skysa\skysa_h2h1.bvh
+Skysa/skysa_h2h2	Skysa	Sky_Skysa_2	attack	1.3	40	30.0	[0.4]	['LH']	0.4	8.5	Unarmed Normal and Power Combo for Skysa 1.9	skysa_h2h2.hkx	animations	bvh\Skysa\skysa_h2h2.bvh
+Skysa/skysa_h2h3	Skysa	Sky_Skysa_3	attack	1.266	38	29.22	[0.433]	['RF']	0.433	6.73	Unarmed Normal and Power Combo for Skysa 1.9	skysa_h2h3.hkx	animations	bvh\Skysa\skysa_h2h3.bvh
+Skysa/skysa_h2h4	Skysa	Sky_Skysa_4	attack	1.467	45	30.0	[0.23]	['RH']	0.23	4.03	Unarmed Normal and Power Combo for Skysa 1.9	skysa_h2h4.hkx	animations	bvh\Skysa\skysa_h2h4.bvh
+Skysa/skysa_powerh2h1	Skysa	Sky_Skysa_5	power	1.367	42	30.0	[0.6]	['RH']	0.6	12.87	Unarmed Normal and Power Combo for Skysa 1.9	skysa_powerh2h1.hkx	animations	bvh\Skysa\skysa_powerh2h1.bvh
+Skysa/skysa_powerh2h2	Skysa	Sky_Skysa_6	power	1.6	49	30.0	[1.1]	['RF']	1.1	12.75	Unarmed Normal and Power Combo for Skysa 1.9	skysa_powerh2h2.hkx	animations	bvh\Skysa\skysa_powerh2h2.bvh
+Skysa/skysa_powerh2h3	Skysa	Sky_Skysa_7	power	1.667	51	30.0	[0.467, 1.067]	['RH', 'LF']	0.467	9.61	Unarmed Normal and Power Combo for Skysa 1.9	skysa_powerh2h3.hkx	animations	bvh\Skysa\skysa_powerh2h3.bvh
+Skysa/skysa_powerh2h4	Skysa	Sky_Skysa_8	power	1.366	41	29.27	[0.8]	['LF']	0.8	9.97	Unarmed Normal and Power Combo for Skysa 1.9	skysa_powerh2h4.hkx	animations	bvh\Skysa\skysa_powerh2h4.bvh
+Unarmed/mco_attack1	Unarmed	Sky_Unarmed_1	attack	0.967	30	30.0	[0.416]	['RH']	0.416	7.09	Unarmed Normal and Power For MCO	mco_attack1.hkx	31117048	bvh\Unarmed\mco_attack1.bvh
+Unarmed/mco_attack2	Unarmed	Sky_Unarmed_2	attack	0.85	27	30.59	[0.33]	['LH']	0.33	11.19	Unarmed Normal and Power For MCO	mco_attack2.hkx	31117048	bvh\Unarmed\mco_attack2.bvh
+Unarmed/mco_attack3	Unarmed	Sky_Unarmed_3	attack	1.067	33	30.0	[0.35]	['RF']	0.35	7.21	Unarmed Normal and Power For MCO	mco_attack3.hkx	31117048	bvh\Unarmed\mco_attack3.bvh
+Unarmed/mco_attack4	Unarmed	Sky_Unarmed_4	attack	1.033	32	30.0	[0.566]	['LF']	0.566	13.79	Unarmed Normal and Power For MCO	mco_attack4.hkx	31117048	bvh\Unarmed\mco_attack4.bvh
+Unarmed/mco_attack5	Unarmed	Sky_Unarmed_5	attack	1.167	36	30.0	[0.466]	['LF']	0.466	13.01	Unarmed Normal and Power For MCO	mco_attack5.hkx	31117048	bvh\Unarmed\mco_attack5.bvh
+Unarmed/mco_attack6	Unarmed	Sky_Unarmed_6	attack	1.633	50	30.0	[0.53]	['LF']	0.53	9.67	Unarmed Normal and Power For MCO	mco_attack6.hkx	31117048	bvh\Unarmed\mco_attack6.bvh
+Unarmed/mco_powerattack1	Unarmed	Sky_Unarmed_7	power	1.117	35	30.45	[0.6]	['RH']	0.6	10.78	Unarmed Normal and Power For MCO	mco_powerattack1.hkx	31117048	bvh\Unarmed\mco_powerattack1.bvh
+Unarmed/mco_powerattack2	Unarmed	Sky_Unarmed_8	power	2.017	62	30.25	[0.483, 0.917]	['LF', 'LF']	0.483	10.33	Unarmed Normal and Power For MCO	mco_powerattack2.hkx	31117048	bvh\Unarmed\mco_powerattack2.bvh
+Unarmed/mco_powerattack3	Unarmed	Sky_Unarmed_9	power	2.367	72	30.0	[0.51, 1.36]	['RF', 'LF']	0.51	9.74	Unarmed Normal and Power For MCO	mco_powerattack3.hkx	31117048	bvh\Unarmed\mco_powerattack3.bvh
+Unarmed/mco_powerattack4	Unarmed	Sky_Unarmed_10	power	1.467	45	30.0	[0.65]	['RF']	0.65	10.65	Unarmed Normal and Power For MCO	mco_powerattack4.hkx	31117048	bvh\Unarmed\mco_powerattack4.bvh
+Unarmed/mco_powerattack5	Unarmed	Sky_Unarmed_11	power	2.017	62	30.25	[0.3, 0.85]	['RF', 'LF']	0.3	14.75	Unarmed Normal and Power For MCO	mco_powerattack5.hkx	31117048	bvh\Unarmed\mco_powerattack5.bvh
+Unarmed/mco_powerattack6	Unarmed	Sky_Unarmed_12	power	1.55	48	30.32	[0.68]	['RF']	0.68	13.76	Unarmed Normal and Power For MCO	mco_powerattack6.hkx	31117048	bvh\Unarmed\mco_powerattack6.bvh
+Gauntlet/2hm_idle	Gauntlet			4.267	256	59.77	[]				BFCO Dante Balrog	2hm_idle.HKX	Dante Balrog for BFCO	bvh\Gauntlet\2hm_idle.bvh
+Gauntlet/bfco_powerattack1	Gauntlet	Sky_Gauntlet_1	power	1.5	45	29.33	[0.2, 0.567]	['RF', 'LF']	0.2	11.93	BFCO Dante Balrog	BFCO_PowerAttack1.HKX	Kick Attack Air SM	bvh\Gauntlet\bfco_powerattack1.bvh
+Gauntlet/bfco_attack1	Gauntlet	Sky_Gauntlet_2	attack	1.367	41	29.27	[0.533]	['RF']	0.533	12.87	BFCO Dante Balrog	BFCO_Attack1.HKX	Kick Attack Air	bvh\Gauntlet\bfco_attack1.bvh
+Gauntlet/bfco_jumpattackpower	Gauntlet	Sky_Gauntlet_3	jump	1.5	45	29.33	[0.2, 0.567]	['RF', 'LF']	0.2	11.94	BFCO Dante Balrog	BFCO_JumpAttackPower.HKX	Kick Attack SM	bvh\Gauntlet\bfco_jumpattackpower.bvh
+Gauntlet/bfco_powerattack1__2	Gauntlet	Sky_Gauntlet_4	power	3.167	95	29.68	[0.467, 1.8]	['RF', 'RF']	0.467	4.69	BFCO Dante Balrog	BFCO_PowerAttack1.HKX	Kick Attack SM	bvh\Gauntlet\bfco_powerattack1__2.bvh
+Gauntlet/bfco_powerattack2	Gauntlet	Sky_Gauntlet_5	power	3.167	95	29.68	[0.467, 1.8]	['RF', 'RF']	0.467	4.69	BFCO Dante Balrog	BFCO_PowerAttack2.HKX	Kick Attack SM	bvh\Gauntlet\bfco_powerattack2.bvh
+Gauntlet/bfco_powerattack4	Gauntlet	Sky_Gauntlet_6	power	3.167	95	29.68	[0.467, 1.8]	['RF', 'RF']	0.467	4.69	BFCO Dante Balrog	BFCO_PowerAttack4.HKX	Kick Attack SM	bvh\Gauntlet\bfco_powerattack4.bvh
+Gauntlet/bfco_powerattack7	Gauntlet	Sky_Gauntlet_7	power	2.933	88	29.66	[0.233, 1.567]	['LF', 'RF']	0.233	9.06	BFCO Dante Balrog	BFCO_PowerAttack7.HKX	Kick Attack SM	bvh\Gauntlet\bfco_powerattack7.bvh
+Gauntlet/bfco_sprintattackpower	Gauntlet	Sky_Gauntlet_8	sprint	1.167	36	30.0	[0.5]	['RH']	0.5	7.12	BFCO Dante Balrog	BFCO_SprintAttackPower.hkx	Kick Attack SM	bvh\Gauntlet\bfco_sprintattackpower.bvh
+Gauntlet/bfco_attack1__2	Gauntlet	Sky_Gauntlet_9	attack	2.167	66	30.0	[0.6]	['LF']	0.6	16.43	BFCO Dante Balrog	BFCO_Attack1.hkx	Kick Attack disable sword	bvh\Gauntlet\bfco_attack1__2.bvh
+Gauntlet/bfco_attack2	Gauntlet	Sky_Gauntlet_10	attack	1.833	56	30.0	[0.5]	['RF']	0.5	9.67	BFCO Dante Balrog	BFCO_Attack2.hkx	Kick Attack	bvh\Gauntlet\bfco_attack2.bvh
+Gauntlet/bfco_attack3	Gauntlet	Sky_Gauntlet_11	attack	2.143	27	12.13	[0.7, 0.7]	['RF', 'RF']	0.7	2.91	BFCO Dante Balrog	BFCO_Attack3.hkx	Kick Attack	bvh\Gauntlet\bfco_attack3.bvh
+Gauntlet/bfco_attack4	Gauntlet	Sky_Gauntlet_12	attack	3.75	90	23.73	[0.5]	['LF']	0.5	8.97	BFCO Dante Balrog	BFCO_Attack4.hkx	Kick Attack	bvh\Gauntlet\bfco_attack4.bvh
+Gauntlet/bfco_attack5	Gauntlet	Sky_Gauntlet_13	attack	5.983	181	30.08	[0.25, 0.65, 1.15, 1.85]	['LH', 'LF', 'LF', 'LF']	0.25	15.39	BFCO Dante Balrog	BFCO_Attack5.hkx	Kick Attack	bvh\Gauntlet\bfco_attack5.bvh
+Gauntlet/bfco_sprintattack	Gauntlet	Sky_Gauntlet_14	sprint	2.167	66	30.0	[0.6]	['LF']	0.6	16.43	BFCO Dante Balrog	BFCO_SprintAttack.hkx	Kick Attack	bvh\Gauntlet\bfco_sprintattack.bvh
+Gauntlet/2hm_idle__2	Gauntlet			0.933	29	30.0	[]				BFCO Dante Balrog	2hm_idle.hkx	Kick BASIC	bvh\Gauntlet\2hm_idle__2.bvh
+Gauntlet/h2h_locomotionpose	Gauntlet			0.083	5	48.0	[]				BFCO Dante Balrog	h2h_Locomotionpose.HKX	Kick BASIC	bvh\Gauntlet\h2h_locomotionpose.bvh
+Gauntlet/mt_idle	Gauntlet			0.933	29	30.0	[]				BFCO Dante Balrog	mt_idle.HKX	Kick BASIC	bvh\Gauntlet\mt_idle.bvh
+Gauntlet/bfco_attack5__2	Gauntlet			0.667	20	28.5	[]				BFCO Dante Balrog	BFCO_Attack5.HKX	boxing mode Left	bvh\Gauntlet\bfco_attack5__2.bvh
+Gauntlet/bfco_attack5__3	Gauntlet			0.667	20	28.5	[]				BFCO Dante Balrog	BFCO_Attack5.HKX	boxing mode Right	bvh\Gauntlet\bfco_attack5__3.bvh
+Gauntlet/bfco_jumpattackpower__2	Gauntlet	Sky_Gauntlet_15	jump	2.0	60	29.5	[0.4]	['LF']	0.4	9.96	BFCO Dante Balrog	BFCO_JumpAttackPower.HKX	boxing mode attack SM	bvh\Gauntlet\bfco_jumpattackpower__2.bvh
+Gauntlet/bfco_powerattack1__3	Gauntlet	Sky_Gauntlet_16	power	2.333	70	29.57	[0.667]	['LH']	0.667	2.93	BFCO Dante Balrog	BFCO_PowerAttack1.hkx	boxing mode attack SM	bvh\Gauntlet\bfco_powerattack1__3.bvh
+Gauntlet/bfco_powerattack2__2	Gauntlet	Sky_Gauntlet_17	power	2.333	70	29.57	[0.667]	['LH']	0.667	2.93	BFCO Dante Balrog	BFCO_PowerAttack2.hkx	boxing mode attack SM	bvh\Gauntlet\bfco_powerattack2__2.bvh
+Gauntlet/bfco_powerattack_charge1	Gauntlet	Sky_Gauntlet_18	power	1.333	40	29.25	[0.167]	['RH']	0.167	10.3	BFCO Dante Balrog	BFCO_PowerAttack_Charge1.HKX	boxing mode attack SM	bvh\Gauntlet\bfco_powerattack_charge1.bvh
+Gauntlet/bfco_powerattack_charge2	Gauntlet	Sky_Gauntlet_19	power	1.833	55	29.45	[0.167]	['RH']	0.167	9.64	BFCO Dante Balrog	BFCO_PowerAttack_Charge2.HKX	boxing mode attack SM	bvh\Gauntlet\bfco_powerattack_charge2.bvh
+Gauntlet/bfco_powerattack_charge3	Gauntlet	Sky_Gauntlet_20	power	2.533	76	29.61	[0.167]	['RH']	0.167	19.2	BFCO Dante Balrog	BFCO_PowerAttack_Charge3.HKX	boxing mode attack SM	bvh\Gauntlet\bfco_powerattack_charge3.bvh
+Gauntlet/bfco_sprintattackpower__2	Gauntlet	Sky_Gauntlet_21	sprint	1.167	35	29.14	[0.533]	['RH']	0.533	11.52	BFCO Dante Balrog	BFCO_SprintAttackPower.hkx	boxing mode attack SM	bvh\Gauntlet\bfco_sprintattackpower__2.bvh
+Gauntlet/bfco_powerattack1__4	Gauntlet	Sky_Gauntlet_22	power	2.0	60	29.5	[0.4]	['LF']	0.4	9.96	BFCO Dante Balrog	BFCO_PowerAttack1.HKX	boxing mode attack air SM	bvh\Gauntlet\bfco_powerattack1__4.bvh
+Gauntlet/bfco_attack1__3	Gauntlet	Sky_Gauntlet_23	attack	2.333	70	29.57	[0.967]	['RH']	0.967	6.82	BFCO Dante Balrog	BFCO_Attack1.HKX	boxing mode attack air	bvh\Gauntlet\bfco_attack1__3.bvh
+Gauntlet/bfco_powerattack1__5	Gauntlet	Sky_Gauntlet_24	power	3.167	95	29.68	[1.567]	['RH']	1.567	7.51	BFCO Dante Balrog	BFCO_PowerAttack1.HKX	boxing mode attack backward SM	bvh\Gauntlet\bfco_powerattack1__5.bvh
+Gauntlet/bfco_attack1__4	Gauntlet	Sky_Gauntlet_25	attack	1.333	40	29.25	[0.2]	['RH']	0.2	12.14	BFCO Dante Balrog	BFCO_Attack1.HKX	boxing mode attack backward air	bvh\Gauntlet\bfco_attack1__4.bvh
+Gauntlet/切换腿模式	Gauntlet			3.75	90	23.73	[0.5]				BFCO Dante Balrog	切换腿模式.hkx	boxing mode attack backward air	bvh\Gauntlet\切换腿模式.bvh
+Gauntlet/bfco_attack1__5	Gauntlet	Sky_Gauntlet_26	attack	3.75	90	23.73	[0.5]	['LF']	0.5	8.97	BFCO Dante Balrog	BFCO_Attack1.hkx	boxing mode attack backward	bvh\Gauntlet\bfco_attack1__5.bvh
+Gauntlet/bfco_jumpattack	Gauntlet	Sky_Gauntlet_27	jump	1.333	40	29.25	[0.2]	['RH']	0.2	12.14	BFCO Dante Balrog	BFCO_JumpAttack.HKX	boxing mode attack backward	bvh\Gauntlet\bfco_jumpattack.bvh
+Gauntlet/bfco_attack1__6	Gauntlet	Sky_Gauntlet_28	attack	0.767	24	30.0	[0.083]	['RH']	0.083	8.28	BFCO Dante Balrog	BFCO_Attack1.hkx	boxing mode attack disable sword	bvh\Gauntlet\bfco_attack1__6.bvh
+Gauntlet/bfco_powerattack1__6	Gauntlet			2.167	65	29.54	[]				BFCO Dante Balrog	BFCO_PowerAttack1.hkx	boxing mode attack forward SM	bvh\Gauntlet\bfco_powerattack1__6.bvh
+Gauntlet/bfco_powerattack2__3	Gauntlet			2.167	65	29.54	[]				BFCO Dante Balrog	BFCO_PowerAttack2.hkx	boxing mode attack forward SM	bvh\Gauntlet\bfco_powerattack2__3.bvh
+Gauntlet/bfco_attack1__7	Gauntlet	Sky_Gauntlet_29	attack	1.167	35	29.14	[0.533]	['RH']	0.533	11.52	BFCO Dante Balrog	BFCO_Attack1.HKX	boxing mode attack forward	bvh\Gauntlet\bfco_attack1__7.bvh
+Gauntlet/bfco_attack10	Gauntlet	Sky_Gauntlet_30	attack	1.5	45	29.33	[0.2]	['LH']	0.2	11.42	BFCO Dante Balrog	BFCO_Attack10.HKX	boxing mode attack forward	bvh\Gauntlet\bfco_attack10.bvh
+Gauntlet/bfco_sprintattackpower__3	Gauntlet	Sky_Gauntlet_31	sprint	3.0	90	29.67	[0.1]	['RH']	0.1	0.33	BFCO Dante Balrog	BFCO_SprintAttackPower.HKX	boxing mode attack true dragon	bvh\Gauntlet\bfco_sprintattackpower__3.bvh
+Gauntlet/bfco_attack10__2	Gauntlet	Sky_Gauntlet_32	attack	0.767	24	30.0	[0.083]	['RH']	0.083	8.29	BFCO Dante Balrog	BFCO_Attack10.hkx	boxing mode attack	bvh\Gauntlet\bfco_attack10__2.bvh
+Gauntlet/bfco_attack2__2	Gauntlet	Sky_Gauntlet_33	attack	1.067	33	30.0	[0.067, 0.367]	['RH', 'RH']	0.067	23.37	BFCO Dante Balrog	BFCO_Attack2.hkx	boxing mode attack	bvh\Gauntlet\bfco_attack2__2.bvh
+Gauntlet/bfco_attack3__2	Gauntlet	Sky_Gauntlet_34	attack	1.333	41	30.0	[0.05, 0.367, 0.633]	['RH', 'RH', 'RH']	0.05	19.01	BFCO Dante Balrog	BFCO_Attack3.hkx	boxing mode attack	bvh\Gauntlet\bfco_attack3__2.bvh
+Gauntlet/bfco_attack4__2	Gauntlet	Sky_Gauntlet_35	attack	1.6	49	30.0	[0.067, 0.317, 0.633, 0.9]	['RH', 'RH', 'RH', 'RH']	0.067	24.37	BFCO Dante Balrog	BFCO_Attack4.hkx	boxing mode attack	bvh\Gauntlet\bfco_attack4__2.bvh
+Gauntlet/bfco_attack5__4	Gauntlet	Sky_Gauntlet_36	attack	0.767	24	30.0	[0.083]	['RH']	0.083	8.28	BFCO Dante Balrog	BFCO_Attack5.hkx	boxing mode attack	bvh\Gauntlet\bfco_attack5__4.bvh
+Gauntlet/bfco_attack6	Gauntlet	Sky_Gauntlet_37	attack	1.067	33	30.0	[0.067, 0.367]	['RH', 'RH']	0.067	23.37	BFCO Dante Balrog	BFCO_Attack6.hkx	boxing mode attack	bvh\Gauntlet\bfco_attack6.bvh
+Gauntlet/bfco_attack7	Gauntlet	Sky_Gauntlet_38	attack	1.333	41	30.0	[0.05, 0.367, 0.633]	['RH', 'RH', 'RH']	0.05	19.04	BFCO Dante Balrog	BFCO_Attack7.hkx	boxing mode attack	bvh\Gauntlet\bfco_attack7.bvh
+Gauntlet/bfco_attack8	Gauntlet	Sky_Gauntlet_39	attack	1.6	49	30.0	[0.067, 0.317, 0.633, 0.9]	['RH', 'RH', 'RH', 'RH']	0.067	24.38	BFCO Dante Balrog	BFCO_Attack8.hkx	boxing mode attack	bvh\Gauntlet\bfco_attack8.bvh
+Gauntlet/bfco_jumpattack__2	Gauntlet	Sky_Gauntlet_40	jump	2.333	70	29.57	[0.967]	['RH']	0.967	6.83	BFCO Dante Balrog	BFCO_JumpAttack.HKX	boxing mode attack	bvh\Gauntlet\bfco_jumpattack__2.bvh
+Gauntlet/mco_dodge-l-1	Gauntlet			0.667	20	28.5	[]				BFCO Dante Balrog	MCO_Dodge-L-1.HKX	boxing mode attack	bvh\Gauntlet\mco_dodge-l-1.bvh
+Gauntlet/mco_dodge-n-1	Gauntlet			5.667	170	29.82	[]				BFCO Dante Balrog	MCO_Dodge-N-1.hkx	boxing mode attack	bvh\Gauntlet\mco_dodge-n-1.bvh
+Gauntlet/mco_dodge-n-2	Gauntlet			5.667	170	29.82	[]				BFCO Dante Balrog	MCO_Dodge-N-2.HKX	boxing mode attack	bvh\Gauntlet\mco_dodge-n-2.bvh
+Gauntlet/mco_dodge-r-1	Gauntlet			0.667	20	28.5	[]				BFCO Dante Balrog	MCO_Dodge-R-1.HKX	boxing mode attack	bvh\Gauntlet\mco_dodge-r-1.bvh
+Gauntlet/2hm_idle__3	Gauntlet			0.8	25	30.0	[]				BFCO Dante Balrog	2hm_idle.hkx	boxing mode basic	bvh\Gauntlet\2hm_idle__3.bvh
+Gauntlet/bfco_powerattackcomb	Gauntlet			5.667	170	29.82	[]				BFCO Dante Balrog	BFCO_PowerAttackComb.HKX	boxing mode left right	bvh\Gauntlet\bfco_powerattackcomb.bvh
+Gauntlet/bfco_attack1__8	Gauntlet	Sky_Gauntlet_41	attack	1.9	114	59.47	[0.25]	['RH']	0.25	37.46	BFCO Dante Balrog	BFCO_Attack1.hkx	dante enable sword	bvh\Gauntlet\bfco_attack1__8.bvh
+Gauntlet/mt_jumpfall	Gauntlet			1.733	52	29.42	[]				BFCO Dante Balrog	mt_jumpfall.HKX	jump fall land	bvh\Gauntlet\mt_jumpfall.bvh
+Gauntlet/mt_jumpfallleft	Gauntlet			1.733	52	29.42	[]				BFCO Dante Balrog	mt_jumpfallleft.HKX	jump fall land	bvh\Gauntlet\mt_jumpfallleft.bvh
+Gauntlet/mt_jumpland	Gauntlet			0.667	20	28.5	[]				BFCO Dante Balrog	mt_jumpland.hkx	jump fall land	bvh\Gauntlet\mt_jumpland.bvh
+Gauntlet/mt_jump	Gauntlet			1.333	40	29.25	[]				BFCO Dante Balrog	mt_jump.HKX	jump forward	bvh\Gauntlet\mt_jump.bvh
+Gauntlet/mt_jump__2	Gauntlet			1.267	38	29.21	[]				BFCO Dante Balrog	mt_jump.HKX	jump	bvh\Gauntlet\mt_jump__2.bvh
+Gauntlet/bfco_powerattack1__7	Gauntlet	Sky_Gauntlet_42	power	1.167	36	30.0	[0.5]	['RH']	0.5	7.12	BFCO Dante Balrog	BFCO_PowerAttack1.hkx	kick Forward SM	bvh\Gauntlet\bfco_powerattack1__7.bvh
+Gauntlet/bfco_powerattack2__4	Gauntlet	Sky_Gauntlet_43	power	6.233	188	30.0	[0.45, 1.05, 1.6, 1.7, 2.2, 2.35, 2.72, 3.22, 3.4, 3.7]	['LF', 'LF', 'RF', 'RF', 'LF', 'LF', 'LF', 'LF', 'RF', 'LF']	0.45	16.21	BFCO Dante Balrog	BFCO_PowerAttack2.hkx	kick Forward SM	bvh\Gauntlet\bfco_powerattack2__4.bvh
+Gauntlet/bfco_attack1__9	Gauntlet	Sky_Gauntlet_44	attack	1.5	45	29.33	[0.333]	['RF']	0.333	17.4	BFCO Dante Balrog	BFCO_Attack1.hkx	kick Forward	bvh\Gauntlet\bfco_attack1__9.bvh
+Gauntlet/bfco_powerattack1__8	Gauntlet	Sky_Gauntlet_45	power	1.633	50	30.0	[0.3, 0.4]	['LF', 'LF']	0.3	6.69	BFCO Dante Balrog	BFCO_PowerAttack1.hkx	kick back SM	bvh\Gauntlet\bfco_powerattack1__8.bvh
+Gauntlet/bfco_powerattack2__5	Gauntlet	Sky_Gauntlet_46	power	1.633	50	30.0	[0.3, 0.4]	['LF', 'LF']	0.3	6.69	BFCO Dante Balrog	BFCO_PowerAttack2.hkx	kick back SM	bvh\Gauntlet\bfco_powerattack2__5.bvh
+Gauntlet/bfco_attack1__10	Gauntlet	Sky_Gauntlet_47	attack	1.5	45	29.33	[0.267]	['RH']	0.267	5.99	BFCO Dante Balrog	BFCO_Attack1.HKX	kick back air	bvh\Gauntlet\bfco_attack1__10.bvh
+Gauntlet/bfco_attack1__11	Gauntlet			1.5	90	59.33	[]				BFCO Dante Balrog	BFCO_Attack1.HKX	kick back	bvh\Gauntlet\bfco_attack1__11.bvh
+SwordC/1hm_blockidle	SwordC			3.333	200	59.7	[]				BFCO MCO Phantom Blade Zero Sword SANGUINE V1.0	1hm_blockidle.hkx	PBZ-Sword-SANGUINE BASE	bvh\SwordC\1hm_blockidle.bvh
+SwordC/1hm_idle	SwordC			5.2	312	59.81	[]				BFCO MCO Phantom Blade Zero Sword SANGUINE V1.0	1hm_idle.hkx	PBZ-Sword-SANGUINE BASE	bvh\SwordC\1hm_idle.bvh
+SwordC/1hm_runbackward	SwordC			0.683	41	58.54	[]				BFCO MCO Phantom Blade Zero Sword SANGUINE V1.0	1hm_runbackward.hkx	PBZ-Sword-SANGUINE BASE	bvh\SwordC\1hm_runbackward.bvh
+SwordC/1hm_runforward	SwordC			0.65	39	58.46	[]				BFCO MCO Phantom Blade Zero Sword SANGUINE V1.0	1hm_runforward.hkx	PBZ-Sword-SANGUINE BASE	bvh\SwordC\1hm_runforward.bvh
+SwordC/1hm_runforwardleft	SwordC			0.65	39	58.46	[]				BFCO MCO Phantom Blade Zero Sword SANGUINE V1.0	1hm_runforwardleft.hkx	PBZ-Sword-SANGUINE BASE	bvh\SwordC\1hm_runforwardleft.bvh
+SwordC/1hm_runleft	SwordC			0.65	39	58.46	[]				BFCO MCO Phantom Blade Zero Sword SANGUINE V1.0	1hm_runleft.hkx	PBZ-Sword-SANGUINE BASE	bvh\SwordC\1hm_runleft.bvh
+SwordC/1hm_runright	SwordC			0.65	39	58.46	[]				BFCO MCO Phantom Blade Zero Sword SANGUINE V1.0	1hm_runright.hkx	PBZ-Sword-SANGUINE BASE	bvh\SwordC\1hm_runright.bvh
+SwordC/1hm_runstrafeleft	SwordC			1.517	91	59.34	[]				BFCO MCO Phantom Blade Zero Sword SANGUINE V1.0	1hm_runstrafeleft.hkx	PBZ-Sword-SANGUINE BASE	bvh\SwordC\1hm_runstrafeleft.bvh
+SwordC/1hm_runstraferight	SwordC			1.483	89	59.33	[]				BFCO MCO Phantom Blade Zero Sword SANGUINE V1.0	1hm_runstraferight.hkx	PBZ-Sword-SANGUINE BASE	bvh\SwordC\1hm_runstraferight.bvh
+SwordC/1hm_walkbackward	SwordC			1.783	107	59.44	[]				BFCO MCO Phantom Blade Zero Sword SANGUINE V1.0	1hm_walkbackward.hkx	PBZ-Sword-SANGUINE BASE	bvh\SwordC\1hm_walkbackward.bvh
+SwordC/1hm_walkforward	SwordC			1.583	95	59.37	[]				BFCO MCO Phantom Blade Zero Sword SANGUINE V1.0	1hm_walkforward.hkx	PBZ-Sword-SANGUINE BASE	bvh\SwordC\1hm_walkforward.bvh
+SwordC/bfco_attack1	SwordC	Sky_SwordC_1	attack	2.083	125	59.52	[0.267]	['WPN']	0.267	23.39	BFCO MCO Phantom Blade Zero Sword SANGUINE V1.0	BFCO_Attack1.hkx	PBZ-Sword-SANGUINE BASE	bvh\SwordC\bfco_attack1.bvh
+SwordC/bfco_attack2	SwordC	Sky_SwordC_2	attack	2.6	156	59.62	[0.483]	['WPN']	0.483	23.1	BFCO MCO Phantom Blade Zero Sword SANGUINE V1.0	BFCO_Attack2.hkx	PBZ-Sword-SANGUINE BASE	bvh\SwordC\bfco_attack2.bvh
+SwordC/bfco_attack3	SwordC	Sky_SwordC_3	attack	2.65	159	59.62	[0.617]	['WPN']	0.617	28.42	BFCO MCO Phantom Blade Zero Sword SANGUINE V1.0	BFCO_Attack3.hkx	PBZ-Sword-SANGUINE BASE	bvh\SwordC\bfco_attack3.bvh
+SwordC/bfco_attack4	SwordC	Sky_SwordC_4	attack	2.55	153	59.61	[0.483]	['WPN']	0.483	18.05	BFCO MCO Phantom Blade Zero Sword SANGUINE V1.0	BFCO_Attack4.hkx	PBZ-Sword-SANGUINE BASE	bvh\SwordC\bfco_attack4.bvh
+SwordC/bfco_attack5	SwordC	Sky_SwordC_5	attack	2.833	170	59.65	[0.5]	['WPN']	0.5	23.77	BFCO MCO Phantom Blade Zero Sword SANGUINE V1.0	BFCO_Attack5.hkx	PBZ-Sword-SANGUINE BASE	bvh\SwordC\bfco_attack5.bvh
+SwordC/bfco_attack6	SwordC	Sky_SwordC_6	attack	3.7	222	59.73	[0.617, 1.05]	['RH', 'WPN']	0.617	12.02	BFCO MCO Phantom Blade Zero Sword SANGUINE V1.0	BFCO_Attack6.hkx	PBZ-Sword-SANGUINE BASE	bvh\SwordC\bfco_attack6.bvh
+SwordC/bfco_jumpattack	SwordC	Sky_SwordC_7	jump	3.8	228	59.74	[1.033]	['WPN']	1.033	9.94	BFCO MCO Phantom Blade Zero Sword SANGUINE V1.0	BFCO_JumpAttack.hkx	PBZ-Sword-SANGUINE BASE	bvh\SwordC\bfco_jumpattack.bvh
+SwordC/bfco_powerattack1	SwordC	Sky_SwordC_8	power	3.583	215	59.72	[0.783]	['WPN']	0.783	30.01	BFCO MCO Phantom Blade Zero Sword SANGUINE V1.0	BFCO_PowerAttack1.hkx	PBZ-Sword-SANGUINE BASE	bvh\SwordC\bfco_powerattack1.bvh
+SwordC/bfco_powerattack10	SwordC	Sky_SwordC_9	power	3.417	205	59.71	[0.75]	['WPN']	0.75	26.69	BFCO MCO Phantom Blade Zero Sword SANGUINE V1.0	BFCO_PowerAttack10.hkx	PBZ-Sword-SANGUINE BASE	bvh\SwordC\bfco_powerattack10.bvh
+SwordC/bfco_powerattack11	SwordC	Sky_SwordC_10	power	5.233	314	59.81	[0.583, 1.517, 2.583]	['WPN', 'WPN', 'RH']	0.583	26.42	BFCO MCO Phantom Blade Zero Sword SANGUINE V1.0	BFCO_PowerAttack11.hkx	PBZ-Sword-SANGUINE BASE	bvh\SwordC\bfco_powerattack11.bvh
+SwordC/bfco_powerattack2	SwordC	Sky_SwordC_11	power	3.033	182	59.67	[0.85]	['WPN']	0.85	19.25	BFCO MCO Phantom Blade Zero Sword SANGUINE V1.0	BFCO_PowerAttack2.hkx	PBZ-Sword-SANGUINE BASE	bvh\SwordC\bfco_powerattack2.bvh
+SwordC/bfco_powerattack3	SwordC	Sky_SwordC_12	power	2.633	158	59.62	[0.767]	['WPN']	0.767	16.39	BFCO MCO Phantom Blade Zero Sword SANGUINE V1.0	BFCO_PowerAttack3.hkx	PBZ-Sword-SANGUINE BASE	bvh\SwordC\bfco_powerattack3.bvh
+SwordC/bfco_powerattack4	SwordC	Sky_SwordC_13	power	5.167	310	59.81	[0.517, 1.117, 1.85]	['WPN', 'WPN', 'WPN']	0.517	17.54	BFCO MCO Phantom Blade Zero Sword SANGUINE V1.0	BFCO_PowerAttack4.hkx	PBZ-Sword-SANGUINE BASE	bvh\SwordC\bfco_powerattack4.bvh
+SwordC/bfco_powerattack5	SwordC	Sky_SwordC_14	power	3.317	199	59.7	[0.417, 1.2]	['WPN', 'WPN']	0.417	28.45	BFCO MCO Phantom Blade Zero Sword SANGUINE V1.0	BFCO_PowerAttack5.hkx	PBZ-Sword-SANGUINE BASE	bvh\SwordC\bfco_powerattack5.bvh
+SwordC/bfco_powerattack6	SwordC	Sky_SwordC_15	power	2.633	158	59.62	[0.283, 1.017]	['WPN', 'RH']	0.283	11.02	BFCO MCO Phantom Blade Zero Sword SANGUINE V1.0	BFCO_PowerAttack6.hkx	PBZ-Sword-SANGUINE BASE	bvh\SwordC\bfco_powerattack6.bvh
+SwordC/bfco_powerattack7	SwordC	Sky_SwordC_16	power	2.983	179	59.66	[1.05]	['WPN']	1.05	23.64	BFCO MCO Phantom Blade Zero Sword SANGUINE V1.0	BFCO_PowerAttack7.hkx	PBZ-Sword-SANGUINE BASE	bvh\SwordC\bfco_powerattack7.bvh
+SwordC/bfco_powerattack8	SwordC	Sky_SwordC_17	power	3.333	200	59.7	[0.533, 0.883, 1.5]	['WPN', 'WPN', 'WPN']	0.533	39.45	BFCO MCO Phantom Blade Zero Sword SANGUINE V1.0	BFCO_PowerAttack8.hkx	PBZ-Sword-SANGUINE BASE	bvh\SwordC\bfco_powerattack8.bvh
+SwordC/bfco_powerattack9	SwordC	Sky_SwordC_18	power	3.167	190	59.68	[0.467, 1.1]	['WPN', 'LF']	0.467	17.04	BFCO MCO Phantom Blade Zero Sword SANGUINE V1.0	BFCO_PowerAttack9.hkx	PBZ-Sword-SANGUINE BASE	bvh\SwordC\bfco_powerattack9.bvh
+SwordC/bfco_sprintattack	SwordC	Sky_SwordC_19	sprint	2.2	132	59.55	[0.533]	['WPN']	0.533	19.32	BFCO MCO Phantom Blade Zero Sword SANGUINE V1.0	BFCO_SprintAttack.hkx	PBZ-Sword-SANGUINE BASE	bvh\SwordC\bfco_sprintattack.bvh
+SwordC/dodgeback	SwordC			0.733	44	58.64	[]				BFCO MCO Phantom Blade Zero Sword SANGUINE V1.0	DodgeBack.HKX	PBZ-Sword-SANGUINE BASE	bvh\SwordC\dodgeback.bvh
+SwordC/dodgeleft	SwordC			0.733	44	58.64	[]				BFCO MCO Phantom Blade Zero Sword SANGUINE V1.0	DodgeLeft.HKX	PBZ-Sword-SANGUINE BASE	bvh\SwordC\dodgeleft.bvh
+SwordC/dodgeright	SwordC			0.733	44	58.64	[]				BFCO MCO Phantom Blade Zero Sword SANGUINE V1.0	DodgeRight.HKX	PBZ-Sword-SANGUINE BASE	bvh\SwordC\dodgeright.bvh
+SwordC/mco_dodge-b-1	SwordC			0.733	44	58.64	[]				BFCO MCO Phantom Blade Zero Sword SANGUINE V1.0	MCO_Dodge-B-1.HKX	PBZ-Sword-SANGUINE BASE	bvh\SwordC\mco_dodge-b-1.bvh
+SwordC/mco_dodge-b-2	SwordC			1.05	63	59.05	[]				BFCO MCO Phantom Blade Zero Sword SANGUINE V1.0	MCO_Dodge-B-2.HKX	PBZ-Sword-SANGUINE BASE	bvh\SwordC\mco_dodge-b-2.bvh
+SwordC/mco_dodge-f-1	SwordC			0.733	44	58.64	[]				BFCO MCO Phantom Blade Zero Sword SANGUINE V1.0	MCO_Dodge-F-1.HKX	PBZ-Sword-SANGUINE BASE	bvh\SwordC\mco_dodge-f-1.bvh
+SwordC/mco_dodge-f-2	SwordC			1.05	63	59.05	[]				BFCO MCO Phantom Blade Zero Sword SANGUINE V1.0	MCO_Dodge-F-2.HKX	PBZ-Sword-SANGUINE BASE	bvh\SwordC\mco_dodge-f-2.bvh
+SwordC/mco_dodge-l-1	SwordC			0.733	44	58.64	[]				BFCO MCO Phantom Blade Zero Sword SANGUINE V1.0	MCO_Dodge-L-1.HKX	PBZ-Sword-SANGUINE BASE	bvh\SwordC\mco_dodge-l-1.bvh
+SwordC/mco_dodge-l-2	SwordC			1.05	63	59.05	[]				BFCO MCO Phantom Blade Zero Sword SANGUINE V1.0	MCO_Dodge-L-2.HKX	PBZ-Sword-SANGUINE BASE	bvh\SwordC\mco_dodge-l-2.bvh
+SwordC/mco_dodge-lb-1	SwordC			0.733	44	58.64	[]				BFCO MCO Phantom Blade Zero Sword SANGUINE V1.0	MCO_Dodge-LB-1.HKX	PBZ-Sword-SANGUINE BASE	bvh\SwordC\mco_dodge-lb-1.bvh
+SwordC/mco_dodge-lf-1	SwordC			0.733	44	58.64	[]				BFCO MCO Phantom Blade Zero Sword SANGUINE V1.0	MCO_Dodge-LF-1.HKX	PBZ-Sword-SANGUINE BASE	bvh\SwordC\mco_dodge-lf-1.bvh
+SwordC/mco_dodge-r-1	SwordC			0.733	44	58.64	[]				BFCO MCO Phantom Blade Zero Sword SANGUINE V1.0	MCO_Dodge-R-1.HKX	PBZ-Sword-SANGUINE BASE	bvh\SwordC\mco_dodge-r-1.bvh
+SwordC/mco_dodge-r-2	SwordC			1.05	63	59.05	[]				BFCO MCO Phantom Blade Zero Sword SANGUINE V1.0	MCO_Dodge-R-2.HKX	PBZ-Sword-SANGUINE BASE	bvh\SwordC\mco_dodge-r-2.bvh
+SwordC/mco_dodge-rb-1	SwordC			0.733	44	58.64	[]				BFCO MCO Phantom Blade Zero Sword SANGUINE V1.0	MCO_Dodge-RB-1.HKX	PBZ-Sword-SANGUINE BASE	bvh\SwordC\mco_dodge-rb-1.bvh
+SwordC/mco_dodge-rf-1	SwordC			0.733	44	58.64	[]				BFCO MCO Phantom Blade Zero Sword SANGUINE V1.0	MCO_Dodge-RF-1.HKX	PBZ-Sword-SANGUINE BASE	bvh\SwordC\mco_dodge-rf-1.bvh
+SwordC/mco_dodgebackward1	SwordC			0.733	44	58.64	[]				BFCO MCO Phantom Blade Zero Sword SANGUINE V1.0	MCO_DodgeBackward1.HKX	PBZ-Sword-SANGUINE BASE	bvh\SwordC\mco_dodgebackward1.bvh
+SwordC/mco_dodgebackward2	SwordC			1.05	63	59.05	[]				BFCO MCO Phantom Blade Zero Sword SANGUINE V1.0	MCO_DodgeBackward2.HKX	PBZ-Sword-SANGUINE BASE	bvh\SwordC\mco_dodgebackward2.bvh
+SwordC/mco_dodgeforward1	SwordC			0.733	44	58.64	[]				BFCO MCO Phantom Blade Zero Sword SANGUINE V1.0	MCO_DodgeForward1.HKX	PBZ-Sword-SANGUINE BASE	bvh\SwordC\mco_dodgeforward1.bvh
+SwordC/mco_dodgeforward2	SwordC			1.05	63	59.05	[]				BFCO MCO Phantom Blade Zero Sword SANGUINE V1.0	MCO_DodgeForward2.HKX	PBZ-Sword-SANGUINE BASE	bvh\SwordC\mco_dodgeforward2.bvh
+SwordC/mco_dodgeleft1	SwordC			0.733	44	58.64	[]				BFCO MCO Phantom Blade Zero Sword SANGUINE V1.0	MCO_DodgeLeft1.HKX	PBZ-Sword-SANGUINE BASE	bvh\SwordC\mco_dodgeleft1.bvh
+SwordC/mco_dodgeleft2	SwordC			1.05	63	59.05	[]				BFCO MCO Phantom Blade Zero Sword SANGUINE V1.0	MCO_DodgeLeft2.HKX	PBZ-Sword-SANGUINE BASE	bvh\SwordC\mco_dodgeleft2.bvh
+SwordC/mco_dodgeright1	SwordC			0.733	44	58.64	[]				BFCO MCO Phantom Blade Zero Sword SANGUINE V1.0	MCO_DodgeRight1.HKX	PBZ-Sword-SANGUINE BASE	bvh\SwordC\mco_dodgeright1.bvh
+SwordC/mco_dodgeright2	SwordC			1.05	63	59.05	[]				BFCO MCO Phantom Blade Zero Sword SANGUINE V1.0	MCO_DodgeRight2.HKX	PBZ-Sword-SANGUINE BASE	bvh\SwordC\mco_dodgeright2.bvh
+SwordC/stepdodgeforward	SwordC			0.733	44	58.64	[]				BFCO MCO Phantom Blade Zero Sword SANGUINE V1.0	StepDodgeForward.HKX	PBZ-Sword-SANGUINE BASE	bvh\SwordC\stepdodgeforward.bvh
+SwordC/mco_dodge_attack1	SwordC	Sky_SwordC_20	dodge	2.2	132	59.55	[0.533]	['WPN']	0.533	19.32	BFCO MCO Phantom Blade Zero Sword SANGUINE V1.0	mco_dodge_attack1.hkx	PBZ-Sword-SANGUINE BASE	bvh\SwordC\mco_dodge_attack1.bvh
+SwordC/mco_weaponart	SwordC			9.783	587	59.9	[0.633, 2.783, 4.317, 6.117]				BFCO MCO Phantom Blade Zero Sword SANGUINE V1.0	mco_weaponart.hkx	PBZ-Sword-SANGUINE BASE	bvh\SwordC\mco_weaponart.bvh
+SwordC/mco_dodge-b-2__2	SwordC			1.15	69	59.13	[]				BFCO MCO Phantom Blade Zero Sword SANGUINE V1.0	MCO_Dodge-B-2.HKX	PBZ_1hm_DefenceB	bvh\SwordC\mco_dodge-b-2__2.bvh
+SwordC/mco_dodge-f-2__2	SwordC			1.15	69	59.13	[]				BFCO MCO Phantom Blade Zero Sword SANGUINE V1.0	MCO_Dodge-F-2.HKX	PBZ_1hm_DefenceB	bvh\SwordC\mco_dodge-f-2__2.bvh
+SwordC/mco_dodge-l-2__2	SwordC			1.15	69	59.13	[]				BFCO MCO Phantom Blade Zero Sword SANGUINE V1.0	MCO_Dodge-L-2.HKX	PBZ_1hm_DefenceB	bvh\SwordC\mco_dodge-l-2__2.bvh
+SwordC/mco_dodge-r-2__2	SwordC			1.15	69	59.13	[]				BFCO MCO Phantom Blade Zero Sword SANGUINE V1.0	MCO_Dodge-R-2.HKX	PBZ_1hm_DefenceB	bvh\SwordC\mco_dodge-r-2__2.bvh
+SwordC/mco_dodgebackward2__2	SwordC			1.15	69	59.13	[]				BFCO MCO Phantom Blade Zero Sword SANGUINE V1.0	MCO_DodgeBackward2.HKX	PBZ_1hm_DefenceB	bvh\SwordC\mco_dodgebackward2__2.bvh
+SwordC/mco_dodgeforward2__2	SwordC			1.15	69	59.13	[]				BFCO MCO Phantom Blade Zero Sword SANGUINE V1.0	MCO_DodgeForward2.HKX	PBZ_1hm_DefenceB	bvh\SwordC\mco_dodgeforward2__2.bvh
+SwordC/mco_dodgeleft2__2	SwordC			1.15	69	59.13	[]				BFCO MCO Phantom Blade Zero Sword SANGUINE V1.0	MCO_DodgeLeft2.HKX	PBZ_1hm_DefenceB	bvh\SwordC\mco_dodgeleft2__2.bvh
+SwordC/mco_dodgeright2__2	SwordC			1.15	69	59.13	[]				BFCO MCO Phantom Blade Zero Sword SANGUINE V1.0	MCO_DodgeRight2.HKX	PBZ_1hm_DefenceB	bvh\SwordC\mco_dodgeright2__2.bvh
+Mech/1hm_idle	Mech			3.3	100	30.0	[]				MCO Dwemer Cyborg Unarmed Moveset	1hm_idle.hkx	ULTIMATE GENOS TEST MOVESET - ALT	bvh\Mech\1hm_idle.bvh
+Mech/1hm_sprintforward	Mech			2.333	71	30.0	[]				MCO Dwemer Cyborg Unarmed Moveset	1hm_sprintforward.hkx	ULTIMATE GENOS TEST MOVESET - ALT	bvh\Mech\1hm_sprintforward.bvh
+Mech/scar_1hmreadydummy	Mech			6.333	190	29.84	[]				MCO Dwemer Cyborg Unarmed Moveset	SCAR_1hmReadyDummy.hkx	ULTIMATE GENOS TEST MOVESET - ALT	bvh\Mech\scar_1hmreadydummy.bvh
+Mech/sneakrun_forwardroll	Mech			0.833	26	30.0	[]				MCO Dwemer Cyborg Unarmed Moveset	sneakrun_forwardroll.hkx	TKDodge	bvh\Mech\sneakrun_forwardroll.bvh
+Mech/mt_sprintforward	Mech			3.3	100	30.0	[]				MCO Dwemer Cyborg Unarmed Moveset	mt_sprintforward.hkx	male	bvh\Mech\mt_sprintforward.bvh
+Mech/mco_attack1	Mech	Sky_Mech_1	attack	0.967	30	30.0	[0.3]	['RH']	0.3	11.5	MCO Dwemer Cyborg Unarmed Moveset	mco_attack1.hkx	ULTIMATE GENOS TEST MOVESET - ALT	bvh\Mech\mco_attack1.bvh
+Mech/mco_attack10	Mech	Sky_Mech_2	attack	3.3	100	30.0	[0.267]	['RH']	0.267	14.53	MCO Dwemer Cyborg Unarmed Moveset	mco_attack10.hkx	ULTIMATE GENOS TEST MOVESET - ALT	bvh\Mech\mco_attack10.bvh
+Mech/mco_attack2	Mech	Sky_Mech_3	attack	1.3	40	30.0	[0.167, 0.733]	['LH', 'RF']	0.167	13.95	MCO Dwemer Cyborg Unarmed Moveset	mco_attack2.hkx	ULTIMATE GENOS TEST MOVESET - ALT	bvh\Mech\mco_attack2.bvh
+Mech/mco_attack3	Mech	Sky_Mech_4	attack	1.633	50	30.0	[0.433, 0.867]	['LF', 'LF']	0.433	8.07	MCO Dwemer Cyborg Unarmed Moveset	mco_attack3.hkx	ULTIMATE GENOS TEST MOVESET - ALT	bvh\Mech\mco_attack3.bvh
+Mech/mco_attack4	Mech	Sky_Mech_5	attack	1.3	40	30.0	[0.433]	['LF']	0.433	21.28	MCO Dwemer Cyborg Unarmed Moveset	mco_attack4.hkx	ULTIMATE GENOS TEST MOVESET - ALT	bvh\Mech\mco_attack4.bvh
+Mech/mco_attack5	Mech			1.967	60	30.0	[]				MCO Dwemer Cyborg Unarmed Moveset	mco_attack5.hkx	ULTIMATE GENOS TEST MOVESET - ALT	bvh\Mech\mco_attack5.bvh
+Mech/mco_attack6	Mech			1.5	46	30.0	[]				MCO Dwemer Cyborg Unarmed Moveset	mco_attack6.hkx	ULTIMATE GENOS TEST MOVESET - ALT	bvh\Mech\mco_attack6.bvh
+Mech/mco_attack7	Mech	Sky_Mech_6	attack	1.3	40	30.0	[0.267, 0.567]	['RH', 'LH']	0.267	16.06	MCO Dwemer Cyborg Unarmed Moveset	mco_attack7.hkx	ULTIMATE GENOS TEST MOVESET - ALT	bvh\Mech\mco_attack7.bvh
+Mech/mco_attack8	Mech	Sky_Mech_7	attack	1.3	40	30.0	[0.267, 0.567]	['RH', 'RF']	0.267	11.78	MCO Dwemer Cyborg Unarmed Moveset	mco_attack8.hkx	ULTIMATE GENOS TEST MOVESET - ALT	bvh\Mech\mco_attack8.bvh
+Mech/mco_attack9	Mech	Sky_Mech_8	attack	0.967	30	30.0	[0.267]	['LH']	0.267	9.39	MCO Dwemer Cyborg Unarmed Moveset	mco_attack9.hkx	ULTIMATE GENOS TEST MOVESET - ALT	bvh\Mech\mco_attack9.bvh
+Mech/mco_powerattack1	Mech	Sky_Mech_9	power	0.967	30	30.0	[0.433]	['RH']	0.433	11.54	MCO Dwemer Cyborg Unarmed Moveset	mco_powerattack1.hkx	ULTIMATE GENOS TEST MOVESET - ALT	bvh\Mech\mco_powerattack1.bvh
+Mech/mco_powerattack2	Mech	Sky_Mech_10	power	1.633	50	30.0	[0.433]	['LH']	0.433	4.4	MCO Dwemer Cyborg Unarmed Moveset	mco_powerattack2.hkx	ULTIMATE GENOS TEST MOVESET - ALT	bvh\Mech\mco_powerattack2.bvh
+Mech/mco_powerattack3	Mech			3.3	100	30.0	[]				MCO Dwemer Cyborg Unarmed Moveset	mco_powerattack3.hkx	ULTIMATE GENOS TEST MOVESET - ALT	bvh\Mech\mco_powerattack3.bvh
+Mech/mco_powerattack4	Mech	Sky_Mech_11	power	1.3	40	30.0	[0.633]	['LH']	0.633	11.86	MCO Dwemer Cyborg Unarmed Moveset	mco_powerattack4.hkx	ULTIMATE GENOS TEST MOVESET - ALT	bvh\Mech\mco_powerattack4.bvh
+Mech/mco_powerattack4backup	Mech	Sky_Mech_12	power	1.333	40	29.25	[0.567]	['RH']	0.567	28.91	MCO Dwemer Cyborg Unarmed Moveset	mco_powerattack4backup.hkx	ULTIMATE GENOS TEST MOVESET - ALT	bvh\Mech\mco_powerattack4backup.bvh
+Mech/mco_powerattack5	Mech	Sky_Mech_13	power	3.3	100	30.0	[0.267]	['RH']	0.267	0.18	MCO Dwemer Cyborg Unarmed Moveset	mco_powerattack5.hkx	ULTIMATE GENOS TEST MOVESET - ALT	bvh\Mech\mco_powerattack5.bvh
+Mech/mco_weaponart	Mech			2.8	85	30.0	[0.233, 0.333, 0.433, 0.533, 0.633, 0.733, 0.833, 0.933, 1.033, 1.133, 1.233, 1.333, 1.433, 1.533, 1.633, 1.733, 1.833, 1.933, 2.167]				MCO Dwemer Cyborg Unarmed Moveset	mco_weaponart.hkx	ULTIMATE GENOS TEST MOVESET - ALT	bvh\Mech\mco_weaponart.bvh
+Mech/mco_attack3__2	Mech	Sky_Mech_14	attack	1.633	50	30.0	[0.433, 0.867]	['LF', 'LF']	0.433	9.94	MCO Dwemer Cyborg Unarmed Moveset	mco_attack3.hkx	ULTIMATE GENOS TEST MOVESET	bvh\Mech\mco_attack3__2.bvh
+Mech/1h_1st_stagger	Mech			3.7	112	30.0	[]				MCO Dwemer Cyborg Unarmed Moveset	1H_1st_stagger.HKX	ULTIMATE STAGGER FALL 1	bvh\Mech\1h_1st_stagger.bvh
+Mech/light_dodge	Mech			6.667	200	29.85	[]				MCO Dwemer Cyborg Unarmed Moveset	Light_Dodge.HKX	ULTIMATE STAGGER FALL 1	bvh\Mech\light_dodge.bvh
+Mech/nn_magflinchc	Mech			2.967	178	59.66	[]				MCO Dwemer Cyborg Unarmed Moveset	NN_MagFlinchC.hkx	ULTIMATE STAGGER FALL 1	bvh\Mech\nn_magflinchc.bvh
+Mech/1h_1st_stagger__2	Mech			4.967	150	30.0	[]				MCO Dwemer Cyborg Unarmed Moveset	1H_1st_stagger.HKX	ULTIMATE STAGGER FLY 1	bvh\Mech\1h_1st_stagger__2.bvh
+Mech/1h_1st_stagger__3	Mech			4.967	150	30.0	[]				MCO Dwemer Cyborg Unarmed Moveset	1H_1st_stagger.HKX	ULTIMATE STAGGER FLYING 1	bvh\Mech\1h_1st_stagger__3.bvh
+Mech/1h_1st_stagger__4	Mech			3.633	110	30.0	[]				MCO Dwemer Cyborg Unarmed Moveset	1H_1st_stagger.hkx	ULTIMATE STAGGER HOVER 2	bvh\Mech\1h_1st_stagger__4.bvh
+UnarmedB/1hm_idle	UnarmedB			5.0	151	30.0	[]				MCO Eryx Inspired Unarmed Moveset	1hm_idle.hkx	ERYX MOVESET BASE	bvh\UnarmedB\1hm_idle.bvh
+UnarmedB/scar_1hmreadydummy	UnarmedB			6.333	190	29.84	[]				MCO Eryx Inspired Unarmed Moveset	SCAR_1hmReadyDummy.hkx	ERYX MOVESET BASE	bvh\UnarmedB\scar_1hmreadydummy.bvh
+UnarmedB/dodgeleft	UnarmedB			0.867	27	30.0	[]				MCO Eryx Inspired Unarmed Moveset	dodgeleft.hkx	TKDodge	bvh\UnarmedB\dodgeleft.bvh
+UnarmedB/stepdodgeleft	UnarmedB			0.7	22	30.0	[]				MCO Eryx Inspired Unarmed Moveset	stepdodgeleft.hkx	TKDodge	bvh\UnarmedB\stepdodgeleft.bvh
+UnarmedB/stepdodgeright	UnarmedB			0.7	22	30.0	[]				MCO Eryx Inspired Unarmed Moveset	stepdodgeright.hkx	TKDodge	bvh\UnarmedB\stepdodgeright.bvh
+UnarmedB/mco_attack1	UnarmedB			1.333	41	30.0	[0.3]				MCO Eryx Inspired Unarmed Moveset	mco_attack1.hkx	ERYX MOVESET BASE	bvh\UnarmedB\mco_attack1.bvh
+UnarmedB/mco_attack2	UnarmedB			1.333	41	30.0	[0.3]				MCO Eryx Inspired Unarmed Moveset	mco_attack2.hkx	ERYX MOVESET BASE	bvh\UnarmedB\mco_attack2.bvh
+UnarmedB/mco_attack3	UnarmedB			1.333	41	30.0	[0.467]				MCO Eryx Inspired Unarmed Moveset	mco_attack3.hkx	ERYX MOVESET BASE	bvh\UnarmedB\mco_attack3.bvh
+UnarmedB/mco_attack4	UnarmedB			2.0	61	30.0	[0.767]				MCO Eryx Inspired Unarmed Moveset	mco_attack4.hkx	ERYX MOVESET BASE	bvh\UnarmedB\mco_attack4.bvh
+UnarmedB/mco_attack6	UnarmedB			1.333	41	30.0	[0.467]				MCO Eryx Inspired Unarmed Moveset	mco_attack6.hkx	ERYX MOVESET BASE	bvh\UnarmedB\mco_attack6.bvh
+UnarmedB/mco_powerattack1	UnarmedB			2.667	81	30.0	[1.633]				MCO Eryx Inspired Unarmed Moveset	mco_powerattack1.hkx	ERYX MOVESET BASE	bvh\UnarmedB\mco_powerattack1.bvh
+UnarmedB/mco_powerattack2	UnarmedB			2.667	81	30.0	[1.633]				MCO Eryx Inspired Unarmed Moveset	mco_powerattack2.hkx	ERYX MOVESET BASE	bvh\UnarmedB\mco_powerattack2.bvh
+UnarmedB/mco_powerattack3	UnarmedB			2.667	81	30.0	[1.8]				MCO Eryx Inspired Unarmed Moveset	mco_powerattack3.hkx	ERYX MOVESET BASE	bvh\UnarmedB\mco_powerattack3.bvh
+UnarmedB/mco_sprintattack	UnarmedB			1.333	80	59.25	[]				MCO Eryx Inspired Unarmed Moveset	mco_sprintattack.HKX	ERYX MOVESET BASE	bvh\UnarmedB\mco_sprintattack.bvh
+UnarmedB/mco_sprintpowerattack	UnarmedB	Sky_UnarmedB_1	sprint	1.333	80	59.25	[0.7]	['RH']	0.7	2.45	MCO Eryx Inspired Unarmed Moveset	mco_sprintpowerattack.HKX	ERYX MOVESET BASE	bvh\UnarmedB\mco_sprintpowerattack.bvh
+UnarmedB/mco_weaponart	UnarmedB			2.2	66	29.55	[]				MCO Eryx Inspired Unarmed Moveset	mco_weaponart.HKX	ERYX MOVESET BASE	bvh\UnarmedB\mco_weaponart.bvh
+UnarmedB/mt_sprintforward	UnarmedB			0.617	37	58.38	[]				MCO Eryx Inspired Unarmed Moveset	mt_sprintforward.hkx	ERYX MOVESET BASE	bvh\UnarmedB\mt_sprintforward.bvh
+UnarmedB/shd_blockanticipate	UnarmedB			0.333	10	27.0	[]				MCO Eryx Inspired Unarmed Moveset	shd_blockanticipate.hkx	ERYX MOVESET BASE	bvh\UnarmedB\shd_blockanticipate.bvh
+UnarmedB/shd_blockhit	UnarmedB			0.333	10	27.0	[]				MCO Eryx Inspired Unarmed Moveset	shd_blockhit.hkx	ERYX MOVESET BASE	bvh\UnarmedB\shd_blockhit.bvh
+UnarmedB/shd_blockhit_varc	UnarmedB			0.333	10	27.0	[]				MCO Eryx Inspired Unarmed Moveset	shd_blockhit_varc.hkx	ERYX MOVESET BASE	bvh\UnarmedB\shd_blockhit_varc.bvh
+UnarmedB/mco_attack1__2	UnarmedB			1.0	31	30.0	[]				MCO Eryx Inspired Unarmed Moveset	mco_attack1.hkx	ERYX MOVESET DISTANCE	bvh\UnarmedB\mco_attack1__2.bvh
+UnarmedB/mco_attack2__2	UnarmedB			1.0	30	29.0	[]				MCO Eryx Inspired Unarmed Moveset	mco_attack2.hkx	ERYX MOVESET DISTANCE	bvh\UnarmedB\mco_attack2__2.bvh
+UnarmedB/mco_attack3__2	UnarmedB			1.0	30	29.0	[]				MCO Eryx Inspired Unarmed Moveset	mco_attack3.hkx	ERYX MOVESET DISTANCE	bvh\UnarmedB\mco_attack3__2.bvh
+UnarmedB/mco_attack4__2	UnarmedB			0.733	23	30.0	[]				MCO Eryx Inspired Unarmed Moveset	mco_attack4.hkx	ERYX MOVESET DISTANCE	bvh\UnarmedB\mco_attack4__2.bvh
+UnarmedB/mco_attack5	UnarmedB			1.233	38	30.0	[]				MCO Eryx Inspired Unarmed Moveset	mco_attack5.hkx	ERYX MOVESET DISTANCE	bvh\UnarmedB\mco_attack5.bvh
+UnarmedB/mco_attack6__2	UnarmedB	Sky_UnarmedB_2	attack	1.429	18	11.9	[0.76]	['RH']	0.76	6.57	MCO Eryx Inspired Unarmed Moveset	mco_attack6.hkx	ERYX MOVESET DISTANCE	bvh\UnarmedB\mco_attack6__2.bvh
+UnarmedB/mco_attack7	UnarmedB	Sky_UnarmedB_3	attack	3.9	118	30.0	[0.85, 1.5, 1.8, 1.97, 2.23, 2.81]	['RH', 'RH', 'RH', 'RH', 'RH', 'RH']	0.85	25.49	MCO Eryx Inspired Unarmed Moveset	mco_attack7.hkx	ERYX MOVESET DISTANCE	bvh\UnarmedB\mco_attack7.bvh
+UnarmedB/mco_attack8	UnarmedB	Sky_UnarmedB_4	attack	1.633	50	30.0	[0.53]	['LF']	0.53	9.67	MCO Eryx Inspired Unarmed Moveset	mco_attack8.hkx	ERYX MOVESET DISTANCE	bvh\UnarmedB\mco_attack8.bvh
+UnarmedB/mco_attack9	UnarmedB	Sky_UnarmedB_5	attack	2.367	72	30.0	[0.51, 1.36]	['RF', 'LF']	0.51	9.74	MCO Eryx Inspired Unarmed Moveset	mco_attack9.hkx	ERYX MOVESET DISTANCE	bvh\UnarmedB\mco_attack9.bvh
+UnarmedB/mco_powerattack1__2	UnarmedB			1.0	31	30.0	[]				MCO Eryx Inspired Unarmed Moveset	mco_powerattack1.hkx	ERYX MOVESET DISTANCE	bvh\UnarmedB\mco_powerattack1__2.bvh
+UnarmedB/mco_powerattack2__2	UnarmedB			1.717	103	59.42	[]				MCO Eryx Inspired Unarmed Moveset	mco_powerattack2.HKX	ERYX MOVESET DISTANCE	bvh\UnarmedB\mco_powerattack2__2.bvh
+KickSet/combatidlea	KickSet			1.833	56	30.0	[]				MCO Kamen Rider Ryuki Ver 1	combatidlea.hkx	Kamen Rider BLOCK TO DODGE	bvh\KickSet\combatidlea.bvh
+KickSet/combatidlesmalla	KickSet			0.267	9	30.0	[]				MCO Kamen Rider Ryuki Ver 1	combatidlesmalla.hkx	Kamen Rider BLOCK TO DODGE	bvh\KickSet\combatidlesmalla.bvh
+KickSet/combatidlesmallb	KickSet			0.267	9	30.0	[]				MCO Kamen Rider Ryuki Ver 1	combatidlesmallb.hkx	Kamen Rider BLOCK TO DODGE	bvh\KickSet\combatidlesmallb.bvh
+KickSet/shd_blockidle	KickSet			3.567	108	30.0	[]				MCO Kamen Rider Ryuki Ver 1	shd_blockidle.hkx	Kamen Rider BLOCK TO DODGE	bvh\KickSet\shd_blockidle.bvh
+KickSet/mco_attack1	KickSet	Sky_KickSet_1	attack	1.429	18	11.9	[0.76]	['RH']	0.76	6.57	MCO Kamen Rider Ryuki Ver 1	mco_attack1.hkx	Kamen Rider Black Distance MCO 0	bvh\KickSet\mco_attack1.bvh
+KickSet/mco_attack5	KickSet	Sky_KickSet_2	attack	1.429	18	11.9	[0.76]	['RH']	0.76	6.57	MCO Kamen Rider Ryuki Ver 1	mco_attack5.hkx	Kamen Rider Black Distance MCO 0	bvh\KickSet\mco_attack5.bvh
+KickSet/mco_attack7	KickSet	Sky_KickSet_3	attack	2.367	72	30.0	[0.51, 1.36]	['RF', 'LF']	0.51	9.74	MCO Kamen Rider Ryuki Ver 1	mco_attack7.HKX	Kamen Rider Black Distance MCO 0	bvh\KickSet\mco_attack7.bvh
+KickSet/mco_powerattack1	KickSet	Sky_KickSet_4	power	2.0	60	29.5	[1.533]	['RH']	1.533	9.46	MCO Kamen Rider Ryuki Ver 1	mco_powerattack1.hkx	Kamen Rider Black Distance MCO 0	bvh\KickSet\mco_powerattack1.bvh
+KickSet/mco_powerattack1__2	KickSet			6.667	200	29.85	[]				MCO Kamen Rider Ryuki Ver 1	mco_powerattack1.hkx	Kamen Rider Black Henshin 0	bvh\KickSet\mco_powerattack1__2.bvh
+KickSet/1hm_equip	KickSet			1.3	39	29.23	[]				MCO Kamen Rider Ryuki Ver 1	1hm_equip.hkx	Kamen Rider Black MCO 0	bvh\KickSet\1hm_equip.bvh
+KickSet/1hm_idle	KickSet			4.367	131	29.77	[]				MCO Kamen Rider Ryuki Ver 1	1hm_idle.hkx	Kamen Rider Black MCO 0	bvh\KickSet\1hm_idle.bvh
+KickSet/h2h_locomotionpose	KickSet			8.233	248	30.0	[]				MCO Kamen Rider Ryuki Ver 1	h2h_locomotionpose.hkx	Kamen Rider Black MCO 0	bvh\KickSet\h2h_locomotionpose.bvh
+KickSet/h2h_runforward	KickSet			0.683	41	58.54	[]				MCO Kamen Rider Ryuki Ver 1	h2h_runforward.hkx	male	bvh\KickSet\h2h_runforward.bvh
+KickSet/h2h_runforwardleft	KickSet			0.683	41	58.54	[]				MCO Kamen Rider Ryuki Ver 1	h2h_runforwardleft.hkx	male	bvh\KickSet\h2h_runforwardleft.bvh
+KickSet/h2h_runforwardright	KickSet			0.683	41	58.54	[]				MCO Kamen Rider Ryuki Ver 1	h2h_runforwardright.hkx	male	bvh\KickSet\h2h_runforwardright.bvh
+KickSet/h2h_runleft	KickSet			0.683	41	58.54	[]				MCO Kamen Rider Ryuki Ver 1	h2h_runleft.hkx	male	bvh\KickSet\h2h_runleft.bvh
+KickSet/h2h_runright	KickSet			0.683	41	58.54	[]				MCO Kamen Rider Ryuki Ver 1	h2h_runright.hkx	male	bvh\KickSet\h2h_runright.bvh
+KickSet/h2h_walkforward	KickSet			1.15	69	59.13	[]				MCO Kamen Rider Ryuki Ver 1	h2h_walkforward.hkx	male	bvh\KickSet\h2h_walkforward.bvh
+KickSet/h2h_walkforwardleft	KickSet			1.15	69	59.13	[]				MCO Kamen Rider Ryuki Ver 1	h2h_walkforwardleft.hkx	male	bvh\KickSet\h2h_walkforwardleft.bvh
+KickSet/h2h_walkforwardright	KickSet			1.15	69	59.13	[]				MCO Kamen Rider Ryuki Ver 1	h2h_walkforwardright.hkx	male	bvh\KickSet\h2h_walkforwardright.bvh
+KickSet/h2h_walkleft	KickSet			1.15	69	59.13	[]				MCO Kamen Rider Ryuki Ver 1	h2h_walkleft.hkx	male	bvh\KickSet\h2h_walkleft.bvh
+KickSet/h2h_walkright	KickSet			1.15	69	59.13	[]				MCO Kamen Rider Ryuki Ver 1	h2h_walkright.hkx	male	bvh\KickSet\h2h_walkright.bvh
+KickSet/mt_idle	KickSet			25.017	1501	59.96	[]				MCO Kamen Rider Ryuki Ver 1	mt_idle.hkx	male	bvh\KickSet\mt_idle.bvh
+KickSet/mco_attack1__2	KickSet	Sky_KickSet_5	attack	1.333	40	29.25	[0.3]	['RH']	0.3	11.73	MCO Kamen Rider Ryuki Ver 1	mco_attack1.hkx	Kamen Rider Black MCO 0	bvh\KickSet\mco_attack1__2.bvh
+KickSet/mco_attack10	KickSet	Sky_KickSet_6	attack	1.833	56	30.0	[0.5]	['RF']	0.5	9.66	MCO Kamen Rider Ryuki Ver 1	mco_attack10.hkx	Kamen Rider Black MCO 0	bvh\KickSet\mco_attack10.bvh
+KickSet/mco_attack111	KickSet			9.0	270	29.89	[]				MCO Kamen Rider Ryuki Ver 1	mco_attack111.hkx	Kamen Rider Black MCO 0	bvh\KickSet\mco_attack111.bvh
+KickSet/mco_attack2	KickSet	Sky_KickSet_7	attack	1.333	40	29.25	[0.3]	['LH']	0.3	9.06	MCO Kamen Rider Ryuki Ver 1	mco_attack2.hkx	Kamen Rider Black MCO 0	bvh\KickSet\mco_attack2.bvh
+KickSet/mco_attack3	KickSet	Sky_KickSet_8	attack	1.333	40	29.25	[0.3]	['RH']	0.3	11.5	MCO Kamen Rider Ryuki Ver 1	mco_attack3.hkx	Kamen Rider Black MCO 0	bvh\KickSet\mco_attack3.bvh
+KickSet/mco_attack4	KickSet	Sky_KickSet_9	attack	3.75	90	23.73	[0.5]	['LF']	0.5	8.95	MCO Kamen Rider Ryuki Ver 1	mco_attack4.hkx	Kamen Rider Black MCO 0	bvh\KickSet\mco_attack4.bvh
+KickSet/mco_attack5__2	KickSet	Sky_KickSet_10	attack	1.667	50	29.4	[0.3, 0.567]	['RH', 'LH']	0.3	12.35	MCO Kamen Rider Ryuki Ver 1	mco_attack5.hkx	Kamen Rider Black MCO 0	bvh\KickSet\mco_attack5__2.bvh
+KickSet/mco_attack6	KickSet			1.6	49	30.0	[]				MCO Kamen Rider Ryuki Ver 1	mco_attack6.HKX	Kamen Rider Black MCO 0	bvh\KickSet\mco_attack6.bvh
+KickSet/mco_attack9	KickSet	Sky_KickSet_11	attack	1.667	50	29.4	[0.3, 0.567]	['RH', 'LH']	0.3	12.35	MCO Kamen Rider Ryuki Ver 1	mco_attack9.hkx	Kamen Rider Black MCO 0	bvh\KickSet\mco_attack9.bvh
+KickSet/mco_powerattack2	KickSet	Sky_KickSet_12	power	1.5	45	29.33	[0.433]	['LH']	0.433	17.14	MCO Kamen Rider Ryuki Ver 1	mco_powerattack2.hkx	Kamen Rider Black MCO 0	bvh\KickSet\mco_powerattack2.bvh
+KickSet/mco_powerattack3	KickSet	Sky_KickSet_13	power	2.267	68	29.56	[0.4]	['LH']	0.4	9.92	MCO Kamen Rider Ryuki Ver 1	mco_powerattack3.hkx	Kamen Rider Black MCO 0	bvh\KickSet\mco_powerattack3.bvh
+KickSet/mco_powerattack4	KickSet	Sky_KickSet_14	power	1.55	48	30.32	[0.68]	['RF']	0.68	13.76	MCO Kamen Rider Ryuki Ver 1	mco_powerattack4.hkx	Kamen Rider Black MCO 0	bvh\KickSet\mco_powerattack4.bvh
+KickSet/shd_blockbash	KickSet			1.333	40	29.25	[0.3]				MCO Kamen Rider Ryuki Ver 1	shd_blockbash.HKX	Kamen Rider Black MCO 0	bvh\KickSet\shd_blockbash.bvh
+KickSet/combatidlea__2	KickSet			0.267	9	30.0	[0.1]				MCO Kamen Rider Ryuki Ver 1	combatidlea.hkx	Kamen Rider DODGE NPC DMG	bvh\KickSet\combatidlea__2.bvh
+KickSet/shd_blockidle__2	KickSet			2.667	81	30.0	[]				MCO Kamen Rider Ryuki Ver 1	shd_blockidle.hkx	Kamen Rider DODGE NPC DMG	bvh\KickSet\shd_blockidle__2.bvh
+KickSet/mco_powerattack1__3	KickSet			4.833	146	30.0	[]				MCO Kamen Rider Ryuki Ver 1	mco_powerattack1.HKX	Kamen Rider Faiz Henshin 0	bvh\KickSet\mco_powerattack1__3.bvh
+KickSet/mco_attack1__3	KickSet			1.333	41	30.0	[0.3]				MCO Kamen Rider Ryuki Ver 1	mco_attack1.hkx	Kamen Rider Faiz MCO 0	bvh\KickSet\mco_attack1__3.bvh
+KickSet/mco_attack2__2	KickSet			1.333	41	30.0	[0.333]				MCO Kamen Rider Ryuki Ver 1	mco_attack2.hkx	Kamen Rider Faiz MCO 0	bvh\KickSet\mco_attack2__2.bvh
+KickSet/mco_attack3__2	KickSet			1.5	46	30.0	[0.3]				MCO Kamen Rider Ryuki Ver 1	mco_attack3.hkx	Kamen Rider Faiz MCO 0	bvh\KickSet\mco_attack3__2.bvh
+KickSet/mco_attack4__2	KickSet			1.5	46	30.0	[0.433]				MCO Kamen Rider Ryuki Ver 1	mco_attack4.hkx	Kamen Rider Faiz MCO 0	bvh\KickSet\mco_attack4__2.bvh
+KickSet/mco_attack5__3	KickSet			2.167	66	30.0	[0.2, 0.433, 0.667, 1.033]				MCO Kamen Rider Ryuki Ver 1	mco_attack5.hkx	Kamen Rider Faiz MCO 0	bvh\KickSet\mco_attack5__3.bvh
+KickSet/mco_attack6__2	KickSet	Sky_KickSet_15	attack	1.167	36	30.0	[0.5]	['RH']	0.5	7.13	MCO Kamen Rider Ryuki Ver 1	mco_attack6.HKX	Kamen Rider Faiz MCO 0	bvh\KickSet\mco_attack6__2.bvh
+KickSet/mco_powerattack1__4	KickSet			3.433	104	30.0	[2.367]				MCO Kamen Rider Ryuki Ver 1	mco_powerattack1.hkx	Kamen Rider Faiz MCO 0	bvh\KickSet\mco_powerattack1__4.bvh
+KickSet/1hm_idle__2	KickSet			3.967	120	30.0	[]				MCO Kamen Rider Ryuki Ver 1	1hm_idle.hkx	Kamen Rider Kabuto AxeDagger 00	bvh\KickSet\1hm_idle__2.bvh
+KickSet/mco_attack1__4	KickSet			2.167	66	30.0	[0.4, 0.6, 0.8]				MCO Kamen Rider Ryuki Ver 1	mco_attack1.hkx	Kamen Rider Kabuto AxeDagger 00	bvh\KickSet\mco_attack1__4.bvh
+KickSet/mco_attack2__3	KickSet			1.667	51	30.0	[0.7]				MCO Kamen Rider Ryuki Ver 1	mco_attack2.hkx	Kamen Rider Kabuto AxeDagger 00	bvh\KickSet\mco_attack2__3.bvh
+KickSet/mco_attack3__3	KickSet			2.233	68	30.0	[0.333, 0.667]				MCO Kamen Rider Ryuki Ver 1	mco_attack3.hkx	Kamen Rider Kabuto AxeDagger 00	bvh\KickSet\mco_attack3__3.bvh
+KickSet/mco_attack4__3	KickSet			2.3	70	30.0	[0.5]				MCO Kamen Rider Ryuki Ver 1	mco_attack4.hkx	Kamen Rider Kabuto AxeDagger 00	bvh\KickSet\mco_attack4__3.bvh
+KickSet/mco_attack5__4	KickSet			1.5	46	30.0	[0.3]				MCO Kamen Rider Ryuki Ver 1	mco_attack5.hkx	Kamen Rider Kabuto AxeDagger 00	bvh\KickSet\mco_attack5__4.bvh
+KickSet/mco_attack6__3	KickSet			1.5	46	30.0	[0.3]				MCO Kamen Rider Ryuki Ver 1	mco_attack6.hkx	Kamen Rider Kabuto AxeDagger 00	bvh\KickSet\mco_attack6__3.bvh
+KickSet/mco_attack7__2	KickSet			1.5	46	30.0	[0.3]				MCO Kamen Rider Ryuki Ver 1	mco_attack7.hkx	Kamen Rider Kabuto AxeDagger 00	bvh\KickSet\mco_attack7__2.bvh
+KickSet/mco_powerattack1__5	KickSet			2.667	81	30.0	[0.6]				MCO Kamen Rider Ryuki Ver 1	mco_powerattack1.hkx	Kamen Rider Kabuto AxeDagger 00	bvh\KickSet\mco_powerattack1__5.bvh
+KickSet/mco_powerattack2__2	KickSet			3.0	91	30.0	[0.9]				MCO Kamen Rider Ryuki Ver 1	mco_powerattack2.hkx	Kamen Rider Kabuto AxeDagger 00	bvh\KickSet\mco_powerattack2__2.bvh
+KickSet/mco_powerattack3__2	KickSet			2.3	70	30.0	[0.533]				MCO Kamen Rider Ryuki Ver 1	mco_powerattack3.hkx	Kamen Rider Kabuto AxeDagger 00	bvh\KickSet\mco_powerattack3__2.bvh
+KickSet/mco_attack1__5	KickSet			3.333	101	30.0	[]				MCO Kamen Rider Ryuki Ver 1	mco_attack1.hkx	Kamen Rider Kabuto Henshin 0	bvh\KickSet\mco_attack1__5.bvh
+KickSet/mco_powerattack1__6	KickSet			3.667	111	30.0	[]				MCO Kamen Rider Ryuki Ver 1	mco_powerattack1.hkx	Kamen Rider Kabuto Henshin 0	bvh\KickSet\mco_powerattack1__6.bvh
+KickSet/mco_attack1__6	KickSet			1.5	46	30.0	[0.3]				MCO Kamen Rider Ryuki Ver 1	mco_attack1.hkx	Kamen Rider Kabuto MCO 0	bvh\KickSet\mco_attack1__6.bvh
+KickSet/mco_attack2__4	KickSet			1.5	46	30.0	[0.3]				MCO Kamen Rider Ryuki Ver 1	mco_attack2.hkx	Kamen Rider Kabuto MCO 0	bvh\KickSet\mco_attack2__4.bvh
+KickSet/mco_attack3__4	KickSet			2.0	61	30.0	[0.3, 0.7]				MCO Kamen Rider Ryuki Ver 1	mco_attack3.hkx	Kamen Rider Kabuto MCO 0	bvh\KickSet\mco_attack3__4.bvh
+KickSet/mco_attack4__4	KickSet	Sky_KickSet_16	attack	3.75	90	23.73	[0.5]	['LF']	0.5	8.95	MCO Kamen Rider Ryuki Ver 1	mco_attack4.hkx	Kamen Rider Kabuto MCO 0	bvh\KickSet\mco_attack4__4.bvh
+KickSet/mco_attack5__5	KickSet			1.5	46	30.0	[0.433]				MCO Kamen Rider Ryuki Ver 1	mco_attack5.hkx	Kamen Rider Kabuto MCO 0	bvh\KickSet\mco_attack5__5.bvh
+KickSet/mco_attack6__4	KickSet			2.167	66	30.0	[0.2, 0.433, 0.667, 1.033]				MCO Kamen Rider Ryuki Ver 1	mco_attack6.hkx	Kamen Rider Kabuto MCO 0	bvh\KickSet\mco_attack6__4.bvh
+KickSet/mco_powerattack1__7	KickSet			5.833	176	30.0	[3.167]				MCO Kamen Rider Ryuki Ver 1	mco_powerattack1.hkx	Kamen Rider Kabuto MCO 0	bvh\KickSet\mco_powerattack1__7.bvh
+KickSet/mco_powerattack1__8	KickSet			5.667	171	30.0	[4.3]				MCO Kamen Rider Ryuki Ver 1	mco_powerattack1.hkx	Kamen Rider Ryuki 01 Final Vent	bvh\KickSet\mco_powerattack1__8.bvh
+KickSet/mco_powerattack1__9	KickSet			24.333	730	29.96	[]				MCO Kamen Rider Ryuki Ver 1	mco_powerattack1.hkx	Kamen Rider Ryuki 01 Henshin Survive	bvh\KickSet\mco_powerattack1__9.bvh
+KickSet/mco_powerattack1__10	KickSet			8.667	260	29.88	[]				MCO Kamen Rider Ryuki Ver 1	mco_powerattack1.hkx	Kamen Rider Ryuki 01 Henshin	bvh\KickSet\mco_powerattack1__10.bvh
+KickSet/1hm_idle__3	KickSet			6.667	201	30.0	[]				MCO Kamen Rider Ryuki Ver 1	1hm_idle.hkx	Kamen Rider Ryuki 01 MCO Normal	bvh\KickSet\1hm_idle__3.bvh
+KickSet/mco_attack1__7	KickSet			1.333	41	30.0	[0.3]				MCO Kamen Rider Ryuki Ver 1	mco_attack1.hkx	Kamen Rider Ryuki 01 MCO Normal	bvh\KickSet\mco_attack1__7.bvh
+KickSet/mco_attack2__5	KickSet			1.333	41	30.0	[0.3]				MCO Kamen Rider Ryuki Ver 1	mco_attack2.hkx	Kamen Rider Ryuki 01 MCO Normal	bvh\KickSet\mco_attack2__5.bvh
+KickSet/mco_attack3__5	KickSet			1.333	41	30.0	[0.333]				MCO Kamen Rider Ryuki Ver 1	mco_attack3.hkx	Kamen Rider Ryuki 01 MCO Normal	bvh\KickSet\mco_attack3__5.bvh
+KickSet/mco_attack4__5	KickSet			1.5	46	30.0	[0.333]				MCO Kamen Rider Ryuki Ver 1	mco_attack4.hkx	Kamen Rider Ryuki 01 MCO Normal	bvh\KickSet\mco_attack4__5.bvh
+KickSet/mco_attack5__6	KickSet			2.0	61	30.0	[0.3, 0.7]				MCO Kamen Rider Ryuki Ver 1	mco_attack5.hkx	Kamen Rider Ryuki 01 MCO Normal	bvh\KickSet\mco_attack5__6.bvh
+KickSet/mco_attack6__5	KickSet	Sky_KickSet_17	attack	3.75	90	23.73	[0.5]	['LF']	0.5	8.95	MCO Kamen Rider Ryuki Ver 1	mco_attack6.HKX	Kamen Rider Ryuki 01 MCO Normal	bvh\KickSet\mco_attack6__5.bvh
+KickSet/mco_attack7__3	KickSet	Sky_KickSet_18	attack	1.167	36	30.0	[0.5]	['RH']	0.5	7.13	MCO Kamen Rider Ryuki Ver 1	mco_attack7.HKX	Kamen Rider Ryuki 01 MCO Normal	bvh\KickSet\mco_attack7__3.bvh
+KickSet/mco_attack8	KickSet	Sky_KickSet_19	attack	1.833	56	30.0	[0.5]	['RF']	0.5	9.66	MCO Kamen Rider Ryuki Ver 1	mco_attack8.hkx	Kamen Rider Ryuki 01 MCO Normal	bvh\KickSet\mco_attack8.bvh
+KickSet/mco_attack9__2	KickSet			1.833	56	30.0	[0.733]				MCO Kamen Rider Ryuki Ver 1	mco_attack9.hkx	Kamen Rider Ryuki 01 MCO Normal	bvh\KickSet\mco_attack9__2.bvh
+KickSet/mco_powerattack1__11	KickSet			2.667	81	30.0	[1.667]				MCO Kamen Rider Ryuki Ver 1	mco_powerattack1.hkx	Kamen Rider Ryuki 01 MCO Normal	bvh\KickSet\mco_powerattack1__11.bvh
+KickSet/mco_attack8__2	KickSet			2.167	66	30.0	[0.4, 0.6, 0.8]				MCO Kamen Rider Ryuki Ver 1	mco_attack8.hkx	Kamen Rider Ryuki 01 MCO Strike Vent	bvh\KickSet\mco_attack8__2.bvh
+KickSet/shd_blockbash__2	KickSet			2.667	81	30.0	[]				MCO Kamen Rider Ryuki Ver 1	shd_blockbash.hkx	Kamen Rider Ryuki 01 MCO Strike Vent	bvh\KickSet\shd_blockbash__2.bvh
+KickSet/mco_attack6__6	KickSet	Sky_KickSet_20	attack	3.0	90	29.67	[0.417]	['RH']	0.417	22.24	MCO Kamen Rider Ryuki Ver 1	MCO_attack6.hkx	Kamen Rider Ryuki 01 MCO Sword Vent	bvh\KickSet\mco_attack6__6.bvh
+KickSet/mco_attack1__8	KickSet			1.667	51	30.0	[0.3]				MCO Kamen Rider Ryuki Ver 1	mco_attack1.hkx	Kamen Rider Ryuki 01 MCO Sword Vent	bvh\KickSet\mco_attack1__8.bvh
+KickSet/mco_attack10__2	KickSet	Sky_KickSet_21	attack	3.9	118	30.0	[0.267, 0.467, 1.033, 1.517, 2.117]	['RH', 'RH', 'RH', 'RH', 'RH']	0.267	25.2	MCO Kamen Rider Ryuki Ver 1	mco_attack10.hkx	Kamen Rider Ryuki 01 MCO Sword Vent	bvh\KickSet\mco_attack10__2.bvh
+KickSet/mco_attack2__6	KickSet			1.667	51	30.0	[0.3]				MCO Kamen Rider Ryuki Ver 1	mco_attack2.hkx	Kamen Rider Ryuki 01 MCO Sword Vent	bvh\KickSet\mco_attack2__6.bvh
+KickSet/mco_attack3__6	KickSet	Sky_KickSet_22	attack	1.667	51	30.0	[0.267]	['RH']	0.267	31.84	MCO Kamen Rider Ryuki Ver 1	mco_attack3.hkx	Kamen Rider Ryuki 01 MCO Sword Vent	bvh\KickSet\mco_attack3__6.bvh
+KickSet/mco_attack4__6	KickSet			1.333	41	30.0	[0.3]				MCO Kamen Rider Ryuki Ver 1	mco_attack4.hkx	Kamen Rider Ryuki 01 MCO Sword Vent	bvh\KickSet\mco_attack4__6.bvh
+KickSet/mco_attack5__7	KickSet			1.4	43	30.0	[]				MCO Kamen Rider Ryuki Ver 1	mco_attack5.hkx	Kamen Rider Ryuki 01 MCO Sword Vent	bvh\KickSet\mco_attack5__7.bvh
+KickSet/mco_attack7__4	KickSet	Sky_KickSet_23	attack	3.0	90	29.67	[0.367]	['RH']	0.367	22.23	MCO Kamen Rider Ryuki Ver 1	mco_attack7.hkx	Kamen Rider Ryuki 01 MCO Sword Vent	bvh\KickSet\mco_attack7__4.bvh
+KickSet/mco_attack8__3	KickSet	Sky_KickSet_24	attack	3.0	90	29.67	[0.35]	['RH']	0.35	13.34	MCO Kamen Rider Ryuki Ver 1	mco_attack8.hkx	Kamen Rider Ryuki 01 MCO Sword Vent	bvh\KickSet\mco_attack8__3.bvh
+KickSet/mco_attack9__3	KickSet	Sky_KickSet_25	attack	3.0	90	29.67	[0.35]	['RH']	0.35	20.11	MCO Kamen Rider Ryuki Ver 1	mco_attack9.hkx	Kamen Rider Ryuki 01 MCO Sword Vent	bvh\KickSet\mco_attack9__3.bvh
+KickSet/mco_powerattack7	KickSet	Sky_KickSet_26	power	1.6	49	30.0	[0.4]	['LF']	0.4	10.84	MCO Kamen Rider Ryuki Ver 1	mco_powerattack7.hkx	Kamen Rider Ryuki 01 MCO Sword Vent	bvh\KickSet\mco_powerattack7.bvh
+KickSet/mco_powerattack8	KickSet	Sky_KickSet_27	power	3.833	230	59.74	[0.817]	['RH']	0.817	37.23	MCO Kamen Rider Ryuki Ver 1	mco_powerattack8.HKX	Kamen Rider Ryuki 01 MCO Sword Vent	bvh\KickSet\mco_powerattack8.bvh
+KickSet/mt_idle__2	KickSet			14.4	433	30.0	[]				MCO Kamen Rider Ryuki Ver 1	mt_idle.hkx	Kamen Rider Ryuki 01 MCO Sword Vent	bvh\KickSet\mt_idle__2.bvh
+Flight/1hm_equip	Flight			0.833	25	28.8	[]				MCO SCAR Superman Omniman Moveset New VERSION FIX	1hm_equip.hkx	001 Omni Base Attacks	bvh\Flight\1hm_equip.bvh
+Flight/1hm_idle	Flight			2.667	80	29.62	[]				MCO SCAR Superman Omniman Moveset New VERSION FIX	1hm_idle.hkx	001 Omni Base Attacks	bvh\Flight\1hm_idle.bvh
+Flight/1hm_runbackward	Flight			0.667	20	28.5	[]				MCO SCAR Superman Omniman Moveset New VERSION FIX	1hm_runbackward.hkx	001 Omni Base Attacks	bvh\Flight\1hm_runbackward.bvh
+Flight/1hm_runforward	Flight			2.667	80	29.62	[]				MCO SCAR Superman Omniman Moveset New VERSION FIX	1hm_runforward.hkx	001 Omni Base Attacks	bvh\Flight\1hm_runforward.bvh
+Flight/1hm_sprintforward	Flight			21.042	505	23.95	[]				MCO SCAR Superman Omniman Moveset New VERSION FIX	1hm_sprintforward.hkx	001 Omni Base Attacks	bvh\Flight\1hm_sprintforward.bvh
+Flight/1hm_walkforward	Flight			2.667	80	29.62	[]				MCO SCAR Superman Omniman Moveset New VERSION FIX	1hm_walkforward.hkx	001 Omni Base Attacks	bvh\Flight\1hm_walkforward.bvh
+Flight/dodgeleft	Flight			0.667	20	28.5	[]				MCO SCAR Superman Omniman Moveset New VERSION FIX	DodgeLeft.hkx	001 Omni Base Attacks	bvh\Flight\dodgeleft.bvh
+Flight/dodgeright	Flight			0.667	20	28.5	[]				MCO SCAR Superman Omniman Moveset New VERSION FIX	DodgeRight.hkx	001 Omni Base Attacks	bvh\Flight\dodgeright.bvh
+Flight/dodgeforward	Flight			0.167	5	24.0	[]				MCO SCAR Superman Omniman Moveset New VERSION FIX	DodgeForward.hkx	TkDodge	bvh\Flight\dodgeforward.bvh
+Flight/dodgeback	Flight			0.433	13	27.69	[]				MCO SCAR Superman Omniman Moveset New VERSION FIX	Dodgeback.hkx	TkDodge	bvh\Flight\dodgeback.bvh
+Flight/stepdodgeback	Flight			0.167	5	24.0	[]				MCO SCAR Superman Omniman Moveset New VERSION FIX	StepDodgeBack.hkx	TkDodge	bvh\Flight\stepdodgeback.bvh
+Flight/stepdodgeleft	Flight			0.167	5	24.0	[]				MCO SCAR Superman Omniman Moveset New VERSION FIX	StepDodgeLeft.hkx	TkDodge	bvh\Flight\stepdodgeleft.bvh
+Flight/stepdodgeright	Flight			0.167	5	24.0	[]				MCO SCAR Superman Omniman Moveset New VERSION FIX	StepDodgeRight.hkx	TkDodge	bvh\Flight\stepdodgeright.bvh
+Flight/mt_jumpland	Flight			0.333	10	27.0	[]				MCO SCAR Superman Omniman Moveset New VERSION FIX	mt_jumpland.hkx	male	bvh\Flight\mt_jumpland.bvh
+Flight/mt_sprintforward	Flight			16.667	500	29.94	[]				MCO SCAR Superman Omniman Moveset New VERSION FIX	mt_sprintforward.hkx	male	bvh\Flight\mt_sprintforward.bvh
+Flight/mco-attack5	Flight	Sky_Flight_1	attack	1.333	40	29.25	[0.39]	['LH']	0.39	11.08	MCO SCAR Superman Omniman Moveset New VERSION FIX	mco-attack5.hkx	001 Omni Base Attacks	bvh\Flight\mco-attack5.bvh
+Flight/mco_attack1	Flight	Sky_Flight_2	attack	1.333	40	29.25	[0.3]	['RH']	0.3	15.74	MCO SCAR Superman Omniman Moveset New VERSION FIX	mco_attack1.hkx	001 Omni Base Attacks	bvh\Flight\mco_attack1.bvh
+Flight/mco_attack2	Flight	Sky_Flight_3	attack	1.333	40	29.25	[0.3]	['LH']	0.3	10.07	MCO SCAR Superman Omniman Moveset New VERSION FIX	mco_attack2.hkx	001 Omni Base Attacks	bvh\Flight\mco_attack2.bvh
+Flight/mco_attack3	Flight	Sky_Flight_4	attack	1.5	45	29.33	[0.433]	['RH']	0.433	17.34	MCO SCAR Superman Omniman Moveset New VERSION FIX	mco_attack3.hkx	001 Omni Base Attacks	bvh\Flight\mco_attack3.bvh
+Flight/mco_attack4	Flight	Sky_Flight_5	attack	1.333	40	29.25	[0.3]	['RH']	0.3	15.74	MCO SCAR Superman Omniman Moveset New VERSION FIX	mco_attack4.hkx	001 Omni Base Attacks	bvh\Flight\mco_attack4.bvh
+Flight/mco_attack5	Flight	Sky_Flight_6	attack	1.333	40	29.25	[0.3]	['LH']	0.3	11.53	MCO SCAR Superman Omniman Moveset New VERSION FIX	mco_attack5.hkx	001 Omni Base Attacks	bvh\Flight\mco_attack5.bvh
+Flight/mco_attack6	Flight	Sky_Flight_7	attack	1.333	40	29.25	[0.3]	['LH']	0.3	10.65	MCO SCAR Superman Omniman Moveset New VERSION FIX	mco_attack6.hkx	001 Omni Base Attacks	bvh\Flight\mco_attack6.bvh
+Flight/mco_attack7	Flight	Sky_Flight_8	attack	1.333	40	29.25	[0.3]	['RH']	0.3	15.68	MCO SCAR Superman Omniman Moveset New VERSION FIX	mco_attack7.hkx	001 Omni Base Attacks	bvh\Flight\mco_attack7.bvh
+Flight/mco_attack8	Flight	Sky_Flight_9	attack	1.333	40	29.25	[0.567]	['RH']	0.567	28.91	MCO SCAR Superman Omniman Moveset New VERSION FIX	mco_attack8.hkx	001 Omni Base Attacks	bvh\Flight\mco_attack8.bvh
+Flight/mco_attack9	Flight	Sky_Flight_10	attack	1.333	40	29.25	[0.39]	['LH']	0.39	11.08	MCO SCAR Superman Omniman Moveset New VERSION FIX	mco_attack9.hkx	001 Omni Base Attacks	bvh\Flight\mco_attack9.bvh
+Flight/mco_powerattack1	Flight			1.667	50	29.4	[]				MCO SCAR Superman Omniman Moveset New VERSION FIX	mco_powerattack1.hkx	001 Omni Base Attacks	bvh\Flight\mco_powerattack1.bvh
+Flight/mco_powerattack2	Flight	Sky_Flight_11	power	1.333	40	29.25	[0.3]	['RH']	0.3	30.76	MCO SCAR Superman Omniman Moveset New VERSION FIX	mco_powerattack2.hkx	001 Omni Base Attacks	bvh\Flight\mco_powerattack2.bvh
+Flight/mco_powerattack3	Flight	Sky_Flight_12	power	1.333	40	29.25	[0.39]	['LH']	0.39	11.95	MCO SCAR Superman Omniman Moveset New VERSION FIX	mco_powerattack3.hkx	001 Omni Base Attacks	bvh\Flight\mco_powerattack3.bvh
+Flight/mco_powerattack4	Flight	Sky_Flight_13	power	1.333	40	29.25	[0.567]	['RH']	0.567	28.91	MCO SCAR Superman Omniman Moveset New VERSION FIX	mco_powerattack4.hkx	001 Omni Base Attacks	bvh\Flight\mco_powerattack4.bvh
+Flight/shd_blockbash	Flight			1.167	35	29.14	[]				MCO SCAR Superman Omniman Moveset New VERSION FIX	shd_blockbash.hkx	001 Omni Base Attacks	bvh\Flight\shd_blockbash.bvh
+Flight/shd_blockidle	Flight			2.667	80	29.62	[]				MCO SCAR Superman Omniman Moveset New VERSION FIX	shd_blockidle.hkx	001 Omni Base Attacks	bvh\Flight\shd_blockidle.bvh
+Flight/sneakrun_forwardroll	Flight			1.333	40	29.25	[]				MCO SCAR Superman Omniman Moveset New VERSION FIX	sneakrun_forwardroll.hkx	001 Omni Base Attacks	bvh\Flight\sneakrun_forwardroll.bvh
+Flight/mco_attack1__2	Flight	Sky_Flight_14	attack	1.333	40	29.25	[0.3]	['RH']	0.3	15.74	MCO SCAR Superman Omniman Moveset New VERSION FIX	mco_attack1.hkx	001 Omni Flight Attacks	bvh\Flight\mco_attack1__2.bvh
+Flight/mco_attack2__2	Flight	Sky_Flight_15	attack	1.333	40	29.25	[0.3]	['LH']	0.3	10.07	MCO SCAR Superman Omniman Moveset New VERSION FIX	mco_attack2.hkx	001 Omni Flight Attacks	bvh\Flight\mco_attack2__2.bvh
+Flight/mco_attack3__2	Flight	Sky_Flight_16	attack	1.5	45	29.33	[0.433]	['RH']	0.433	17.34	MCO SCAR Superman Omniman Moveset New VERSION FIX	mco_attack3.hkx	001 Omni Flight Attacks	bvh\Flight\mco_attack3__2.bvh
+Flight/mco_attack4__2	Flight	Sky_Flight_17	attack	1.333	40	29.25	[0.3]	['RH']	0.3	15.74	MCO SCAR Superman Omniman Moveset New VERSION FIX	mco_attack4.hkx	001 Omni Flight Attacks	bvh\Flight\mco_attack4__2.bvh
+Flight/mco_attack5__2	Flight	Sky_Flight_18	attack	1.333	40	29.25	[0.3]	['LH']	0.3	11.53	MCO SCAR Superman Omniman Moveset New VERSION FIX	mco_attack5.hkx	001 Omni Flight Attacks	bvh\Flight\mco_attack5__2.bvh
+Flight/mco_attack6__2	Flight	Sky_Flight_19	attack	1.333	40	29.25	[0.3]	['LH']	0.3	10.65	MCO SCAR Superman Omniman Moveset New VERSION FIX	mco_attack6.hkx	001 Omni Flight Attacks	bvh\Flight\mco_attack6__2.bvh
+Flight/mco_attack7__2	Flight	Sky_Flight_20	attack	1.333	40	29.25	[0.3]	['RH']	0.3	15.68	MCO SCAR Superman Omniman Moveset New VERSION FIX	mco_attack7.hkx	001 Omni Flight Attacks	bvh\Flight\mco_attack7__2.bvh
+Flight/mco_attack9__2	Flight	Sky_Flight_21	attack	1.333	40	29.25	[0.39]	['LH']	0.39	11.08	MCO SCAR Superman Omniman Moveset New VERSION FIX	mco_attack9.hkx	001 Omni Flight Attacks	bvh\Flight\mco_attack9__2.bvh
+Flight/mco_powerattack1__2	Flight			1.667	50	29.4	[]				MCO SCAR Superman Omniman Moveset New VERSION FIX	mco_powerattack1.hkx	001 Omni Flight Attacks	bvh\Flight\mco_powerattack1__2.bvh
+Flight/mco_attack1__3	Flight	Sky_Flight_22	attack	1.0	30	29.0	[0.533]	['LH']	0.533	57.24	MCO SCAR Superman Omniman Moveset New VERSION FIX	mco_attack1.hkx	001 Omni Side Sweep One	bvh\Flight\mco_attack1__3.bvh
+Flight/mco_attack2__3	Flight	Sky_Flight_23	attack	0.967	29	28.97	[0.533]	['LH']	0.533	98.95	MCO SCAR Superman Omniman Moveset New VERSION FIX	mco_attack2.hkx	001 Omni Side Sweep One	bvh\Flight\mco_attack2__3.bvh
+Flight/mco_attack1__4	Flight	Sky_Flight_24	attack	1.0	30	29.0	[0.533]	['LH']	0.533	57.24	MCO SCAR Superman Omniman Moveset New VERSION FIX	mco_attack1.hkx	001 Omni Side Sweep Two	bvh\Flight\mco_attack1__4.bvh
+Flight/mco_attack2__4	Flight	Sky_Flight_25	attack	0.967	29	28.97	[0.533]	['LH']	0.533	98.95	MCO SCAR Superman Omniman Moveset New VERSION FIX	mco_attack2.hkx	001 Omni Side Sweep Two	bvh\Flight\mco_attack2__4.bvh
+Flight/mco_attack1__5	Flight	Sky_Flight_26	attack	0.333	10	27.0	[0.1]	['RH']	0.1	0.07	MCO SCAR Superman Omniman Moveset New VERSION FIX	mco_attack1.hkx	001 Omni Super Dash Flight	bvh\Flight\mco_attack1__5.bvh
+Flight/mco_attack2__5	Flight	Sky_Flight_27	attack	0.333	10	27.0	[0.1]	['RH']	0.1	0.07	MCO SCAR Superman Omniman Moveset New VERSION FIX	mco_attack2.hkx	001 Omni Super Dash Flight	bvh\Flight\mco_attack2__5.bvh
+Flight/mco_attack3__3	Flight	Sky_Flight_28	attack	0.333	10	27.0	[0.1]	['RH']	0.1	0.07	MCO SCAR Superman Omniman Moveset New VERSION FIX	mco_attack3.hkx	001 Omni Super Dash Flight	bvh\Flight\mco_attack3__3.bvh
+Flight/mco_attack4__3	Flight	Sky_Flight_29	attack	0.333	10	27.0	[0.1]	['RH']	0.1	0.07	MCO SCAR Superman Omniman Moveset New VERSION FIX	mco_attack4.hkx	001 Omni Super Dash Flight	bvh\Flight\mco_attack4__3.bvh
+Flight/mco_attack5__3	Flight	Sky_Flight_30	attack	0.333	10	27.0	[0.1]	['RH']	0.1	0.07	MCO SCAR Superman Omniman Moveset New VERSION FIX	mco_attack5.hkx	001 Omni Super Dash Flight	bvh\Flight\mco_attack5__3.bvh
+Flight/mco_attack6__3	Flight	Sky_Flight_31	attack	0.333	10	27.0	[0.1]	['RH']	0.1	0.07	MCO SCAR Superman Omniman Moveset New VERSION FIX	mco_attack6.hkx	001 Omni Super Dash Flight	bvh\Flight\mco_attack6__3.bvh
+Flight/mco_attack7__3	Flight	Sky_Flight_32	attack	1.333	40	29.25	[0.3]	['RH']	0.3	15.68	MCO SCAR Superman Omniman Moveset New VERSION FIX	mco_attack7.hkx	001 Omni Super Dash Flight	bvh\Flight\mco_attack7__3.bvh
+Flight/mco_attack8__2	Flight	Sky_Flight_33	attack	1.333	40	29.25	[0.567]	['RH']	0.567	28.91	MCO SCAR Superman Omniman Moveset New VERSION FIX	mco_attack8.hkx	001 Omni Super Dash Flight	bvh\Flight\mco_attack8__2.bvh
+Flight/mco_powerattack1__3	Flight	Sky_Flight_34	power	1.467	44	29.32	[0.39]	['RH']	0.39	16.48	MCO SCAR Superman Omniman Moveset New VERSION FIX	mco_powerattack1.hkx	001 Omni Super Dash Flight	bvh\Flight\mco_powerattack1__3.bvh
+Flight/mco_powerattack2__2	Flight			2.733	82	29.63	[]				MCO SCAR Superman Omniman Moveset New VERSION FIX	mco_powerattack2.hkx	001 Omni Super Dash Flight	bvh\Flight\mco_powerattack2__2.bvh
+Flight/paired_1hmkillmovedecapslash	Flight			1.867	57	30.0	[]				MCO SCAR Superman Omniman Moveset New VERSION FIX	paired_1hmkillmovedecapslash.hkx	001 spin decap second	bvh\Flight\paired_1hmkillmovedecapslash.bvh
+Flight/paired_2hmkillmovedecapslash	Flight			1.867	57	30.0	[]				MCO SCAR Superman Omniman Moveset New VERSION FIX	paired_2hmkillmovedecapslash.hkx	001 spin decap second	bvh\Flight\paired_2hmkillmovedecapslash.bvh
+Flight/paired_1hmkillmovedecapslash__2	Flight			1.867	57	30.0	[]				MCO SCAR Superman Omniman Moveset New VERSION FIX	paired_1hmkillmovedecapslash.hkx	001 spin decap	bvh\Flight\paired_1hmkillmovedecapslash__2.bvh
+Agile/1hm_blockidle	Agile			0.367	12	30.0	[]				MCO Spiderman Moveset V1	1hm_blockidle.hkx	CERBERUS COUNTER GRAB 4 IDLE WITH SWAY DETECTION	bvh\Agile\1hm_blockidle.bvh
+Agile/1hm_idle	Agile			0.367	12	30.0	[]				MCO Spiderman Moveset V1	1hm_idle.hkx	CERBERUS COUNTER GRAB 4 IDLE WITH SWAY DETECTION	bvh\Agile\1hm_idle.bvh
+Agile/shd_blockanticipate	Agile			0.367	12	30.0	[]				MCO Spiderman Moveset V1	shd_blockanticipate.hkx	CERBERUS COUNTER GRAB 4 IDLE WITH SWAY DETECTION	bvh\Agile\shd_blockanticipate.bvh
+Agile/shd_blockbash	Agile			5.017	301	59.8	[]				MCO Spiderman Moveset V1	shd_blockbash.HKX	CERBERUS COUNTER GRAB 4 IDLE WITH SWAY DETECTION	bvh\Agile\shd_blockbash.bvh
+Agile/shd_blockbashintro	Agile			0.033	2	30.0	[]				MCO Spiderman Moveset V1	shd_blockbashintro.hkx	CERBERUS COUNTER GRAB 4 IDLE WITH SWAY DETECTION	bvh\Agile\shd_blockbashintro.bvh
+Agile/shd_blockbashpower	Agile			0.967	30	30.0	[]				MCO Spiderman Moveset V1	shd_blockbashpower.hkx	CERBERUS COUNTER GRAB 4 IDLE WITH SWAY DETECTION	bvh\Agile\shd_blockbashpower.bvh
+Agile/shd_blockhit	Agile			0.367	12	30.0	[0.1]				MCO Spiderman Moveset V1	shd_blockhit.hkx	CERBERUS COUNTER GRAB 4 IDLE WITH SWAY DETECTION	bvh\Agile\shd_blockhit.bvh
+Agile/shd_blockhit_vara	Agile			0.367	12	30.0	[0.1]				MCO Spiderman Moveset V1	shd_blockhit_vara.hkx	CERBERUS COUNTER GRAB 4 IDLE WITH SWAY DETECTION	bvh\Agile\shd_blockhit_vara.bvh
+Agile/shd_blockidle	Agile			0.367	12	30.0	[]				MCO Spiderman Moveset V1	shd_blockidle.hkx	CERBERUS COUNTER GRAB 4 IDLE WITH SWAY DETECTION	bvh\Agile\shd_blockidle.bvh
+Agile/shd_blockanticipate__2	Agile			0.367	12	30.0	[]				MCO Spiderman Moveset V1	shd_blockanticipate.hkx	CERBERUS COUNTER GRAB 4 SWAY ONE LEFT	bvh\Agile\shd_blockanticipate__2.bvh
+Agile/shd_turnleft180	Agile			0.367	12	30.0	[]				MCO Spiderman Moveset V1	shd_turnleft180.hkx	CERBERUS COUNTER GRAB 4 SWAY ONE LEFT	bvh\Agile\shd_turnleft180.bvh
+Agile/paired_vampfeedfront	Agile			3.867	117	30.0	[]				MCO Spiderman Moveset V1	paired_vampfeedfront.hkx	dlc01	bvh\Agile\paired_vampfeedfront.bvh
+Agile/1hm_idle__2	Agile			3.3	100	30.0	[]				MCO Spiderman Moveset V1	1hm_idle.hkx	CERBERUS SPIDER MOVESET SYMBIOTE MOVESET SLASH	bvh\Agile\1hm_idle__2.bvh
+Agile/mco_attack1	Agile	Sky_Agile_1	attack	1.333	41	30.0	[0.333]	['RH']	0.333	22.29	MCO Spiderman Moveset V1	Mco_Attack1.hkx	CERBERUS SPIDER MOVESET SYMBIOTE MOVESET SLASH	bvh\Agile\mco_attack1.bvh
+Agile/mco_attack2	Agile	Sky_Agile_2	attack	1.467	45	30.0	[0.333]	['RH']	0.333	23.63	MCO Spiderman Moveset V1	Mco_Attack2.hkx	CERBERUS SPIDER MOVESET SYMBIOTE MOVESET SLASH	bvh\Agile\mco_attack2.bvh
+Agile/mco_attack3	Agile	Sky_Agile_3	attack	1.633	50	30.0	[0.433, 0.8]	['RH', 'RH']	0.433	29.17	MCO Spiderman Moveset V1	Mco_Attack3.hkx	CERBERUS SPIDER MOVESET SYMBIOTE MOVESET SLASH	bvh\Agile\mco_attack3.bvh
+Agile/mco_attack4	Agile	Sky_Agile_4	attack	1.7	52	30.0	[0.3, 0.667]	['RH', 'RH']	0.3	33.25	MCO Spiderman Moveset V1	Mco_Attack4.hkx	CERBERUS SPIDER MOVESET SYMBIOTE MOVESET SLASH	bvh\Agile\mco_attack4.bvh
+Agile/mco_powerattack1	Agile	Sky_Agile_5	power	1.333	41	30.0	[0.333]	['RH']	0.333	22.29	MCO Spiderman Moveset V1	Mco_PowerAttack1.hkx	CERBERUS SPIDER MOVESET SYMBIOTE MOVESET SLASH	bvh\Agile\mco_powerattack1.bvh
+Agile/mco_powerattack5	Agile			2.0	61	30.0	[0.233, 0.333, 0.5, 0.633, 1.233]				MCO Spiderman Moveset V1	Mco_PowerAttack5.hkx	CERBERUS SPIDER MOVESET SYMBIOTE MOVESET SLASH	bvh\Agile\mco_powerattack5.bvh
+Agile/mco_attack5	Agile			2.0	61	30.0	[0.233, 0.333, 0.5, 0.633, 1.233]				MCO Spiderman Moveset V1	mco_attack5.hkx	CERBERUS SPIDER MOVESET SYMBIOTE MOVESET SLASH	bvh\Agile\mco_attack5.bvh
+Agile/mco_attack6	Agile			1.667	50	29.4	[]				MCO Spiderman Moveset V1	mco_attack6.hkx	CERBERUS SPIDER MOVESET SYMBIOTE MOVESET SLASH	bvh\Agile\mco_attack6.bvh
+Agile/mco_powerattack6	Agile			1.667	50	29.4	[]				MCO Spiderman Moveset V1	mco_powerattack6.hkx	CERBERUS SPIDER MOVESET SYMBIOTE MOVESET SLASH	bvh\Agile\mco_powerattack6.bvh
+Agile/shd_blockidle__2	Agile			4.967	150	30.0	[]				MCO Spiderman Moveset V1	shd_blockidle.hkx	CERBERUS SPIDER MOVESET SYMBIOTE MOVESET SLASH	bvh\Agile\shd_blockidle__2.bvh
+Agile/1hm_idle__3	Agile			8.0	241	30.0	[]				MCO Spiderman Moveset V1	1hm_idle.hkx	CERBERUS SPIDER MOVESET SYMBIOTE MOVESET	bvh\Agile\1hm_idle__3.bvh
+Agile/mco_attack1__2	Agile	Sky_Agile_6	attack	1.5	46	30.0	[0.3]	['LH']	0.3	13.81	MCO Spiderman Moveset V1	mco_attack1.hkx	CERBERUS SPIDER MOVESET SYMBIOTE MOVESET	bvh\Agile\mco_attack1__2.bvh
+Agile/mco_attack10_-_backup	Agile			1.667	51	30.0	[]				MCO Spiderman Moveset V1	mco_attack10 - Backup.hkx	CERBERUS SPIDER MOVESET SYMBIOTE MOVESET	bvh\Agile\mco_attack10_-_backup.bvh
+Agile/mco_attack10	Agile	Sky_Agile_7	attack	1.833	56	30.0	[0.7]	['RH']	0.7	33.05	MCO Spiderman Moveset V1	mco_attack10.hkx	CERBERUS SPIDER MOVESET SYMBIOTE MOVESET	bvh\Agile\mco_attack10.bvh
+Agile/mco_attack2__2	Agile	Sky_Agile_8	attack	1.5	46	30.0	[0.3]	['RH']	0.3	9.73	MCO Spiderman Moveset V1	mco_attack2.hkx	CERBERUS SPIDER MOVESET SYMBIOTE MOVESET	bvh\Agile\mco_attack2__2.bvh
+Agile/mco_attack3__2	Agile	Sky_Agile_9	attack	1.5	46	30.0	[0.433]	['RH']	0.433	6.21	MCO Spiderman Moveset V1	mco_attack3.hkx	CERBERUS SPIDER MOVESET SYMBIOTE MOVESET	bvh\Agile\mco_attack3__2.bvh
+Agile/mco_attack4_-_backup	Agile	Sky_Agile_10	attack	2.167	66	30.0	[0.367, 1.0, 1.0]	['RH', 'RF', 'RF']	0.367	12.75	MCO Spiderman Moveset V1	mco_attack4 - Backup.hkx	CERBERUS SPIDER MOVESET SYMBIOTE MOVESET	bvh\Agile\mco_attack4_-_backup.bvh
+Agile/mco_attack4__2	Agile	Sky_Agile_11	attack	2.167	66	30.0	[0.367, 1.0, 1.0]	['LF', 'RF', 'RF']	0.367	11.68	MCO Spiderman Moveset V1	mco_attack4.hkx	CERBERUS SPIDER MOVESET SYMBIOTE MOVESET	bvh\Agile\mco_attack4__2.bvh
+Agile/mco_attack5_-_backup	Agile	Sky_Agile_12	attack	1.0	30	29.0	[0.267]	['RF']	0.267	8.78	MCO Spiderman Moveset V1	mco_attack5 - Backup.hkx	CERBERUS SPIDER MOVESET SYMBIOTE MOVESET	bvh\Agile\mco_attack5_-_backup.bvh
+Agile/mco_attack5__2	Agile	Sky_Agile_13	attack	1.333	41	30.0	[0.267]	['RF']	0.267	11.81	MCO Spiderman Moveset V1	mco_attack5.hkx	CERBERUS SPIDER MOVESET SYMBIOTE MOVESET	bvh\Agile\mco_attack5__2.bvh
+Agile/mco_attack6_-_backup	Agile	Sky_Agile_14	attack	1.183	36	29.58	[0.433, 0.533]	['RF', 'RF']	0.433	6.04	MCO Spiderman Moveset V1	mco_attack6 - Backup.hkx	CERBERUS SPIDER MOVESET SYMBIOTE MOVESET	bvh\Agile\mco_attack6_-_backup.bvh
+Agile/mco_attack6__2	Agile	Sky_Agile_15	attack	1.5	46	30.0	[0.363]	['LF']	0.363	3.8	MCO Spiderman Moveset V1	mco_attack6.hkx	CERBERUS SPIDER MOVESET SYMBIOTE MOVESET	bvh\Agile\mco_attack6__2.bvh
+Agile/mco_attack7	Agile	Sky_Agile_16	attack	1.167	36	30.0	[0.5]	['RH']	0.5	7.12	MCO Spiderman Moveset V1	mco_attack7.hkx	CERBERUS SPIDER MOVESET SYMBIOTE MOVESET	bvh\Agile\mco_attack7.bvh
+Agile/mco_attack8	Agile	Sky_Agile_17	attack	6.233	188	30.0	[0.45, 1.05, 1.6, 1.7, 2.2, 2.35, 2.72, 3.22, 3.4, 3.7]	['LF', 'LF', 'RF', 'RF', 'LF', 'LF', 'LF', 'LF', 'RF', 'LF']	0.45	16.25	MCO Spiderman Moveset V1	mco_attack8.hkx	CERBERUS SPIDER MOVESET SYMBIOTE MOVESET	bvh\Agile\mco_attack8.bvh
+Agile/mco_attack9	Agile	Sky_Agile_18	attack	1.633	50	30.0	[0.333, 0.933]	['RF', 'LF']	0.333	12.85	MCO Spiderman Moveset V1	mco_attack9.hkx	CERBERUS SPIDER MOVESET SYMBIOTE MOVESET	bvh\Agile\mco_attack9.bvh
+Agile/mco_powerattack10	Agile	Sky_Agile_19	power	1.833	56	30.0	[0.7]	['RH']	0.7	33.05	MCO Spiderman Moveset V1	mco_powerattack10.hkx	CERBERUS SPIDER MOVESET SYMBIOTE MOVESET	bvh\Agile\mco_powerattack10.bvh
+Agile/mco_powerattack7	Agile	Sky_Agile_20	power	1.167	36	30.0	[0.5]	['RH']	0.5	7.12	MCO Spiderman Moveset V1	mco_powerattack7.hkx	CERBERUS SPIDER MOVESET SYMBIOTE MOVESET	bvh\Agile\mco_powerattack7.bvh
+Agile/mco_powerattack9	Agile	Sky_Agile_21	power	1.633	50	30.0	[0.333, 0.933]	['RF', 'LF']	0.333	12.85	MCO Spiderman Moveset V1	mco_powerattack9.hkx	CERBERUS SPIDER MOVESET SYMBIOTE MOVESET	bvh\Agile\mco_powerattack9.bvh
+Agile/mco_weaponart	Agile			0.333	11	30.0	[]				MCO Spiderman Moveset V1	mco_weaponart.HKX	CERBERUS SPIDER MOVESET SYMBIOTE MOVESET	bvh\Agile\mco_weaponart.bvh
+Agile/combatidlea	Agile			6.0	181	30.0	[]				MCO Spiderman Moveset V1	combatidlea.hkx	CERBERUS SPIDER MOVESET SYMBIOTE TRANSFORM	bvh\Agile\combatidlea.bvh
+Agile/mco_attack1__3	Agile	Sky_Agile_22	attack	2.0	61	30.0	[0.433]	['RH']	0.433	1.14	MCO Spiderman Moveset V1	mco_attack1.hkx	CERBERUS SPIDER MOVESET TEST  SPIDER AERIAL ATTACK	bvh\Agile\mco_attack1__3.bvh
+Agile/mco_attack10__2	Agile	Sky_Agile_23	attack	2.533	77	30.0	[0.433, 1.3]	['RF', 'RH']	0.433	13.35	MCO Spiderman Moveset V1	mco_attack10.hkx	CERBERUS SPIDER MOVESET TEST  SPIDER AERIAL ATTACK	bvh\Agile\mco_attack10__2.bvh
+Agile/mco_attack2__3	Agile	Sky_Agile_24	attack	2.533	77	30.0	[0.433, 1.3]	['RF', 'RH']	0.433	13.35	MCO Spiderman Moveset V1	mco_attack2.hkx	CERBERUS SPIDER MOVESET TEST  SPIDER AERIAL ATTACK	bvh\Agile\mco_attack2__3.bvh
+Agile/mco_attack3__3	Agile	Sky_Agile_25	attack	1.567	48	30.0	[0.467]	['RH']	0.467	26.07	MCO Spiderman Moveset V1	mco_attack3.hkx	CERBERUS SPIDER MOVESET TEST  SPIDER AERIAL ATTACK	bvh\Agile\mco_attack3__3.bvh
+Agile/mco_attack4__3	Agile	Sky_Agile_26	attack	1.567	48	30.0	[0.467]	['LH']	0.467	26.08	MCO Spiderman Moveset V1	mco_attack4.hkx	CERBERUS SPIDER MOVESET TEST  SPIDER AERIAL ATTACK	bvh\Agile\mco_attack4__3.bvh
+Agile/mco_attack5__3	Agile	Sky_Agile_27	attack	1.333	41	30.0	[0.333]	['RH']	0.333	14.11	MCO Spiderman Moveset V1	mco_attack5.hkx	CERBERUS SPIDER MOVESET TEST  SPIDER AERIAL ATTACK	bvh\Agile\mco_attack5__3.bvh
+Agile/mco_attack6__3	Agile	Sky_Agile_28	attack	1.5	46	30.0	[0.133, 0.367, 0.567]	['RH', 'RF', 'RH']	0.133	2.57	MCO Spiderman Moveset V1	mco_attack6.hkx	CERBERUS SPIDER MOVESET TEST  SPIDER AERIAL ATTACK	bvh\Agile\mco_attack6__3.bvh
+Agile/mco_attack7__2	Agile	Sky_Agile_29	attack	1.5	46	30.0	[0.133, 0.367, 0.567]	['RH', 'RH', 'RH']	0.133	2.31	MCO Spiderman Moveset V1	mco_attack7.hkx	CERBERUS SPIDER MOVESET TEST  SPIDER AERIAL ATTACK	bvh\Agile\mco_attack7__2.bvh
+Agile/mco_powerattack1__2	Agile	Sky_Agile_30	power	2.0	61	30.0	[0.433]	['RH']	0.433	1.14	MCO Spiderman Moveset V1	mco_powerattack1.hkx	CERBERUS SPIDER MOVESET TEST  SPIDER AERIAL ATTACK	bvh\Agile\mco_powerattack1__2.bvh
+Agile/mco_powerattack5__2	Agile	Sky_Agile_31	power	1.333	41	30.0	[0.333]	['RH']	0.333	14.11	MCO Spiderman Moveset V1	mco_powerattack5.hkx	CERBERUS SPIDER MOVESET TEST  SPIDER AERIAL ATTACK	bvh\Agile\mco_powerattack5__2.bvh
+Agile/mco_attack2__4	Agile	Sky_Agile_32	attack	2.533	77	30.0	[0.333, 1.3]	['RF', 'RH']	0.333	13.47	MCO Spiderman Moveset V1	mco_attack2.hkx	CERBERUS SPIDER MOVESET TEST  SPIDER AERIAL FORWARD	bvh\Agile\mco_attack2__4.bvh
+Agile/mco_attack5__4	Agile	Sky_Agile_33	attack	1.0	31	30.0	[0.427]	['LH']	0.427	5.55	MCO Spiderman Moveset V1	mco_attack5.hkx	CERBERUS SPIDER MOVESET TEST  SPIDER AERIAL FORWARD	bvh\Agile\mco_attack5__4.bvh
+Agile/mco_attack6__4	Agile	Sky_Agile_34	attack	1.0	31	30.0	[0.427]	['LH']	0.427	5.55	MCO Spiderman Moveset V1	mco_attack6.hkx	CERBERUS SPIDER MOVESET TEST  SPIDER AERIAL FORWARD	bvh\Agile\mco_attack6__4.bvh
+Agile/mco_attack7__3	Agile	Sky_Agile_35	attack	2.533	77	30.0	[0.333, 1.3]	['RF', 'RH']	0.333	13.47	MCO Spiderman Moveset V1	mco_attack7.hkx	CERBERUS SPIDER MOVESET TEST  SPIDER AERIAL FORWARD	bvh\Agile\mco_attack7__3.bvh
+Agile/mco_attack1__4	Agile	Sky_Agile_36	attack	2.0	61	30.0	[0.433]	['RH']	0.433	1.14	MCO Spiderman Moveset V1	mco_attack1.hkx	CERBERUS SPIDER MOVESET TEST  SPIDER AERIAL STARTKICK	bvh\Agile\mco_attack1__4.bvh
+Agile/paired_vampfeedfront__2	Agile			3.667	111	30.0	[]				MCO Spiderman Moveset V1	paired_vampfeedfront.hkx	dlc01	bvh\Agile\paired_vampfeedfront__2.bvh
+Agile/mco_attack1_-_backup	Agile	Sky_Agile_37	attack	1.5	46	30.0	[0.333]	['LH']	0.333	12.16	MCO Spiderman Moveset V1	mco_attack1 - Backup.hkx	CERBERUS SPIDER MOVESET TEST  SPIDER MAIN MOVESET	bvh\Agile\mco_attack1_-_backup.bvh
+Agile/mco_attack10__3	Agile	Sky_Agile_38	attack	1.633	50	30.0	[0.433]	['LH']	0.433	4.4	MCO Spiderman Moveset V1	mco_attack10.hkx	CERBERUS SPIDER MOVESET TEST  SPIDER MAIN MOVESET	bvh\Agile\mco_attack10__3.bvh
+Agile/mco_attack2__5	Agile	Sky_Agile_39	attack	2.167	66	30.0	[0.55]	['LF']	0.55	16.5	MCO Spiderman Moveset V1	mco_attack2.hkx	CERBERUS SPIDER MOVESET TEST  SPIDER MAIN MOVESET	bvh\Agile\mco_attack2__5.bvh
+Agile/mco_attack3__4	Agile	Sky_Agile_40	attack	1.833	56	30.0	[0.5]	['RF']	0.5	9.67	MCO Spiderman Moveset V1	mco_attack3.hkx	CERBERUS SPIDER MOVESET TEST  SPIDER MAIN MOVESET	bvh\Agile\mco_attack3__4.bvh
+Agile/mco_attack4_-_backup__2	Agile	Sky_Agile_41	attack	1.0	30	29.0	[0.267]	['RF']	0.267	8.78	MCO Spiderman Moveset V1	mco_attack4 - Backup.hkx	CERBERUS SPIDER MOVESET TEST  SPIDER MAIN MOVESET	bvh\Agile\mco_attack4_-_backup__2.bvh
+Agile/mco_attack4__4	Agile	Sky_Agile_42	attack	1.333	41	30.0	[0.267]	['RF']	0.267	11.81	MCO Spiderman Moveset V1	mco_attack4.hkx	CERBERUS SPIDER MOVESET TEST  SPIDER MAIN MOVESET	bvh\Agile\mco_attack4__4.bvh
+Agile/mco_attack5_-_backup__2	Agile	Sky_Agile_43	attack	1.183	36	29.58	[0.433, 0.533]	['RF', 'RF']	0.433	6.04	MCO Spiderman Moveset V1	mco_attack5 - Backup.hkx	CERBERUS SPIDER MOVESET TEST  SPIDER MAIN MOVESET	bvh\Agile\mco_attack5_-_backup__2.bvh
+Agile/mco_attack5__5	Agile	Sky_Agile_44	attack	1.5	46	30.0	[0.363]	['LF']	0.363	3.8	MCO Spiderman Moveset V1	mco_attack5.hkx	CERBERUS SPIDER MOVESET TEST  SPIDER MAIN MOVESET	bvh\Agile\mco_attack5__5.bvh
+Agile/mco_attack6__5	Agile	Sky_Agile_45	attack	1.467	45	30.0	[0.65]	['RF']	0.65	10.65	MCO Spiderman Moveset V1	mco_attack6.hkx	CERBERUS SPIDER MOVESET TEST  SPIDER MAIN MOVESET	bvh\Agile\mco_attack6__5.bvh
+Agile/mco_attack7__4	Agile	Sky_Agile_46	attack	1.167	36	30.0	[0.5]	['RH']	0.5	7.12	MCO Spiderman Moveset V1	mco_attack7.hkx	CERBERUS SPIDER MOVESET TEST  SPIDER MAIN MOVESET	bvh\Agile\mco_attack7__4.bvh
+Agile/mco_attack8__2	Agile	Sky_Agile_47	attack	6.233	188	30.0	[0.45, 1.05, 1.6, 1.7, 2.2, 2.35, 2.72, 3.22, 3.4, 3.7]	['LF', 'LF', 'RF', 'RF', 'LF', 'LF', 'LF', 'LF', 'RF', 'LF']	0.45	16.25	MCO Spiderman Moveset V1	mco_attack8.hkx	CERBERUS SPIDER MOVESET TEST  SPIDER MAIN MOVESET	bvh\Agile\mco_attack8__2.bvh
+Agile/mco_attack9__2	Agile	Sky_Agile_48	attack	1.633	50	30.0	[0.333, 0.933]	['RF', 'LF']	0.333	12.85	MCO Spiderman Moveset V1	mco_attack9.hkx	CERBERUS SPIDER MOVESET TEST  SPIDER MAIN MOVESET	bvh\Agile\mco_attack9__2.bvh
+Agile/mco_powerattack1__3	Agile	Sky_Agile_49	power	1.5	46	30.0	[0.3]	['LH']	0.3	13.81	MCO Spiderman Moveset V1	mco_powerattack1.hkx	CERBERUS SPIDER MOVESET TEST  SPIDER MAIN MOVESET	bvh\Agile\mco_powerattack1__3.bvh
+Agile/mco_powerattack10__2	Agile	Sky_Agile_50	power	1.633	50	30.0	[0.433]	['LH']	0.433	4.4	MCO Spiderman Moveset V1	mco_powerattack10.hkx	CERBERUS SPIDER MOVESET TEST  SPIDER MAIN MOVESET	bvh\Agile\mco_powerattack10__2.bvh
+Agile/mco_powerattack2	Agile	Sky_Agile_51	power	2.167	66	30.0	[0.55]	['LF']	0.55	16.5	MCO Spiderman Moveset V1	mco_powerattack2.hkx	CERBERUS SPIDER MOVESET TEST  SPIDER MAIN MOVESET	bvh\Agile\mco_powerattack2.bvh
+Agile/shd_blockbash__2	Agile			0.467	15	30.0	[]				MCO Spiderman Moveset V1	shd_blockbash.HKX	CERBERUS SPIDER MOVESET TEST  SPIDER MAIN MOVESET	bvh\Agile\shd_blockbash__2.bvh
+Agile/shd_blockhit__2	Agile			0.133	5	30.0	[0.067]				MCO Spiderman Moveset V1	shd_blockhit.hkx	CERBERUS SPIDER MOVESET TEST  SPIDER MAIN MOVESET	bvh\Agile\shd_blockhit__2.bvh
+Agile/1hm_idle__4	Agile			22.0	661	30.0	[]				MCO Spiderman Moveset V1	1hm_idle.hkx	CERBERUS SPIDER MOVESET TEST  SPIDER WEBSWING FALL ONLY	bvh\Agile\1hm_idle__4.bvh
+Agile/mt_jumpfall	Agile			6.667	201	30.0	[0.367]				MCO Spiderman Moveset V1	mt_jumpfall.hkx	CERBERUS SPIDER MOVESET TEST  SPIDER WEBSWING LAUNCH KICK	bvh\Agile\mt_jumpfall.bvh
+Agile/mt_jumpland	Agile			0.3	10	30.0	[]				MCO Spiderman Moveset V1	mt_jumpland.hkx	CERBERUS SPIDER MOVESET TEST  SPIDER WEBSWING LAUNCH KICK	bvh\Agile\mt_jumpland.bvh
+Agile/mt_jumpfall__2	Agile			1.133	35	30.0	[]				MCO Spiderman Moveset V1	mt_jumpfall.HKX	CERBERUS SPIDER MOVESET TEST  SPIDER WEBSWING LEAP AIR	bvh\Agile\mt_jumpfall__2.bvh
+Agile/combatidlea__2	Agile			3.667	111	30.0	[]				MCO Spiderman Moveset V1	combatidlea.hkx	backup	bvh\Agile\combatidlea__2.bvh
+Agile/combatidleb	Agile			3.667	111	30.0	[]				MCO Spiderman Moveset V1	combatidleb.hkx	backup	bvh\Agile\combatidleb.bvh
+Agile/combatidlesmalla	Agile			3.667	111	30.0	[]				MCO Spiderman Moveset V1	combatidlesmalla.hkx	backup	bvh\Agile\combatidlesmalla.bvh
+Agile/combatidlea__3	Agile			1.0	31	30.0	[0.367]				MCO Spiderman Moveset V1	combatidlea.hkx	CERBERUS SPIDER MOVESET TEST  SPIDER WEBSWING LEAP COMBAT KICK	bvh\Agile\combatidlea__3.bvh
+Agile/paraglideequip	Agile			0.333	11	30.0	[]				MCO Spiderman Moveset V1	ParaGlideEquip.hkx	NickNak	bvh\Agile\paraglideequip.bvh
+Agile/paraglideforward	Agile			11.3	340	30.0	[]				MCO Spiderman Moveset V1	ParaGlideForward.hkx	NickNak	bvh\Agile\paraglideforward.bvh
+Agile/paraglideleft	Agile			3.367	102	30.0	[]				MCO Spiderman Moveset V1	ParaGlideleft.hkx	NickNak	bvh\Agile\paraglideleft.bvh
+Agile/paraglideunequip	Agile			0.333	11	30.0	[]				MCO Spiderman Moveset V1	ParaGlideunEquip.hkx	NickNak	bvh\Agile\paraglideunequip.bvh
+Agile/paraglideforward__2	Agile			5.333	161	30.0	[]				MCO Spiderman Moveset V1	ParaGlideForward.hkx	NickNak	bvh\Agile\paraglideforward__2.bvh
+Agile/mco_attack1__5	Agile	Sky_Agile_52	attack	1.533	47	30.0	[0.433]	['RF']	0.433	0.77	MCO Spiderman Moveset V1	mco_attack1.hkx	CERBERUS SPIDER MOVESET TEST DODGE	bvh\Agile\mco_attack1__5.bvh
+Agile/mco_attack2__6	Agile			1.0	30	29.0	[]				MCO Spiderman Moveset V1	mco_attack2.hkx	CERBERUS SPIDER MOVESET TEST DODGE	bvh\Agile\mco_attack2__6.bvh
+Agile/mco_attack3__5	Agile			1.0	30	29.0	[]				MCO Spiderman Moveset V1	mco_attack3.hkx	CERBERUS SPIDER MOVESET TEST DODGE	bvh\Agile\mco_attack3__5.bvh
+Agile/mco_attack4__5	Agile			0.733	23	30.0	[]				MCO Spiderman Moveset V1	mco_attack4.hkx	CERBERUS SPIDER MOVESET TEST DODGE	bvh\Agile\mco_attack4__5.bvh
+Agile/mco_attack5__6	Agile	Sky_Agile_53	attack	0.967	30	30.0	[0.433]	['RH']	0.433	11.54	MCO Spiderman Moveset V1	mco_attack5.hkx	CERBERUS SPIDER MOVESET TEST DODGE	bvh\Agile\mco_attack5__6.bvh
+Agile/mco_attack2__7	Agile	Sky_Agile_54	attack	1.667	51	30.0	[0.3, 0.667]	['RH', 'LH']	0.3	14.22	MCO Spiderman Moveset V1	mco_attack2.hkx	CERBERUS SPIDER MOVESET TEST ONE	bvh\Agile\mco_attack2__7.bvh
+Agile/mco_attack3__6	Agile	Sky_Agile_55	attack	1.833	56	30.0	[0.5]	['RF']	0.5	9.67	MCO Spiderman Moveset V1	mco_attack3.hkx	CERBERUS SPIDER MOVESET TEST ONE	bvh\Agile\mco_attack3__6.bvh
+Agile/mco_attack4__6	Agile	Sky_Agile_56	attack	2.143	27	12.13	[0.7, 0.7]	['RF', 'RF']	0.7	2.91	MCO Spiderman Moveset V1	mco_attack4.hkx	CERBERUS SPIDER MOVESET TEST ONE	bvh\Agile\mco_attack4__6.bvh
+Agile/mco_attack5__7	Agile			1.6	49	30.0	[]				MCO Spiderman Moveset V1	mco_attack5.hkx	CERBERUS SPIDER MOVESET TEST ONE	bvh\Agile\mco_attack5__7.bvh
+Agile/mco_attack6__6	Agile			2.0	61	30.0	[]				MCO Spiderman Moveset V1	mco_attack6.hkx	CERBERUS SPIDER MOVESET TEST ONE	bvh\Agile\mco_attack6__6.bvh
+Agile/mco_attack8__3	Agile	Sky_Agile_57	attack	5.017	301	59.8	[0.583]	['RH']	0.583	21.14	MCO Spiderman Moveset V1	mco_attack8.HKX	CERBERUS SPIDER MOVESET TEST ONE	bvh\Agile\mco_attack8__3.bvh
+Agile/mco_powerattack7__2	Agile	Sky_Agile_58	power	1.633	50	30.0	[0.433]	['LH']	0.433	4.4	MCO Spiderman Moveset V1	mco_powerattack7.hkx	CERBERUS SPIDER MOVESET TEST ONE	bvh\Agile\mco_powerattack7__2.bvh
+Agile/shd_blockbashintro__2	Agile			0.133	5	30.0	[]				MCO Spiderman Moveset V1	shd_blockbashintro.hkx	CERBERUS SPIDER MOVESET TEST ONE	bvh\Agile\shd_blockbashintro__2.bvh
+Agile/mco_attack1__6	Agile	Sky_Agile_59	attack	1.533	47	30.0	[0.433]	['RF']	0.433	0.77	MCO Spiderman Moveset V1	mco_attack1.hkx	CERBERUS SPIDER MOVESET TEST SPIDER TWO FORWARD	bvh\Agile\mco_attack1__6.bvh
+Agile/mco_attack2__8	Agile	Sky_Agile_60	attack	1.533	47	30.0	[0.433]	['RF']	0.433	0.77	MCO Spiderman Moveset V1	mco_attack2.hkx	CERBERUS SPIDER MOVESET TEST SPIDER TWO FORWARD	bvh\Agile\mco_attack2__8.bvh
+Agile/mco_powerattack1__4	Agile	Sky_Agile_61	power	1.3	40	30.0	[0.667]	['RH']	0.667	12.91	MCO Spiderman Moveset V1	mco_powerattack1.hkx	CERBERUS SPIDER MOVESET TEST SPIDER TWO FORWARD	bvh\Agile\mco_powerattack1__4.bvh
+Agile/mco_powerattack10__3	Agile	Sky_Agile_62	power	2.533	77	30.0	[1.3]	['RF']	1.3	13.86	MCO Spiderman Moveset V1	mco_powerattack10.hkx	CERBERUS SPIDER MOVESET TEST SPIDER TWO FORWARD	bvh\Agile\mco_powerattack10__3.bvh
+Agile/mt_jumpfall__3	Agile			4.967	150	30.0	[]				MCO Spiderman Moveset V1	mt_jumpfall.HKX	male	bvh\Agile\mt_jumpfall__3.bvh
+Agile/1h_1st_stagger	Agile			4.967	150	30.0	[]				MCO Spiderman Moveset V1	1H_1st_stagger.HKX	ULTIMATE STAGGER FLY  SPIDER	bvh\Agile\1h_1st_stagger.bvh
+Agile/1h_1st_stagger__2	Agile			3.7	112	30.0	[]				MCO Spiderman Moveset V1	1H_1st_stagger.HKX	ULTIMATE STAGGER HOVER KNOCK	bvh\Agile\1h_1st_stagger__2.bvh
+Agile/1hm_staggerbacksmallv	Agile			3.083	185	59.68	[]				MCO Spiderman Moveset V1	1hm_staggerbacksmallV.hkx	ULTIMATE STAGGER HOVER KNOCK	bvh\Agile\1hm_staggerbacksmallv.bvh
+Agile/1h_1st_stagger__3	Agile			0.667	20	28.5	[]				MCO Spiderman Moveset V1	1H_1st_stagger.HKX	ULTIMATE STAGGER STAY	bvh\Agile\1h_1st_stagger__3.bvh
+Agile/1h_hit1_axe	Agile			0.667	20	28.5	[]				MCO Spiderman Moveset V1	1h_hit1_axe.HKX	ULTIMATE STAGGER STAY	bvh\Agile\1h_hit1_axe.bvh
+Agile/2hw_staggerbacksmalliv	Agile			4.967	150	30.0	[]				MCO Spiderman Moveset V1	2hw_staggerbacksmallIV.hkx	ULTIMATE STAGGER STAY	bvh\Agile\2hw_staggerbacksmalliv.bvh
+Feral/1hm_idle	Feral			4.1	123	29.76	[]				MCO Turbo Khajiit Version 1	1hm_idle.hkx	Start Up 1 ye	bvh\Feral\1hm_idle.bvh
+Feral/mco_attack1	Feral	Sky_Feral_1	attack	1.333	40	29.25	[0.567]	['RF']	0.567	3.54	MCO Turbo Khajiit Version 1	mco_attack1.hkx	Start Up 1 ye	bvh\Feral\mco_attack1.bvh
+Feral/mco_attack2	Feral	Sky_Feral_2	attack	1.333	40	29.25	[0.433]	['RF']	0.433	23.92	MCO Turbo Khajiit Version 1	mco_attack2.hkx	Start Up 1 ye	bvh\Feral\mco_attack2.bvh
+Feral/mco_attack3	Feral	Sky_Feral_3	attack	1.2	36	29.17	[0.4]	['LH']	0.4	37.15	MCO Turbo Khajiit Version 1	mco_attack3.hkx	Start Up 1 ye	bvh\Feral\mco_attack3.bvh
+Feral/mco_attack4	Feral	Sky_Feral_4	attack	1.167	35	29.14	[0.433]	['RF']	0.433	26.23	MCO Turbo Khajiit Version 1	mco_attack4.hkx	Start Up 1 ye	bvh\Feral\mco_attack4.bvh
+Feral/mco_attack5	Feral	Sky_Feral_5	attack	1.2	36	29.17	[0.4]	['LH']	0.4	37.15	MCO Turbo Khajiit Version 1	mco_attack5.hkx	Start Up 1 ye	bvh\Feral\mco_attack5.bvh
+Feral/mco_attack6	Feral	Sky_Feral_6	attack	1.5	45	29.33	[0.433, 0.9]	['LF', 'LH']	0.433	23.14	MCO Turbo Khajiit Version 1	mco_attack6.hkx	Start Up 1 ye	bvh\Feral\mco_attack6.bvh
+Feral/mco_powerattack1	Feral	Sky_Feral_7	power	1.8	54	29.44	[0.467]	['LF']	0.467	25.15	MCO Turbo Khajiit Version 1	mco_powerattack1.hkx	Start Up 1 ye	bvh\Feral\mco_powerattack1.bvh
+Feral/mco_powerattack2	Feral	Sky_Feral_8	power	2.2	66	29.55	[0.167, 0.467, 0.8, 1.133, 1.4, 1.733, 2.0]	['LF', 'LF', 'LF', 'LF', 'RF', 'RH', 'LF']	0.167	40.34	MCO Turbo Khajiit Version 1	mco_powerattack2.hkx	Start Up 1 ye	bvh\Feral\mco_powerattack2.bvh
+Feral/mco_powerattack3	Feral	Sky_Feral_9	power	1.5	45	29.33	[0.533]	['RH']	0.533	-1.42	MCO Turbo Khajiit Version 1	mco_powerattack3.hkx	Start Up 1 ye	bvh\Feral\mco_powerattack3.bvh
+Feral/1hm_sprintforward	Feral			0.267	8	26.25	[]				MCO Turbo Khajiit Version 1	1hm_sprintforward.hkx	male	bvh\Feral\1hm_sprintforward.bvh
+Feral/mt_sprintforward	Feral			0.267	8	26.25	[]				MCO Turbo Khajiit Version 1	mt_sprintforward.hkx	male	bvh\Feral\mt_sprintforward.bvh
+Feral/mco_attack1__2	Feral	Sky_Feral_10	attack	1.333	40	29.25	[0.567]	['RF']	0.567	3.54	MCO Turbo Khajiit Version 1	mco_attack1.hkx	Start Up 1 yee - Copy	bvh\Feral\mco_attack1__2.bvh
+Feral/mco_attack2__2	Feral	Sky_Feral_11	attack	1.333	40	29.25	[0.433]	['RF']	0.433	23.92	MCO Turbo Khajiit Version 1	mco_attack2.hkx	Start Up 1 yee - Copy	bvh\Feral\mco_attack2__2.bvh
+Feral/mco_attack3__2	Feral	Sky_Feral_12	attack	1.2	36	29.17	[0.4]	['LH']	0.4	37.15	MCO Turbo Khajiit Version 1	mco_attack3.hkx	Start Up 1 yee - Copy	bvh\Feral\mco_attack3__2.bvh
+Feral/mco_attack4__2	Feral	Sky_Feral_13	attack	1.167	35	29.14	[0.433]	['RF']	0.433	26.23	MCO Turbo Khajiit Version 1	mco_attack4.hkx	Start Up 1 yee - Copy	bvh\Feral\mco_attack4__2.bvh
+Feral/mco_attack5__2	Feral	Sky_Feral_14	attack	1.2	36	29.17	[0.4]	['LH']	0.4	37.15	MCO Turbo Khajiit Version 1	mco_attack5.hkx	Start Up 1 yee - Copy	bvh\Feral\mco_attack5__2.bvh
+Feral/mco_attack6__2	Feral	Sky_Feral_15	attack	1.5	45	29.33	[0.433, 0.9]	['LF', 'LH']	0.433	23.14	MCO Turbo Khajiit Version 1	mco_attack6.hkx	Start Up 1 yee - Copy	bvh\Feral\mco_attack6__2.bvh
+BrawlB/sourceup	BrawlB			0.867	27	30.0	[]				MCO Ultimate Ultra Masculine Unarmed Moveset V2	SourceUP.hkx	test replace	bvh\BrawlB\sourceup.bvh
+BrawlB/bowdrawn_turnleft180	BrawlB			6.933	209	30.0	[]				MCO Ultimate Ultra Masculine Unarmed Moveset V2	bowdrawn_turnleft180.hkx	test replace	bvh\BrawlB\bowdrawn_turnleft180.bvh
+BrawlB/1hm_idle	BrawlB			3.3	100	30.0	[]				MCO Ultimate Ultra Masculine Unarmed Moveset V2	1hm_idle.hkx	ULTIMATE MANLY MAN TEST MOVESET b	bvh\BrawlB\1hm_idle.bvh
+BrawlB/mco_attack1	BrawlB	Sky_BrawlB_1	attack	0.967	30	30.0	[0.267]	['LH']	0.267	10.23	MCO Ultimate Ultra Masculine Unarmed Moveset V2	mco_attack1.hkx	ULTIMATE MANLY MAN TEST MOVESET b	bvh\BrawlB\mco_attack1.bvh
+BrawlB/mco_attack10	BrawlB	Sky_BrawlB_2	attack	3.3	100	30.0	[0.267]	['RH']	0.267	14.53	MCO Ultimate Ultra Masculine Unarmed Moveset V2	mco_attack10.hkx	ULTIMATE MANLY MAN TEST MOVESET b	bvh\BrawlB\mco_attack10.bvh
+BrawlB/mco_attack2	BrawlB	Sky_BrawlB_3	attack	1.3	40	30.0	[0.267, 0.567]	['RF', 'LF']	0.267	11.1	MCO Ultimate Ultra Masculine Unarmed Moveset V2	mco_attack2.hkx	ULTIMATE MANLY MAN TEST MOVESET b	bvh\BrawlB\mco_attack2.bvh
+BrawlB/mco_attack3	BrawlB	Sky_BrawlB_4	attack	1.3	40	30.0	[0.267, 0.567]	['RH', 'LH']	0.267	16.06	MCO Ultimate Ultra Masculine Unarmed Moveset V2	mco_attack3.hkx	ULTIMATE MANLY MAN TEST MOVESET b	bvh\BrawlB\mco_attack3.bvh
+BrawlB/mco_attack4	BrawlB	Sky_BrawlB_5	attack	1.3	40	30.0	[0.267, 0.567]	['RH', 'RF']	0.267	11.78	MCO Ultimate Ultra Masculine Unarmed Moveset V2	mco_attack4.hkx	ULTIMATE MANLY MAN TEST MOVESET b	bvh\BrawlB\mco_attack4.bvh
+BrawlB/mco_attack6	BrawlB	Sky_BrawlB_6	attack	1.633	50	30.0	[0.6]	['LH']	0.6	12.0	MCO Ultimate Ultra Masculine Unarmed Moveset V2	mco_attack6.hkx	ULTIMATE MANLY MAN TEST MOVESET b	bvh\BrawlB\mco_attack6.bvh
+BrawlB/mco_attack7	BrawlB	Sky_BrawlB_7	attack	1.3	40	30.0	[0.267, 0.567]	['LH', 'RH']	0.267	11.73	MCO Ultimate Ultra Masculine Unarmed Moveset V2	mco_attack7.hkx	ULTIMATE MANLY MAN TEST MOVESET b	bvh\BrawlB\mco_attack7.bvh
+BrawlB/mco_attack8	BrawlB	Sky_BrawlB_8	attack	1.3	40	30.0	[0.267, 0.567]	['LF', 'RH']	0.267	13.88	MCO Ultimate Ultra Masculine Unarmed Moveset V2	mco_attack8.hkx	ULTIMATE MANLY MAN TEST MOVESET b	bvh\BrawlB\mco_attack8.bvh
+BrawlB/mco_attack9	BrawlB	Sky_BrawlB_9	attack	0.967	30	30.0	[0.267]	['LF']	0.267	8.56	MCO Ultimate Ultra Masculine Unarmed Moveset V2	mco_attack9.hkx	ULTIMATE MANLY MAN TEST MOVESET b	bvh\BrawlB\mco_attack9.bvh
+BrawlB/mco_powerattack1	BrawlB	Sky_BrawlB_10	power	0.967	30	30.0	[0.267]	['LH']	0.267	12.41	MCO Ultimate Ultra Masculine Unarmed Moveset V2	mco_powerattack1.hkx	ULTIMATE MANLY MAN TEST MOVESET b	bvh\BrawlB\mco_powerattack1.bvh
+BrawlB/mco_powerattack2	BrawlB	Sky_BrawlB_11	power	0.967	30	30.0	[0.267]	['LH']	0.267	9.39	MCO Ultimate Ultra Masculine Unarmed Moveset V2	mco_powerattack2.hkx	ULTIMATE MANLY MAN TEST MOVESET b	bvh\BrawlB\mco_powerattack2.bvh
+BrawlB/mco_powerattack3	BrawlB	Sky_BrawlB_12	power	1.667	51	30.0	[0.433]	['RF']	0.433	8.93	MCO Ultimate Ultra Masculine Unarmed Moveset V2	mco_powerattack3.hkx	ULTIMATE MANLY MAN TEST MOVESET b	bvh\BrawlB\mco_powerattack3.bvh
+BrawlB/mco_weaponart	BrawlB			3.3	100	30.0	[0.267]				MCO Ultimate Ultra Masculine Unarmed Moveset V2	mco_weaponart.hkx	ULTIMATE MANLY MAN TEST MOVESET b	bvh\BrawlB\mco_weaponart.bvh
+BrawlB/1hm_idle__2	BrawlB			6.767	204	30.0	[]				MCO Ultimate Ultra Masculine Unarmed Moveset V2	1hm_idle.hkx	ULTIMATE MANLY TAUNT	bvh\BrawlB\1hm_idle__2.bvh
+BrawlB/mt_idle	BrawlB			6.067	183	30.0	[]				MCO Ultimate Ultra Masculine Unarmed Moveset V2	mt_idle.hkx	male	bvh\BrawlB\mt_idle.bvh
+SwordD/1hm_idle	SwordD			3.333	200	59.7	[]				Swordplay (One Handed Sword) MCO	1hm_idle.HKX	999126001	bvh\SwordD\1hm_idle.bvh
+SwordD/dodgeback	SwordD			0.433	26	57.69	[]				Swordplay (One Handed Sword) MCO	DodgeBack.HKX	999126001	bvh\SwordD\dodgeback.bvh
+SwordD/dodgeforward	SwordD			0.583	35	58.29	[]				Swordplay (One Handed Sword) MCO	DodgeForward.HKX	999126001	bvh\SwordD\dodgeforward.bvh
+SwordD/dodgeleft	SwordD			0.583	35	58.29	[]				Swordplay (One Handed Sword) MCO	DodgeLeft.HKX	999126001	bvh\SwordD\dodgeleft.bvh
+SwordD/dodgeright	SwordD			0.583	35	58.29	[]				Swordplay (One Handed Sword) MCO	DodgeRight.HKX	999126001	bvh\SwordD\dodgeright.bvh
+SwordD/mco_attack1	SwordD	Sky_SwordD_1	attack	3.333	200	59.7	[0.567]	['WPN']	0.567	46.15	Swordplay (One Handed Sword) MCO	mco_attack1.HKX	999126001	bvh\SwordD\mco_attack1.bvh
+SwordD/mco_attack2	SwordD	Sky_SwordD_2	attack	1.833	110	59.45	[0.333]	['RH']	0.333	3.26	Swordplay (One Handed Sword) MCO	mco_attack2.HKX	999126001	bvh\SwordD\mco_attack2.bvh
+SwordD/mco_attack3	SwordD	Sky_SwordD_3	attack	3.883	233	59.74	[0.2, 0.433, 0.867, 2.117, 2.317, 2.65]	['WPN', 'WPN', 'WPN', 'WPN', 'WPN', 'WPN']	0.2	39.51	Swordplay (One Handed Sword) MCO	mco_attack3.HKX	999126001	bvh\SwordD\mco_attack3.bvh
+SwordD/mco_attack4	SwordD	Sky_SwordD_4	attack	4.233	254	59.76	[0.767, 1.083, 1.55]	['WPN', 'WPN', 'WPN']	0.767	52.39	Swordplay (One Handed Sword) MCO	mco_attack4.HKX	999126001	bvh\SwordD\mco_attack4.bvh
+SwordD/mco_powerattack1	SwordD	Sky_SwordD_5	power	1.5	90	59.33	[0.317]	['WPN']	0.317	20.12	Swordplay (One Handed Sword) MCO	mco_powerattack1.HKX	999126001	bvh\SwordD\mco_powerattack1.bvh
+SwordD/mco_powerattack2	SwordD	Sky_SwordD_6	power	1.583	95	59.37	[0.233]	['WPN']	0.233	38.89	Swordplay (One Handed Sword) MCO	mco_powerattack2.HKX	999126001	bvh\SwordD\mco_powerattack2.bvh
+SwordD/mco_powerattack3	SwordD	Sky_SwordD_7	power	2.667	160	59.62	[0.3]	['WPN']	0.3	47.43	Swordplay (One Handed Sword) MCO	mco_powerattack3.HKX	999126001	bvh\SwordD\mco_powerattack3.bvh
+SwordD/mco_powerattack4	SwordD	Sky_SwordD_8	power	2.667	160	59.62	[0.317]	['WPN']	0.317	42.24	Swordplay (One Handed Sword) MCO	mco_powerattack4.HKX	999126001	bvh\SwordD\mco_powerattack4.bvh
+SwordD/mco_powerattack5	SwordD	Sky_SwordD_9	power	3.333	200	59.7	[0.3]	['WPN']	0.3	35.16	Swordplay (One Handed Sword) MCO	mco_powerattack5.HKX	999126001	bvh\SwordD\mco_powerattack5.bvh
+SwordD/mco_powerattack6	SwordD	Sky_SwordD_10	power	4.5	270	59.78	[0.2, 0.833, 1.717]	['RF', 'WPN', 'WPN']	0.2	45.49	Swordplay (One Handed Sword) MCO	mco_powerattack6.HKX	999126001	bvh\SwordD\mco_powerattack6.bvh
+SwordD/mco_powerattack7	SwordD	Sky_SwordD_11	power	3.0	180	59.67	[0.317, 0.467, 0.65, 0.733, 0.833]	['RH', 'RH', 'WPN', 'RH', 'RH']	0.317	22.47	Swordplay (One Handed Sword) MCO	mco_powerattack7.HKX	999126001	bvh\SwordD\mco_powerattack7.bvh
+SwordD/mco_powerattack8	SwordD	Sky_SwordD_12	power	3.167	190	59.68	[0.517, 0.517]	['WPN', 'WPN']	0.517	53.75	Swordplay (One Handed Sword) MCO	mco_powerattack8.HKX	999126001	bvh\SwordD\mco_powerattack8.bvh
+SwordD/mco_powerattack1__2	SwordD	Sky_SwordD_13	power	3.667	220	59.73	[0.433, 0.583, 0.7, 1.017, 1.267, 1.783, 2.0, 2.417, 2.617]	['WPN', 'WPN', 'WPN', 'WPN', 'WPN', 'WPN', 'WPN', 'WPN', 'LH']	0.433	24.62	Swordplay (One Handed Sword) MCO	mco_powerattack1.HKX	999126002	bvh\SwordD\mco_powerattack1__2.bvh
+SwordD/mco_powerattack1__3	SwordD	Sky_SwordD_14	power	3.0	180	59.67	[0.4, 0.4, 1.0]	['WPN', 'WPN', 'WPN']	0.4	43.29	Swordplay (One Handed Sword) MCO	mco_powerattack1.HKX	999126003	bvh\SwordD\mco_powerattack1__3.bvh
+SwordD/mco_powerattack1__4	SwordD	Sky_SwordD_15	power	3.0	180	59.67	[0.167, 0.817, 1.417, 1.6, 2.35]	['RH', 'WPN', 'WPN', 'WPN', 'WPN']	0.167	22.95	Swordplay (One Handed Sword) MCO	mco_powerattack1.HKX	999126004	bvh\SwordD\mco_powerattack1__4.bvh
+SwordD/mco_powerattack1__5	SwordD	Sky_SwordD_16	power	3.667	220	59.73	[0.433, 0.6, 0.833, 1.033, 1.367, 1.733, 1.967, 2.483, 2.617]	['WPN', 'RH', 'WPN', 'WPN', 'WPN', 'RH', 'WPN', 'WPN', 'WPN']	0.433	29.81	Swordplay (One Handed Sword) MCO	mco_powerattack1.HKX	999126005	bvh\SwordD\mco_powerattack1__5.bvh
+SwordB/mco_attack1	SwordB	Sky_SwordB_1	attack	1.5	46	30.0	[0.317]	['WPN']	0.317	28.83	mco nero moveset	mco_attack1.hkx	just na	bvh\SwordB\mco_attack1.bvh
+SwordB/mco_attack2	SwordB	Sky_SwordB_2	attack	1.5	46	30.0	[0.2]	['WPN']	0.2	23.59	mco nero moveset	mco_attack2.hkx	just na	bvh\SwordB\mco_attack2.bvh
+SwordB/mco_attack3	SwordB	Sky_SwordB_3	attack	1.5	46	30.0	[0.267]	['WPN']	0.267	31.84	mco nero moveset	mco_attack3.hkx	just na	bvh\SwordB\mco_attack3.bvh
+SwordB/mco_attack4	SwordB	Sky_SwordB_4	attack	2.167	66	30.0	[0.4]	['WPN']	0.4	25.11	mco nero moveset	mco_attack4.hkx	just na	bvh\SwordB\mco_attack4.bvh
+SwordB/mco_attack10	SwordB	Sky_SwordB_5	attack	6.0	181	30.0	[0.367, 0.983, 1.033, 1.1]	['RH', 'WPN', 'WPN', 'WPN']	0.367	32.94	mco nero moveset	mco_attack10.hkx	80088	bvh\SwordB\mco_attack10.bvh
+SwordB/mco_attack4__2	SwordB	Sky_SwordB_6	attack	2.167	66	30.0	[0.4]	['WPN']	0.4	25.11	mco nero moveset	mco_attack4.hkx	80088	bvh\SwordB\mco_attack4__2.bvh
+SwordB/mco_attack5	SwordB	Sky_SwordB_7	attack	3.267	99	30.0	[0.483]	['WPN']	0.483	16.91	mco nero moveset	mco_attack5.hkx	80088	bvh\SwordB\mco_attack5.bvh
+SwordB/mco_attack6	SwordB	Sky_SwordB_8	attack	2.567	78	30.0	[0.117]	['WPN']	0.117	25.71	mco nero moveset	mco_attack6.hkx	80088	bvh\SwordB\mco_attack6.bvh
+SwordB/mco_attack7	SwordB	Sky_SwordB_9	attack	2.8	85	30.0	[0.117]	['WPN']	0.117	20.13	mco nero moveset	mco_attack7.hkx	80088	bvh\SwordB\mco_attack7.bvh
+SwordB/mco_attack8	SwordB	Sky_SwordB_10	attack	2.8	85	30.0	[0.117]	['WPN']	0.117	20.13	mco nero moveset	mco_attack8.hkx	80088	bvh\SwordB\mco_attack8.bvh
+SwordB/mco_attack9	SwordB	Sky_SwordB_11	attack	2.567	78	30.0	[0.117]	['WPN']	0.117	25.71	mco nero moveset	mco_attack9.hkx	80088	bvh\SwordB\mco_attack9.bvh
+SwordB/mco_powerattack1	SwordB	Sky_SwordB_12	power	2.267	69	30.0	[0.75, 0.783]	['WPN', 'WPN']	0.75	23.96	mco nero moveset	mco_powerattack1.hkx	80088	bvh\SwordB\mco_powerattack1.bvh
+SwordB/mco_powerattack3	SwordB	Sky_SwordB_13	power	3.9	118	30.0	[0.267, 0.467, 1.033, 1.517, 2.117]	['WPN', 'WPN', 'WPN', 'WPN', 'WPN']	0.267	25.2	mco nero moveset	mco_powerattack3.hkx	80088	bvh\SwordB\mco_powerattack3.bvh
+SwordB/mco_powerattack4	SwordB	Sky_SwordB_14	power	2.933	89	30.0	[0.4, 0.45, 0.5]	['WPN', 'WPN', 'WPN']	0.4	19.21	mco nero moveset	mco_powerattack4.hkx	80088	bvh\SwordB\mco_powerattack4.bvh
+SwordB/mco_powerattack1__2	SwordB	Sky_SwordB_15	power	1.833	56	30.0	[0.467]	['WPN']	0.467	23.88	mco nero moveset	mco_powerattack1.hkx	81188	bvh\SwordB\mco_powerattack1__2.bvh
+SwordB/mco_powerattack1__3	SwordB	Sky_SwordB_16	power	2.233	68	30.0	[0.083, 0.467, 0.5]	['WPN', 'WPN', 'WPN']	0.083	23.88	mco nero moveset	mco_powerattack1.hkx	82288	bvh\SwordB\mco_powerattack1__3.bvh
+SwordB/mco_powerattack1__4	SwordB	Sky_SwordB_17	power	4.1	124	30.0	[1.05, 1.117, 1.317, 1.35, 1.383, 1.4]	['WPN', 'WPN', 'WPN', 'WPN', 'WPN', 'WPN']	1.05	23.58	mco nero moveset	mco_powerattack1.hkx	83388	bvh\SwordB\mco_powerattack1__4.bvh
+SwordB/mco_powerattack1__5	SwordB	Sky_SwordB_18	power	1.767	54	30.0	[0.65]	['WPN']	0.65	30.6	mco nero moveset	mco_powerattack1.hkx	84488	bvh\SwordB\mco_powerattack1__5.bvh

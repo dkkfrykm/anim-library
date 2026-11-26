@@ -1,0 +1,687 @@
+{
+ "Sky_Blade_M1_1": {
+  "n": 36,
+  "w": 6,
+  "i": [
+   10
+  ],
+  "r": 28,
+  "sw": [
+   6
+  ],
+  "src": "Sky_Sword_A1"
+ },
+ "Sky_Blade_M1_2": {
+  "n": 36,
+  "w": 6,
+  "i": [
+   10
+  ],
+  "r": 28,
+  "sw": [
+   6
+  ],
+  "src": "Sky_Sword_A2"
+ },
+ "Sky_Blade_M1_3": {
+  "n": 36,
+  "w": 6,
+  "i": [
+   10
+  ],
+  "r": 28,
+  "sw": [
+   6
+  ],
+  "src": "Sky_Sword_A3"
+ },
+ "Sky_Blade_M1_4": {
+  "n": 40,
+  "w": 6,
+  "i": [
+   12
+  ],
+  "r": 30,
+  "sw": [
+   6
+  ],
+  "src": "Sky_Sword_A4"
+ },
+ "Sky_Blade_Bolt": {
+  "n": 46,
+  "w": 10,
+  "i": [
+   14
+  ],
+  "r": 36,
+  "sw": [
+   10
+  ],
+  "src": "Sky_Sword_P5",
+  "la": 52,
+  "lb": 70
+ },
+ "Sky_Blade_Burst": {
+  "n": 50,
+  "w": 12,
+  "i": [
+   16
+  ],
+  "r": 40,
+  "sw": [
+   12
+  ],
+  "src": "Sky_Glaive_P4",
+  "la": 56,
+  "lb": 74
+ },
+ "Sky_Blade_Blast": {
+  "n": 56,
+  "w": 18,
+  "i": [
+   22
+  ],
+  "r": 46,
+  "sw": [
+   18
+  ],
+  "src": "Sky_Sword_P1",
+  "la": 62,
+  "lb": 80
+ },
+ "Sky_Blade_Dash": {
+  "n": 36,
+  "w": 5,
+  "i": [
+   8
+  ],
+  "r": 28,
+  "sw": [
+   5
+  ],
+  "src": "Sky_Rapier_A3",
+  "la": 42,
+  "lb": 60
+ },
+ "Sky_Blade_Ult": {
+  "n": 72,
+  "w": 24,
+  "i": [
+   30
+  ],
+  "r": 62,
+  "sw": [
+   24
+  ],
+  "src": "Sky_Glaive_P2",
+  "la": 78,
+  "lb": 96
+ },
+ "Sky_Fighter_M1_1": {
+  "n": 36,
+  "w": 6,
+  "i": [
+   10
+  ],
+  "r": 28,
+  "sw": [
+   6
+  ],
+  "src": "Sky_Unarmed_A1"
+ },
+ "Sky_Fighter_M1_2": {
+  "n": 36,
+  "w": 6,
+  "i": [
+   10
+  ],
+  "r": 28,
+  "sw": [
+   6
+  ],
+  "src": "Sky_Unarmed_A2"
+ },
+ "Sky_Fighter_M1_3": {
+  "n": 36,
+  "w": 6,
+  "i": [
+   10
+  ],
+  "r": 28,
+  "sw": [
+   6
+  ],
+  "src": "Sky_Skysa_A2"
+ },
+ "Sky_Fighter_M1_4": {
+  "n": 40,
+  "w": 6,
+  "i": [
+   12
+  ],
+  "r": 30,
+  "sw": [
+   6
+  ],
+  "src": "Sky_Skysa_P1"
+ },
+ "Sky_Fighter_Bolt": {
+  "n": 46,
+  "w": 10,
+  "i": [
+   14
+  ],
+  "r": 36,
+  "sw": [
+   10
+  ],
+  "src": "Sky_Unarmed_P1",
+  "la": 52,
+  "lb": 70
+ },
+ "Sky_Fighter_Burst": {
+  "n": 50,
+  "w": 12,
+  "i": [
+   16
+  ],
+  "r": 40,
+  "sw": [
+   12
+  ],
+  "src": "Sky_Unarmed_P2",
+  "la": 56,
+  "lb": 74
+ },
+ "Sky_Fighter_Blast": {
+  "n": 56,
+  "w": 18,
+  "i": [
+   22
+  ],
+  "r": 46,
+  "sw": [
+   18
+  ],
+  "src": "Sky_Unarmed_P4",
+  "la": 62,
+  "lb": 80
+ },
+ "Sky_Fighter_Dash": {
+  "n": 36,
+  "w": 5,
+  "i": [
+   8
+  ],
+  "r": 28,
+  "sw": [
+   5
+  ],
+  "src": "Sky_Skysa_A1",
+  "la": 42,
+  "lb": 60
+ },
+ "Sky_Kick_M1_1": {
+  "n": 36,
+  "w": 6,
+  "i": [
+   10
+  ],
+  "r": 28,
+  "sw": [
+   6
+  ],
+  "src": "Sky_Unarmed_A3"
+ },
+ "Sky_Kick_M1_2": {
+  "n": 36,
+  "w": 6,
+  "i": [
+   10
+  ],
+  "r": 28,
+  "sw": [
+   6
+  ],
+  "src": "Sky_Unarmed_A4"
+ },
+ "Sky_Kick_M1_3": {
+  "n": 36,
+  "w": 6,
+  "i": [
+   10
+  ],
+  "r": 28,
+  "sw": [
+   6
+  ],
+  "src": "Sky_Unarmed_A6"
+ },
+ "Sky_Kick_M1_4": {
+  "n": 40,
+  "w": 6,
+  "i": [
+   12
+  ],
+  "r": 30,
+  "sw": [
+   6
+  ],
+  "src": "Sky_Unarmed_A5"
+ },
+ "Sky_Titan_M1_1": {
+  "n": 40,
+  "w": 7,
+  "i": [
+   11
+  ],
+  "r": 30,
+  "sw": [
+   7
+  ],
+  "src": "Sky_Heavy_A6"
+ },
+ "Sky_Titan_M1_2": {
+  "n": 40,
+  "w": 7,
+  "i": [
+   11
+  ],
+  "r": 30,
+  "sw": [
+   7
+  ],
+  "src": "Sky_Heavy_A1"
+ },
+ "Sky_Titan_M1_3": {
+  "n": 40,
+  "w": 7,
+  "i": [
+   11
+  ],
+  "r": 30,
+  "sw": [
+   7
+  ],
+  "src": "Sky_Heavy_A2"
+ },
+ "Sky_Titan_M1_4": {
+  "n": 42,
+  "w": 8,
+  "i": [
+   12
+  ],
+  "r": 32,
+  "sw": [
+   8
+  ],
+  "src": "Sky_Heavy_A3"
+ },
+ "Sky_Titan_Bolt": {
+  "n": 50,
+  "w": 12,
+  "i": [
+   16
+  ],
+  "r": 40,
+  "sw": [
+   12
+  ],
+  "src": "Sky_Heavy_P9",
+  "la": 56,
+  "lb": 74
+ },
+ "Sky_Titan_Burst": {
+  "n": 54,
+  "w": 14,
+  "i": [
+   18
+  ],
+  "r": 44,
+  "sw": [
+   14
+  ],
+  "src": "Sky_Heavy_P5",
+  "la": 60,
+  "lb": 78
+ },
+ "Sky_Titan_Blast": {
+  "n": 56,
+  "w": 18,
+  "i": [
+   22
+  ],
+  "r": 46,
+  "sw": [
+   18
+  ],
+  "src": "Sky_Heavy_P3",
+  "la": 62,
+  "lb": 80
+ },
+ "Sky_Titan_Dash": {
+  "n": 36,
+  "w": 5,
+  "i": [
+   8
+  ],
+  "r": 28,
+  "sw": [
+   5
+  ],
+  "src": "Sky_Heavy_P4",
+  "la": 42,
+  "lb": 60
+ },
+ "Sky_Beast_M1_1": {
+  "n": 36,
+  "w": 6,
+  "i": [
+   10
+  ],
+  "r": 28,
+  "sw": [
+   6
+  ],
+  "src": "Sky_Scythe_A1"
+ },
+ "Sky_Beast_M1_2": {
+  "n": 36,
+  "w": 6,
+  "i": [
+   10
+  ],
+  "r": 28,
+  "sw": [
+   6
+  ],
+  "src": "Sky_Scythe_A2"
+ },
+ "Sky_Beast_M1_3": {
+  "n": 36,
+  "w": 6,
+  "i": [
+   10
+  ],
+  "r": 28,
+  "sw": [
+   6
+  ],
+  "src": "Sky_Scythe_A8"
+ },
+ "Sky_Beast_M1_4": {
+  "n": 40,
+  "w": 6,
+  "i": [
+   12
+  ],
+  "r": 30,
+  "sw": [
+   6
+  ],
+  "src": "Sky_Scythe_A6"
+ },
+ "Sky_Beast_Bolt": {
+  "n": 46,
+  "w": 10,
+  "i": [
+   14
+  ],
+  "r": 36,
+  "sw": [
+   10
+  ],
+  "src": "Sky_Scythe_P2",
+  "la": 52,
+  "lb": 70
+ },
+ "Sky_Beast_Burst": {
+  "n": 50,
+  "w": 12,
+  "i": [
+   16
+  ],
+  "r": 40,
+  "sw": [
+   12,
+   14
+  ],
+  "src": "Sky_Scythe_P1",
+  "la": 56,
+  "lb": 74
+ },
+ "Sky_Beast_Blast": {
+  "n": 56,
+  "w": 18,
+  "i": [
+   22
+  ],
+  "r": 46,
+  "sw": [
+   18
+  ],
+  "src": "Sky_Unarmed_P3",
+  "la": 62,
+  "lb": 80
+ },
+ "Sky_Beast_Dash": {
+  "n": 36,
+  "w": 5,
+  "i": [
+   8
+  ],
+  "r": 28,
+  "sw": [
+   5
+  ],
+  "src": "Sky_Shinobi_A3",
+  "la": 42,
+  "lb": 60
+ },
+ "Sky_Mystic_M1_1": {
+  "n": 36,
+  "w": 6,
+  "i": [
+   10
+  ],
+  "r": 28,
+  "sw": [
+   6
+  ],
+  "src": "Sky_ShinMagic_A1"
+ },
+ "Sky_Mystic_M1_2": {
+  "n": 36,
+  "w": 6,
+  "i": [
+   10
+  ],
+  "r": 28,
+  "sw": [
+   6
+  ],
+  "src": "Sky_ShinMagic_A3"
+ },
+ "Sky_Mystic_M1_3": {
+  "n": 36,
+  "w": 6,
+  "i": [
+   10
+  ],
+  "r": 28,
+  "sw": [
+   6
+  ],
+  "src": "Sky_ShinMagic_A4"
+ },
+ "Sky_Mystic_M1_4": {
+  "n": 40,
+  "w": 6,
+  "i": [
+   12
+  ],
+  "r": 30,
+  "sw": [
+   6,
+   8,
+   9,
+   10
+  ],
+  "src": "Sky_ShinMagic_A5"
+ },
+ "Sky_Mystic_Bolt": {
+  "n": 46,
+  "w": 10,
+  "i": [
+   14
+  ],
+  "r": 36,
+  "sw": [
+   10
+  ],
+  "src": "Sky_ShinMagic_P1",
+  "la": 52,
+  "lb": 70
+ },
+ "Sky_Mystic_Burst": {
+  "n": 50,
+  "w": 12,
+  "i": [
+   16
+  ],
+  "r": 40,
+  "sw": [
+   12
+  ],
+  "src": "Sky_ShinMagic_P2",
+  "la": 56,
+  "lb": 74
+ },
+ "Sky_Mystic_Blast": {
+  "n": 56,
+  "w": 18,
+  "i": [
+   22
+  ],
+  "r": 46,
+  "sw": [
+   18
+  ],
+  "src": "Sky_ShinMagic_P7",
+  "la": 62,
+  "lb": 80
+ },
+ "Sky_Mystic_Dash": {
+  "n": 36,
+  "w": 5,
+  "i": [
+   8
+  ],
+  "r": 28,
+  "sw": [
+   5
+  ],
+  "src": "Sky_ShinMagic_Dodgeleft",
+  "la": 42,
+  "lb": 60
+ },
+ "Sky_Spirit_Bolt": {
+  "n": 46,
+  "w": 10,
+  "i": [
+   14
+  ],
+  "r": 36,
+  "sw": [
+   10
+  ],
+  "src": "Sky_ShinMagic_P3",
+  "la": 52,
+  "lb": 70
+ },
+ "Sky_Spirit_Burst": {
+  "n": 50,
+  "w": 12,
+  "i": [
+   16
+  ],
+  "r": 40,
+  "sw": [
+   12
+  ],
+  "src": "Sky_ShinMagic_P4",
+  "la": 56,
+  "lb": 74
+ },
+ "Sky_Spirit_Blast": {
+  "n": 56,
+  "w": 18,
+  "i": [
+   22
+  ],
+  "r": 46,
+  "sw": [
+   18,
+   20
+  ],
+  "src": "Sky_ShinMagic_P5",
+  "la": 62,
+  "lb": 80
+ },
+ "Sky_Spirit_Dash": {
+  "n": 36,
+  "w": 5,
+  "i": [
+   8
+  ],
+  "r": 28,
+  "sw": [
+   5
+  ],
+  "src": "Sky_Shinobi_Dodgeback",
+  "la": 42,
+  "lb": 60
+ },
+ "Sky_Ult_Leap": {
+  "n": 72,
+  "w": 24,
+  "i": [
+   30
+  ],
+  "r": 62,
+  "sw": [
+   24
+  ],
+  "src": "Sky_Heavy_P1",
+  "la": 78,
+  "lb": 96
+ },
+ "Sky_Ult_Beam": {
+  "n": 72,
+  "w": 24,
+  "i": [
+   30
+  ],
+  "r": 62,
+  "sw": [
+   24
+  ],
+  "src": "Sky_ShinMagic_P6",
+  "la": 78,
+  "lb": 96
+ },
+ "Sky_Ult_Nuke": {
+  "n": 72,
+  "w": 24,
+  "i": [
+   30
+  ],
+  "r": 62,
+  "sw": [
+   24
+  ],
+  "src": "Sky_ShinMagic_P7_2",
+  "la": 78,
+  "lb": 96
+ }
+}

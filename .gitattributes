@@ -1,0 +1,4 @@
+*.hkx binary
+*.nif binary
+*.dds binary
+*.bvh text eol=lf

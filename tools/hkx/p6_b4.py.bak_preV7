@@ -1,0 +1,218 @@
+# Phase-6 batch B4: blades. bladedancer = Phantom Blade SANGUINE set used directly (user order: whole moveset, authored
+# choreography kept, only retarget/retime/R15 fixes/QA/planting). The other blades are modular + authored and never use
+# PBZ clips. DSL: powers6.py
+from powers6 import *
+
+PBZ = "Phantom Blade"
+
+
+def direct(clip, name, **kw):
+    return dict(sword_direct=True, src_clip=clip, src_set=PBZ, name=name, side="R", **kw)
+
+
+@power("B4")
+def bladedancer():  # PBZ SANGUINE, direct
+    L = ["bfco_attack1", "bfco_attack2", "bfco_attack3", "bfco_attack4", "bfco_attack6", "bfco_attack5"]
+    H = ["bfco_powerattack1", "bfco_powerattack6", "bfco_powerattack9", "bfco_powerattack3", "bfco_powerattack7", "bfco_powerattack2", "bfco_powerattack10"]
+    MH = ["bfco_powerattack4", "bfco_powerattack11", "bfco_powerattack5", "bfco_powerattack8", "bfco_attack6"]
+    # candidate lists in preference order: the first PBZ clip that passes every gate is used (choreography untouched)
+    s = {"M1_1": direct(L, "PBZ light combo 1"),
+         "M1_2": direct(L[1:] + L[:1], "PBZ light combo 2"),
+         "M1_3": direct(L[2:] + L[:2], "PBZ light combo 3"),
+         "M1_4": direct(["bfco_attack5", "bfco_attack6", "bfco_powerattack1"] + L, "PBZ finisher"),
+         "Bolt": direct(H, "PBZ power strike"),
+         "Burst": direct(MH, "PBZ multi-hit power"),
+         "Dash": direct(["mco_dodge_attack1", "bfco_sprintattack"] + H, "PBZ dodge attack (mobility)"),
+         "Ult": direct(["mco_weaponart"] + MH, "PBZ weapon art")}
+    return dict(guard=None, guard_src=("1hm_idle", PBZ), slots=s, idle_direct=("1hm_idle", PBZ))
+
+
+SW = dict(weapon_src=True)
+BLADE_AVOID = (PBZ,)
+
+
+@power("B4")
+def demonhunter():  # stylish: one-hand sword trailing low-back, free hand out; flashy twirls and a spinning finisher
+    g = M(legs(lh=(28, 0, -14), lk=-36, rh=(-12, 0, 16), rk=-14, ra=10), body(root=(0, -30, 0), waist=(-4, -6, 0), neck=(0, 30, 0), p=(0, -0.3, 0)),
+          A("R", (-25, 30, -20), 30, (-10, 0, 0)), A("L", (50, -30, 0), 60, (-40, 0, 0)))
+    flash = dict(legs=0.25, torso=0.25, p=0.3)
+    rise = T6(g, [A("R", (-10, 30, -20), 20), Bd(g, -16, -6, (0, -0.1, 0.04))], [A("R", (100, -10, -20), 10, (-20, 0, 0)), A("L", (30, -30, 30), 40), Bd(g, 26, 4, (0, 0.0, -0.22))],
+              ws=flash, allow=("elbow_up", "hands_up", "hand_in_head"), **SW)
+    flat = T6(g, [A("R", (60, -30, 75), 50), Bd(g, -34, 0, (0, -0.02, 0.06))], [A("R", (85, 10, -45), 6), Bd(g, 36, -6, (0, -0.1, -0.24), LeftKnee=-44)],
+              ws=flash, allow=("elbow_up", "hands_up", "hand_in_head"), **SW)
+    twirl = T6(g, [A("R", (70, 20, 10), 40, (0, 0, 0)), Bd(g, -10, 0, (0, -0.02, 0.02))], [A("R", (75, 30, -35), 10, (10, 0, 0)), Bd(g, 30, -10, (0, -0.12, -0.3), LeftKnee=-46)],
+               ws=flash, allow=("elbow_up", "hands_up", "hand_in_head"), **SW,
+               extra=[("w", -3, [A("R", (70, 20, 10), 40, (0, 180, 0))], "lin")])
+    spin = T6(g, [A("R", (60, -30, 70), 40), Bd(g, 30, 0, (0, -0.06, 0.04))], [A("R", (85, 10, -50), 6), Bd(g, -180, -6, (0, -0.12, -0.26), LeftKnee=-44)],
+              ws=flash, allow=("elbow_up", "hands_up", "hand_in_head", "crossed_knees", "pop", "foot_slide"), wend=18, **SW,
+              extra=[("i", -3, [Bd(g, -60, -2, (0, -0.08, -0.1))], "lin"), ("h", 6, [Bd(g, -300, -4, (0, -0.1, -0.2))], "io"), ("r", 0, [Bd(g, -360, 0, (0, 0, 0))], "io")])
+    stinger = T6(g, [A("R", (30, 55, 0), 115, (-10, 0, 0)), Bd(g, -16, -4, (0, -0.1, 0.1))], [A("R", (88, 0, -6), 2, (-12, 0, 0)), A("L", (-10, -20, 30), 40), Bd(g, 22, -12, (0, -0.2, -0.66), LeftKnee=-56)],
+                 es="expo", ws=flash, **SW)
+    flurry = rush4(flat, rise, twirl, flat)
+    ult = dict(flurry)
+    ult["extra"] = [("w", -14, [A("R", (70, 20, 10), 40, (0, 180, 0)), Bd(g, 10, 0, (0, -0.04, 0.02))], "lin"), ("w", -8, [A("R", (70, 20, 10), 40, (0, 360, 0))], "lin")]
+    s = {"M1_1": meta(rise, "rising slash", foot=["advance"], torso=["attack"], **SW),
+         "M1_2": meta(flat, "flat cross cut", foot=["planted"], torso=["attack", "twist"], **SW),
+         "M1_3": meta(twirl, "twirl into diagonal cut", foot=["advance"], **SW),
+         "M1_4": meta(spin, "spinning slash finisher", foot=["spin"], torso=["attack", "twist"], **SW),
+         "Bolt": meta(stinger, "stinger thrust", foot=["advance", "long"], **SW),
+         "Burst": meta(flurry, "flourish combo", foot=["advance"], **SW),
+         "Dash": meta(stinger, "stinger rush (mobility)", foot=["dash"], **SW),
+         "Ult": meta(ult, "twirl, then the storm", foot=["advance"], **SW)}
+    return dict(guard=g, slots=s, avoid_sets=BLADE_AVOID, idle=dict(bounce=0.02, period=48, sway=6, drift=6, breath=2))
+
+
+@power("B4")
+def soulblade():  # iaido: sword sheathed at the left hip, quick-draw cut, chiburi flick and noto (sheathe) in recovery
+    g = M(legs(lh=(22, 0, -10), lk=-32, rh=(-12, 0, 12), rk=-20, ra=8), body(root=(-2, -20, 0), waist=(-2, -4, 0), neck=(4, 22, 0), p=(0, -0.28, 0)),
+          A("R", (40, 45, 0), 95, (0, 0, 0)), A("L", (10, -10, 10), 70))
+    calm = dict(legs=0.15, torso=0.15, p=0.2)
+    sheathe = [A("R", (40, 45, 0), 95), A("L", (10, -10, 10), 70)]
+    draw = T6(g, [A("R", (45, 50, 0), 90), Bd(g, -10, -4, (0, -0.06, 0.04))], [A("R", (82, -5, -55), 4), A("L", (5, -10, 20), 70), Bd(g, 14, -2, (0, -0.06, -0.18), LeftKnee=-40)],
+              es="expo", ws=calm, allow=("elbow_up", "hands_up", "hand_in_head"), wend=17, **SW,
+              extra=[("h", 5, [A("R", (60, -10, -50), 30, (0, 0, 40)), Bd(g, 20, -4, (0, -0.1, -0.24))], "snap"),
+                     ("r", -4, sheathe + [Bd(g, 4, 0, (0, -0.06, -0.06))], "io")])
+    back = T6(g, [A("R", (80, -20, -55), 10)], [A("R", (80, 40, 30), 10), Bd(g, -20, -6, (0, -0.1, -0.2))], es="expo", ws=calm, allow=("elbow_up", "hands_up", "hand_in_head"), **SW)
+    rise = T6(g, [A("R", (20, 50, 0), 90), Bd(g, -6, -8, (0, -0.16, 0.02))], [A("R", (100, 0, -20), 10, (-15, 0, 0)), Bd(g, 22, 4, (0, 0.0, -0.22))], es="expo", ws=calm,
+              allow=("elbow_up", "hands_up", "hand_in_head"), **SW)
+    thrust = T6(g, [A("R", (35, 55, 0), 115, (-10, 0, 0)), Bd(g, -14, 0, (0, -0.04, 0.1))], [A("R", (88, 0, -6), 2, (-12, 0, 0)), A("L", (20, -10, 20), 60), Bd(g, 22, -8, (0, -0.16, -0.44), LeftKnee=-54)],
+                es="expo", ws=calm, wend=16, **SW, extra=[("r", -4, sheathe + [Bd(g, 0, 0, (0, -0.04, -0.04))], "io")])
+    down = T6(g, [A("R", (80, 30, 10), 80), A("L", (80, -10, 30), 80), Bd(g, -6, 2, (0, 0.02, 0.04))], [A("R", (55, 20, 0), 10, (10, 0, 0)), A("L", (55, -20, 30), 20), Bd(g, 6, -12, (0, -0.4, -0.2), LeftKnee=-66, RightKnee=-60)],
+              es="expo", ws=calm, allow=("elbow_up", "hands_up", "hand_in_head"), **SW)
+    kesa = T6(g, [A("R", (95, 30, 30), 60, (-20, 0, 0)), Bd(g, -18, 2, (0, 0.0, 0.04))], [A("R", (55, 30, -40), 10, (10, 0, 0)), Bd(g, 70, -10, (0.2, -0.16, -0.2), LeftKnee=-48)],
+              es="expo", ws=calm, allow=("elbow_up", "hands_up", "hand_in_head", "crossed_knees"), wend=17, **SW,
+              extra=[("h", 5, [A("R", (50, 20, -45), 30, (0, 0, 40)), Bd(g, 18, -6, (0, -0.12, -0.24))], "snap"), ("r", -4, sheathe + [Bd(g, 4, 0, (0, -0.06, -0.06))], "io")])
+    multi = rush(draw, back)
+    ult = dict(draw)
+    ult["extra"] = [("w", -16, sheathe + [Bd(g, 0, -4, (0, -0.2, 0.06))], "hold"), ("w", -4, [A("R", (45, 50, 0), 90), Bd(g, -12, -6, (0, -0.24, 0.06))], "slow"),
+                    ("h", 6, [A("R", (60, -10, -50), 30, (0, 0, 40)), Bd(g, 20, -4, (0, -0.1, -0.24))], "snap"), ("r", -6, sheathe + [Bd(g, 4, 0, (0, -0.06, -0.06))], "slow")]
+    s = {"M1_1": meta(draw, "nukitsuke quick-draw", foot=["advance"], torso=["attack"], **SW),
+         "M1_2": meta(back, "return cut", foot=["planted"], **SW),
+         "M1_3": meta(down, "kirioroshi two-hand downward cut", foot=["advance"], **SW),
+         "M1_4": meta(kesa, "kesa-giri diagonal, then sheathe finisher", foot=["advance"], torso=["attack"], **SW),
+         "Bolt": meta(dict(kesa), "spirit kesa cut", foot=["planted"], **SW),
+         "Blast": meta(multi, "flash draws (heavy)", foot=["planted"], **SW),
+         "Dash": meta(dict(down, es="expo"), "iai dash-cut (mobility)", foot=["dash"], **SW),
+         "Ult": meta(ult, "stillness, one cut", foot=["planted"], **SW)}
+    return dict(guard=g, slots=s, avoid_sets=BLADE_AVOID, idle=dict(bounce=0.004, period=96, breath=1.2))
+
+
+@power("B4")
+def sunblade():  # greatsword: both hands low at the right hip, blade back; slow committed two-hand arcs
+    g = M(legs(lh=(24, 0, -28), lk=-56, rh=(-6, 0, 28), rk=-40, ra=8), body(root=(-6, -36, 0), waist=(-6, -10, 0), neck=(8, 40, 0), p=(0, -0.5, 0)),
+          A("R", (20, 30, -10), 70), A("L", (40, -20, 30), 80))
+    heavy = dict(legs=0.2, torso=0.25, p=0.25)
+    two = lambda sh, el, l_sh, l_el: [A("R", sh, el), A("L", l_sh, l_el)]
+    sweep = T6(g, two((55, -30, 70), 50, (55, -10, 60), 60) + [Bd(g, -40, 0, (0, -0.04, 0.08))], two((80, 20, -40), 10, (78, 10, -30), 20) + [Bd(g, 40, -8, (0, -0.16, -0.26), LeftKnee=-48)],
+               ec="slow", ws=heavy, allow=("elbow_up", "hands_up", "hand_in_head", "crossed_knees"), **SW)
+    cleave = T6(g, two((150, 0, 12), 40, (150, 0, 12), 50) + [Bd(g, 0, 6, (0, 0.04, 0.08))], two((72, 0, -8), 8, (68, 0, -14), 14) + [Bd(g, 6, -16, (0, -0.3, -0.3), LeftKnee=-52, RightKnee=-24)],
+                ec="slow", ws=heavy, allow=("elbow_up", "hands_up", "hand_in_head"), **SW, extra=[("h", 4, two((68, 0, -8), 12, (64, 0, -14), 18) + [Bd(g, 6, -14, (0, -0.28, -0.28))], "hold")])
+    rise = T6(g, two((-10, 20, 30), 30, (0, -10, 40), 40) + [Bd(g, -30, -8, (0, -0.14, 0.04))], two((120, 0, -20), 20, (115, 0, -10), 30) + [Bd(g, 26, 6, (0, 0.02, -0.2))],
+              ec="slow", ws=heavy, allow=("elbow_up", "hands_up", "hand_in_head"), **SW)
+    wheel = T6(g, two((55, -30, 70), 50, (55, -10, 60), 60) + [Bd(g, 40, 0, (0, -0.06, 0.04))], two((80, 20, -40), 10, (78, 10, -30), 20) + [Bd(g, -200, -6, (0, -0.16, -0.2))],
+               ec="slow", ws=heavy, allow=("elbow_up", "hands_up", "hand_in_head", "crossed_knees", "pop", "foot_slide"), wend=18, **SW,
+               extra=[("i", -3, [Bd(g, -80, -2, (0, -0.1, -0.1))], "lin"), ("h", 6, [Bd(g, -320, -4, (0, -0.14, -0.16))], "io"), ("r", 0, [Bd(g, -360, 0, (0, 0, 0))], "io")])
+    charge = T6(g, two((30, 30, 0), 80, (40, -10, 30), 80) + [Bd(g, 0, -10, (0, -0.16, 0.06))], two((85, 0, -6), 10, (82, 10, -10), 20) + [Bd(g, 20, -14, (0, -0.2, -0.6), LeftKnee=-56)],
+                ws=heavy, es="expo", **SW)
+    ult = dict(cleave)
+    ult["extra"] = [("w", -16, two((20, 30, -10), 70, (40, -20, 30), 80) + [Bd(g, 0, 0, (0, -0.36, 0.06), LeftKnee=-56)], "slow"),
+                    ("w", -6, two((155, 0, 12), 40, (155, 0, 12), 50) + [Bd(g, 0, 8, (0, 0.08, 0.1))], "slow"),
+                    ("h", 6, two((68, 0, -8), 12, (64, 0, -14), 18) + [Bd(g, 6, -14, (0, -0.28, -0.28))], "hold")]
+    stab2 = T6(g, two((30, 30, 0), 80, (40, -10, 30), 80) + [Bd(g, -10, 0, (0, -0.06, 0.08))], two((85, 0, -6), 10, (82, 10, -10), 20) + [Bd(g, 16, -10, (0, -0.2, -0.4), LeftKnee=-54)],
+               ec="slow", ws=heavy, **SW)
+    s = {"M1_1": meta(rise, "rising two-hand arc", foot=["advance"], **SW),
+         "M1_2": meta(sweep, "two-hand horizontal arc", foot=["planted"], torso=["attack", "heavy"], **SW),
+         "M1_3": meta(stab2, "two-hand driving thrust", foot=["advance"], **SW),
+         "M1_4": meta(cleave, "overhead cleave finisher", foot=["advance"], torso=["heavy"], **SW),
+         "Bolt": meta(wheel, "sun wheel", foot=["spin"], **SW),
+         "Burst": meta(rush(sweep, rise), "solar arcs", foot=["planted"], **SW),
+         "Dash": meta(charge, "shoulder-led charge (mobility)", foot=["dash"], **SW),
+         "Ult": meta(ult, "zenith cleave", foot=["planted"], torso=["heavy"], **SW)}
+    return dict(guard=g, slots=s, avoid_sets=BLADE_AVOID, idle=dict(bounce=0.008, period=96, breath=3.5, sway=3))
+
+
+@power("B4")
+def soulrequiem():  # glaive / polearm: wide two-hand grip (rear hand at hip, lead hand far forward low), sweeps and long thrusts
+    g = M(legs(lh=(30, 0, -18), lk=-50, rh=(-16, 0, 20), rk=-26, ra=12), body(root=(0, -40, 0), waist=(-4, -10, 0), neck=(0, 44, 0), p=(0, -0.42, 0)),
+          A("R", (-10, 10, 0), 70), A("L", (68, -10, 10), 10))
+    reach = dict(legs=0.2, torso=0.25, p=0.25)
+    thrust = T6(g, [A("R", (-30, 10, 0), 80), A("L", (40, -10, 10), 40), Bd(g, -10, 0, (0, -0.04, 0.12))],
+                [A("R", (40, 30, 0), 30), A("L", (80, -5, 0), 0), Bd(g, 16, -10, (0, -0.16, -0.5), LeftKnee=-56)], es="expo", ws=reach, **SW)
+    sweep = T6(g, [A("R", (20, -10, 40), 60), A("L", (50, -40, 50), 20), Bd(g, -40, 0, (0, -0.06, 0.04))],
+               [A("R", (40, 40, -20), 60), A("L", (70, 30, -40), 10), Bd(g, 44, -8, (0, -0.16, -0.2), LeftKnee=-48)], ws=reach, allow=("elbow_up", "hands_up", "crossed_knees"), **SW)
+    low = T6(g, [A("R", (0, 0, 20), 60), A("L", (30, -30, 40), 20), Bd(g, -30, -8, (0, -0.2, 0.04), LeftKnee=-60)],
+             [A("R", (20, 30, -10), 60), A("L", (40, 30, -40), 10), Bd(g, 40, -14, (0, -0.4, -0.1), LeftKnee=-66, RightKnee=-50)], ws=reach, allow=("crossed_knees", "elbow_up"), **SW)
+    vault = T6(g, [A("R", (10, 10, 0), 80), A("L", (60, -10, 10), 20), Bd(g, 0, -6, (0, -0.2, 0.08), LeftKnee=-60)],
+               [A("R", (90, 10, -10), 30), A("L", (95, -10, 10), 20), Bd(g, 10, -14, (0, -0.3, -0.36), LeftKnee=-60)], ws=reach, ec="slow", allow=("elbow_up", "hands_up", "hand_in_head"), wend=14, **SW)
+    spinsweep = T6(g, [A("R", (20, -10, 40), 60), A("L", (50, -40, 50), 20), Bd(g, 30, 0, (0, -0.06, 0.04))],
+                   [A("R", (40, 40, -20), 60), A("L", (70, 30, -40), 10), Bd(g, -200, -6, (0, -0.2, -0.1))], ws=reach, allow=("elbow_up", "hands_up", "crossed_knees", "pop", "foot_slide"), wend=18, **SW,
+                   extra=[("i", -3, [Bd(g, -80, -2, (0, -0.12, -0.06))], "lin"), ("h", 6, [Bd(g, -320, -4, (0, -0.16, -0.06))], "io"), ("r", 0, [Bd(g, -360, 0, (0, 0, 0))], "io")])
+    ult = dict(rush(sweep, thrust))
+    ult["extra"] = [("w", -14, [A("R", (-30, 10, 0), 80), A("L", (40, -10, 10), 40), Bd(g, 0, -4, (0, -0.24, 0.1), LeftKnee=-60)], "slow")]
+    s = {"M1_1": meta(thrust, "glaive thrust", foot=["advance"], **SW),
+         "M1_2": meta(low, "low reaping sweep", foot=["crouch"], **SW),
+         "M1_3": meta(sweep, "wide sweep", foot=["planted"], torso=["attack", "twist"], **SW),
+         "M1_4": meta(spinsweep, "whirling glaive finisher", foot=["spin"], **SW),
+         "Bolt": meta(dict(thrust), "requiem lance", foot=["advance", "long"], **SW),
+         "Burst": meta(vault, "overhead pole smash", foot=["advance"], torso=["heavy"], **SW),
+         "Dash": meta(dict(thrust, es="expo"), "lunging lance (mobility)", foot=["dash"], **SW),
+         "Ult": meta(ult, "funeral dance: sweep and pierce", foot=["advance"], **SW)}
+    return dict(guard=g, slots=s, avoid_sets=BLADE_AVOID, idle=dict(bounce=0.01, period=96, breath=2, sway=4, drift=4))
+
+
+@power("B4")
+def eclipsemonarch():  # regal sabre: upright fencing line, sword arm extended low, free hand on the hip; lunges and moulinets
+    g = M(legs(lh=(20, 0, -6), lk=-26, rh=(-6, 0, 30), rk=-16), body(root=(0, -60, 0), waist=(2, -4, 0), neck=(-2, 58, 0), p=(0, -0.2, 0)),
+          A("R", (50, 30, 0), 15, (-10, 0, 0)), A("L", (-10, 0, 35), 80))
+    regal = dict(legs=0.15, torso=0.12, p=0.2)
+    lunge = T6(g, [A("R", (45, 30, 0), 40, (-10, 0, 0)), Bd(g, 0, 0, (0, 0, 0.06))], [A("R", (85, 10, -4), 0, (-10, 0, 0)), Bd(g, 10, -6, (0, -0.2, -0.5), LeftKnee=-60, RightKnee=-4)],
+               es="expo", ws=regal, **SW)
+    moul = T6(g, [A("R", (60, 30, 10), 40, (0, 0, 60)), Bd(g, -6, 0, (0, 0, 0.02))], [A("R", (70, 40, -30), 10, (0, 0, -40)), Bd(g, 10, -4, (0, -0.06, -0.16))], ws=regal,
+              allow=("hand_in_head",), extra=[("w", -3, [A("R", (60, 30, 10), 40, (0, 0, -60))], "lin")], **SW)
+    riposte = T6(g, [A("R", (60, 50, -20), 30, (0, 0, -40)), Bd(g, 8, 0, (0, 0, 0.04))], [A("R", (85, 10, -4), 0, (-10, 0, 0)), Bd(g, 12, -4, (0, -0.12, -0.34), LeftKnee=-46)],
+                 es="expo", ws=regal, extra=[("w", -2, [A("R", (55, 55, -30), 30, (0, 0, -60))], "snap")], **SW)
+    fleche = T6(g, [A("R", (45, 30, 0), 40), Bd(g, 0, -6, (0, -0.06, 0.04))], [A("R", (85, 10, -4), 0, (-10, 0, 0)), A("L", (-20, 0, 40), 30), Bd(g, 6, -16, (0, -0.24, -0.66), LeftKnee=-40, RightKnee=-50)],
+                es="expo", ws=regal, wend=14, **SW, extra=[("h", 4, [A("R", (85, 10, -4), 0, (-10, 0, 0)), Bd(g, 6, -14, (0, -0.22, -0.62))], "hold")])
+    crown = T6(g, [A("R", (75, 40, 0), 70), Bd(g, 0, 2, (0, 0.02, 0))], [A("R", (60, 30, -30), 10), Bd(g, 10, -8, (0, -0.12, -0.24), LeftKnee=-44)], ws=regal,
+               allow=("hand_in_head", "elbow_up"), ec="slow", **SW)
+    ult = dict(rush(lunge, riposte))
+    ult["extra"] = [("w", -14, [A("R", (75, 40, 0), 70), A("L", (-10, 0, 35), 80), Bd(g, 0, 2, (0, 0.02, 0))], "slow"), ("w", -6, [A("R", (50, 30, 0), 15), Bd(g, 0, 0, (0, -0.04, 0.04))], "io")]
+    ult["allow"] = tuple(ult.get("allow", ())) + ("elbow_up", "hand_in_head")
+    s = {"M1_1": meta(lunge, "fencing lunge", foot=["advance"], **SW),
+         "M1_2": meta(moul, "moulinet cut", foot=["planted"], **SW),
+         "M1_3": meta(riposte, "parry-riposte", foot=["planted"], **SW),
+         "M1_4": meta(fleche, "fleche finisher", foot=["advance", "long"], **SW),
+         "Blast": meta(crown, "crown cut (heavy)", foot=["planted"], torso=["heavy"], **SW),
+         "Burst": meta(rush(lunge, moul), "royal flurry", foot=["advance"], **SW),
+         "Dash": meta(dict(fleche), "eclipse fleche (mobility)", foot=["dash"], **SW),
+         "Ult": meta(ult, "salute, then the duel", foot=["advance"], **SW)}
+    return dict(guard=g, slots=s, avoid_sets=BLADE_AVOID, idle=dict(bounce=0.004, period=96, breath=1.5, sway=2))
+
+
+@power("B4")
+def eclipseblacksun():  # reverse-grip dual daggers: hunched low, forearms forward, aggressive slashes, stabs and X-cuts
+    g = M(legs(lh=(30, 0, -20), lk=-54, rh=(14, 0, 20), rk=-48, ra=16), body(root=(-14, -12, 0), waist=(-14, -4, 0), neck=(22, 10, 0), p=(0, -0.45, 0)),
+          A2((30, 30, 0), 100, (20, 0, 0)))
+    feral = dict(legs=0.3, torso=0.3, p=0.3)
+    def slash(side):
+        d = 1 if side == "R" else -1
+        return T6(g, [A(side, (50, -20, 60), 70, (-30, 0, 0)), Bd(g, -26 * d, 0, (0, -0.06, 0.04))],
+                  [A(side, (70, 20, -50), 30, (-30, 0, 0)), Bd(g, 30 * d, -8, (0, -0.12, -0.24), LeftKnee=-56)], es="expo", ws=feral, allow=("elbow_up", "hands_up", "hand_in_head"), **SW)
+    stab = T6(g, [A("R", (95, 20, 10), 90, (20, 0, 0)), Bd(g, -6, 4, (0, 0.04, 0.04))], [A("R", (50, 20, -10), 20, (20, 0, 0)), Bd(g, 10, -16, (0, -0.3, -0.24), LeftKnee=-62)],
+              es="expo", ws=feral, allow=("elbow_up", "hands_up", "hand_in_head"), **SW)
+    xcut = T6(g, [A2((60, -30, 60), 70, (-30, 0, 0)), Bd(g, 0, 4, (0, 0.02, 0.06))], [A2((70, 40, -40), 20, (-30, 0, 0)), Bd(g, 0, -12, (0, -0.2, -0.34), LeftKnee=-58)],
+              es="expo", ws=feral, allow=("elbow_up", "hands_up", "hand_in_head"), wend=14, **SW,
+              extra=[("h", 3, [A2((68, 42, -42), 24, (-30, 0, 0)), Bd(g, 0, -10, (0, -0.18, -0.3))], "hold")])
+    pounce = T6(g, [A2((20, 30, 0), 110), Bd(g, 0, -6, (0, -0.2, 0.08), LeftKnee=-66)], [A2((70, 20, -20), 30, (20, 0, 0)), Bd(g, 0, -14, (0, -0.24, -0.66), LeftKnee=-60)], es="expo", ws=feral, **SW)
+    frenzy = rush4(slash("R"), slash("L"), slash("R"), stab)
+    ult = dict(frenzy)
+    ult["extra"] = [("w", -12, [A2((20, 30, 0), 110), Bd(g, 0, -6, (0, -0.3, 0.1), LeftKnee=-70)], "slow")]
+    s = {"M1_1": meta(slash("L"), "reverse-grip slash", foot=["advance"], side="L", **SW),
+         "M1_2": meta(slash("R"), "reverse-grip slash (right)", foot=["advance"], **SW),
+         "M1_3": meta(stab, "downward hammer stab", foot=["crouch"], **SW),
+         "M1_4": meta(xcut, "X-cut finisher", foot=["advance"], torso=["attack"], **SW),
+         "Bolt": meta(dict(stab), "black sun stab", foot=["planted"], **SW),
+         "Burst": meta(frenzy, "dagger frenzy", foot=["advance"], **SW),
+         "Dash": meta(pounce, "shadow pounce (mobility)", foot=["dash"], **SW),
+         "Ult": meta(ult, "crouch, then frenzy", foot=["advance"], **SW)}
+    return dict(guard=g, slots=s, avoid_sets=BLADE_AVOID, idle=dict(bounce=0.03, period=48, sway=6, breath=3, shift=0.04))

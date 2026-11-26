@@ -1,0 +1,207 @@
+# Export every unique decodable Skyrim SE HKX (src + src2) into a reusable, engine-neutral library:
+#   <LIB>/bvh/<SetCode>/<clip>.bvh   humanoid core skeleton (27 bones incl. Weapon/Shield), native fps, Y-up,
+#                                     Skyrim units (1 unit ~ 1.428 cm), root = COM with translation.
+#   <LIB>/catalog.tsv                 id, set code, original set/file, duration, fps, frames, hits, limbs, score, kind, bvh path
+# Usage: python -I export_lib.py <LIB>
+import sys, os, json, math, hashlib
+from concurrent.futures import ProcessPoolExecutor
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+import hkx
+from decode import qmul
+
+SKEL = os.environ.get("SKYRIM_SKELETON") or ("C:/Users/mytwo/soulbound/skyrim/src/XP32 Maximum Skeleton Special Extended/Skeleton Rig/HDT/"
+        "meshes/actors/character/character assets/skeleton.hkx")
+BONES = ["NPC COM", "NPC Pelvis", "NPC L Thigh", "NPC L Calf", "NPC L Foot", "NPC L Toe0",
+         "NPC R Thigh", "NPC R Calf", "NPC R Foot", "NPC R Toe0", "NPC Spine", "NPC Spine1", "NPC Spine2",
+         "NPC Neck", "NPC Head", "NPC L Clavicle", "NPC L UpperArm", "NPC L Forearm", "NPC L Hand", "Shield",
+         "NPC R Clavicle", "NPC R UpperArm", "NPC R Forearm", "NPC R Hand", "Weapon", "NPC L Finger20", "NPC R Finger20"]
+_SK = None
+
+
+def skel():
+    global _SK
+    if _SK is None:
+        _SK = hkx.load(SKEL)["skeletons"][0]
+    return _SK
+
+
+def yup_v(v):  # Skyrim (X right, Y fwd, Z up) -> BVH (X right, Y up, Z fwd... use -Y fwd convention: Z = -sky Y? keep right-handed)
+    return (v[0], v[2], -v[1])
+
+
+def yup_q(q):  # quaternion (x,y,z,w) under the same proper rotation
+    return (q[0], q[2], -q[1], q[3])
+
+
+def q2m(q):
+    x, y, z, w = q
+    return [[1 - 2 * (y * y + z * z), 2 * (x * y - z * w), 2 * (x * z + y * w)],
+            [2 * (x * y + z * w), 1 - 2 * (x * x + z * z), 2 * (y * z - x * w)],
+            [2 * (x * z - y * w), 2 * (y * z + x * w), 1 - 2 * (x * x + y * y)]]
+
+
+def euler_zxy(q):  # R = Rz * Rx * Ry  -> degrees (z, x, y)
+    m = q2m(q)
+    x = math.asin(max(-1, min(1, m[2][1])))
+    z = math.atan2(-m[0][1], m[1][1])
+    y = math.atan2(-m[2][0], m[2][2])
+    return math.degrees(z), math.degrees(x), math.degrees(y)
+
+
+def qinv(q):
+    return (-q[0], -q[1], -q[2], q[3])
+
+
+def qrot(q, v):
+    p = qmul(qmul(q, (v[0], v[1], v[2], 0.0)), qinv(q))
+    return p[:3]
+
+
+def export(args):
+    path, out_path = args
+    try:
+        sk = skel()
+        r = hkx.load(path)
+        a = r["anims"][0]
+        t2b = r["bindings"][0]["t2b"] or list(range(a["ntt"]))
+        frames = hkx.sample_frames(a)
+        names = sk["bones"]; par = sk["parents"]
+        idx = {}
+        for i, n in enumerate(names):
+            idx.setdefault(n.split(" [")[0], i)
+        sel = [idx[b] for b in BONES]
+        selset = set(sel)
+        # parent within the selected subset
+        spar = {}
+        for i in sel:
+            p = par[i]
+            while p >= 0 and p not in selset:
+                p = par[p]
+            spar[i] = p
+        def model_space(local):
+            W = [None] * len(local)
+            for i, (t, q) in enumerate(local):
+                p = par[i]
+                if p < 0:
+                    W[i] = (t, q)
+                else:
+                    pt, pq = W[p]
+                    v = qrot(pq, t)
+                    W[i] = ((pt[0] + v[0], pt[1] + v[1], pt[2] + v[2]), qmul(pq, q))
+            return W
+        ref = [(tuple(x["t"]), tuple(x["q"])) for x in sk["ref"]]
+        Wb = model_space(ref)
+        def rel(W, i):  # transform of i relative to its selected parent
+            p = spar[i]
+            t, q = W[i]
+            if p < 0:
+                return t, q
+            pt, pq = W[p]
+            iq = qinv(pq)
+            d = qrot(iq, (t[0] - pt[0], t[1] - pt[1], t[2] - pt[2]))
+            return d, qmul(iq, q)
+        lines = ["HIERARCHY"]
+        kids = {i: [j for j in sel if spar[j] == i] for i in sel}
+        order = []
+        def emit(i, depth):
+            ind = "  " * depth
+            off = yup_v(rel(Wb, i)[0])
+            nm = names[i].split(" [")[0].replace(" ", "_")
+            if spar[i] < 0:
+                lines.append("%sROOT %s" % (ind, nm))
+            else:
+                lines.append("%sJOINT %s" % (ind, nm))
+            lines.append(ind + "{")
+            lines.append("%s  OFFSET %.4f %.4f %.4f" % (ind, off[0], off[1], off[2]))
+            if spar[i] < 0:
+                lines.append(ind + "  CHANNELS 6 Xposition Yposition Zposition Zrotation Xrotation Yrotation")
+            else:
+                lines.append(ind + "  CHANNELS 3 Zrotation Xrotation Yrotation")
+            order.append(i)
+            if kids[i]:
+                for j in kids[i]:
+                    emit(j, depth + 1)
+            else:
+                lines.append(ind + "  End Site")
+                lines.append(ind + "  {")
+                lines.append(ind + "    OFFSET 0.0000 2.0000 0.0000")
+                lines.append(ind + "  }")
+            lines.append(ind + "}")
+        emit(sel[0], 0)
+        lines.append("MOTION")
+        lines.append("Frames: %d" % len(frames))
+        lines.append("Frame Time: %.6f" % a["frameDuration"])
+        for row in frames:
+            local = list(ref)
+            for ti, bi in enumerate(t2b):
+                if 0 <= bi < len(local):
+                    local[bi] = (row[ti][0], row[ti][1])
+            W = model_space(local)
+            vals = []
+            for i in order:
+                t, q = rel(W, i)
+                if spar[i] < 0:
+                    tt = yup_v(t)
+                    vals += ["%.4f" % v for v in tt]
+                q = yup_q(q)
+                vals += ["%.3f" % v for v in euler_zxy(q)]
+            lines.append(" ".join(vals))
+        os.makedirs(os.path.dirname(out_path), exist_ok=True)
+        open(out_path, "w").write("\n".join(lines) + "\n")
+        return dict(ok=True, frames=len(frames), fps=round(1 / a["frameDuration"], 2), duration=round(a["duration"], 3))
+    except Exception as e:
+        return dict(ok=False, error="%s: %s" % (type(e).__name__, e))
+
+
+def main():
+    LIB = sys.argv[1]
+    OUT = "C:/Users/mytwo/soulbound/skyrim/out"
+    sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+    from pool import code_of
+    rows = json.load(open(os.path.join(OUT, "survey2.json")))
+    pool = {p["path"]: p for p in json.load(open(os.path.join(OUT, "pool.json")))}
+    s1 = json.load(open(os.path.join(OUT, "survey.json")))
+    allrows = [dict(path=r["path"], moveset=r["mod"], file=r["file"], cond=r["cond"]) for r in s1] + rows
+    seen, jobs, meta = set(), [], []
+    counters = {}
+    for r in allrows:
+        if "error" in r and r.get("error", "").startswith("FileNotFound"):
+            continue
+        try:
+            h = hashlib.md5(open(r["path"], "rb").read()).hexdigest()
+        except OSError:
+            continue
+        if h in seen:
+            continue
+        seen.add(h)
+        c = code_of(r["moveset"]) or "Misc"
+        base = os.path.splitext(r["file"])[0].lower().replace(" ", "_")
+        counters[(c, base)] = counters.get((c, base), 0) + 1
+        k = counters[(c, base)]
+        name = base if k == 1 else "%s__%d" % (base, k)
+        outp = os.path.join(LIB, "bvh", c, name + ".bvh")
+        p = pool.get(r["path"], {})
+        meta.append(dict(id="%s/%s" % (c, name), set=c, source_set=r["moveset"], source_file=r["file"], cond=r.get("cond", ""),
+                         hits=p.get("hits", r.get("hits", "")), limbs=p.get("limbs", ""), first_hit=p.get("first_hit", ""),
+                         score=p.get("score", ""), kind=p.get("kind", ""), pool_code=p.get("code", ""), bvh=os.path.relpath(outp, LIB)))
+        jobs.append((r["path"], outp))
+    with ProcessPoolExecutor(max_workers=6) as ex:
+        res = list(ex.map(export, jobs, chunksize=8))
+    cols = ["id", "set", "pool_code", "kind", "duration", "frames", "fps", "hits", "limbs", "first_hit", "score", "source_set", "source_file", "cond", "bvh"]
+    ok = 0
+    with open(os.path.join(LIB, "catalog.tsv"), "w", encoding="utf-8") as fh:
+        fh.write("\t".join(cols) + "\n")
+        for m, rr in zip(meta, res):
+            if not rr["ok"]:
+                continue
+            ok += 1
+            m.update(rr)
+            fh.write("\t".join(str(m.get(c, "")) for c in cols) + "\n")
+    print("exported", ok, "of", len(jobs), "unique clips")
+    bad = [rr["error"][:60] for rr in res if not rr["ok"]]
+    from collections import Counter
+    print(Counter(bad).most_common(5))
+
+
+if __name__ == "__main__":
+    main()
