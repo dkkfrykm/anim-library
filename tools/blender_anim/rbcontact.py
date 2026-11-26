@@ -188,15 +188,15 @@ def sample_pose(ref_cid, frame, bones):
     a = rig(); import_base(ref_cid, force=True); solo(ref_cid); bpy.context.scene.frame_set(frame); bpy.context.view_layer.update()
     return {b: a.pose.bones[b].rotation_quaternion.copy() for b in bones if b in a.pose.bones}
 
-def pose_transplant(cid, ref_pose, f0, f1, ramp=8, nudge=None):
+def pose_transplant(cid, ref_pose, f0, f1, ramp=8, nudge=None, weight=1.0, layer='CORR'):
     """nudge = {bone: [(axis, deg), ...]}: after taking the ref rotation, turn that bone about a BODY axis through its head
     (axis 'r' = her right/lateral: + raises the arm forward, 'f' = forward, 'u' = up). Small corrections on top of the transplanted pose."""
     """CORR so the listed bones take the reference's LOCAL rotations (final = BASE x CORR = ref), eased in/out over `ramp` frames.
     Local rotations on the same skeleton reproduce the reference arm pose relative to the dance's own torso."""
-    a = rig(); n = solo(cid); sc = bpy.context.scene; pbs = a.pose.bones; corr = bpy.data.actions[cid + '_CORR']
+    a = rig(); n = solo(cid); sc = bpy.context.scene; pbs = a.pose.bones; corr = bpy.data.actions[cid + '_' + layer]
     _mute(cid, ('CORR', 'POLISH'), True); frames = _frames(f0, f1, n); res = {}
     for i, f in enumerate(frames):
-        sc.frame_set(f); bpy.context.view_layer.update(); w = _weight(i, len(frames), ramp)
+        sc.frame_set(f); bpy.context.view_layer.update(); w = _weight(i, len(frames), ramp) * weight
         res[f] = {}; base = {b: pbs[b].rotation_quaternion.copy() for b in ref_pose}
         for b, rq in ref_pose.items(): pbs[b].rotation_quaternion = base[b].slerp(rq, w) if w < 1 else rq
         bpy.context.view_layer.update()
