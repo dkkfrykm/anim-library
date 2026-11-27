@@ -61,7 +61,13 @@ def smooth_rot(Rm, win):
     q = m2q(Rm)
     for k in range(1, len(q)):
         if (q[k] * q[k - 1]).sum() < 0: q[k] = -q[k]
-    q = sgf(q, win); return q2m(q / np.linalg.norm(q, axis=-1, keepdims=True))
+    # cyclic smoothing: after the hemisphere chain the last frame can sit on the OPPOSITE sign of frame 0 (the loop closes on -q); a plain
+    # mode='wrap' filter then averages q with ~-q across the seam -> near-zero quaternions -> 100-170 deg pops at the wrap (dance_2 thighs).
+    # Pad with sign-corrected copies of the other end instead and filter the padded track.
+    n = len(q); w = min(int(win) | 1, n - 1); sg = 1.0 if (q[-1] * q[0]).sum() >= 0 else -1.0
+    if n > 4 and w >= 3:
+        qp = np.concatenate([sg * q[n - w:], q, sg * q[:w]], 0); q = savgol_filter(qp, max(w, 3), 2, axis=0, mode='interp')[w:w + n]
+    return q2m(q / np.linalg.norm(q, axis=-1, keepdims=True))
 
 # ---------------- 1-2: fit -> ground frame, loop, targets ----------------
 def load_fit(did):
@@ -525,7 +531,9 @@ def project_limits(W, WTq, idx, spread=4):
     for k in ['SP0', 'SP1', 'SP2', 'NECK', 'HEAD'] + [s + j for s in 'LR' for j in ('CLV', 'UA', 'FA', 'HD', 'TH', 'CF', 'FT')]:
         d, a1, a2, r1, r2, rt = LIMITS[k]; b = idx[k]; pb = idx[APAR[k]]; WTp, WTb = _frames(k, WTq)
         Rp = W[:, pb] @ WTp.T; Rr = np.swapaxes(Rp, -1, -2) @ (W[:, b] @ WTb.T); q = m2q(Rr)
-        tw = 2 * np.arctan2(q[:, :3] @ d, q[:, 3]); tw = (tw + np.pi) % (2 * np.pi) - np.pi
+        q = q * np.sign(q[:, 3:4] + 1e-12); tw = 2 * np.arctan2(q[:, :3] @ d, q[:, 3])
+        tw = np.unwrap(tw); tw -= 2 * np.pi * np.round(tw.mean() / (2 * np.pi))   # continuous twist: a wrapped angle near +-180 clamped to +range on one
+        # frame and -range on the next (200 deg hand flip, dance_1 f158); unwrapped, an over-twist clamps to the SAME side every frame
         Rsw = Rr @ rodrigues(-d[None] * tw[:, None]); sv = rot_log(Rsw); c1 = sv @ a1; c2 = sv @ a2; rest = sv - np.outer(c1, a1) - np.outer(c2, a2)
         lo = np.radians; c1n = np.clip(c1, lo(r1[0]), lo(r1[1])); c2n = np.clip(c2, lo(r2[0]), lo(r2[1])); twn = np.clip(tw, lo(rt[0]), lo(rt[1]))
         hit = (np.abs(c1n - c1) + np.abs(c2n - c2) + np.abs(twn - tw)) > 1e-6

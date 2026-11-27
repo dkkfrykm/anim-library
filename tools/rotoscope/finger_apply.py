@@ -108,6 +108,38 @@ _BK = json.load(open(os.path.join(D, 'tools', 'roto', 'bind_hand_kp.json')))
 BIND = {s: tuple(x[0] for x in angles(np.array(_BK[s], float)[None])) for s in 'LR'}
 # (no flat-bias subtraction here: that bias belongs to MANO's joint placement; her bone heads lie on the finger axis -> raw = true)
 
+def qslerp(a, b, w):
+    """per-frame slerp of quaternion arrays [n,4] (xyzw) by w [n]"""
+    a = np.broadcast_to(a, b.shape).copy(); d = (a * b).sum(1); b = b * np.sign(d + 1e-12)[:, None]; d = np.abs(d).clip(0, 1)
+    th = np.arccos(d); sn = np.sin(th); w = np.asarray(w, float)
+    k0 = np.where(sn > 1e-6, np.sin((1 - w) * th) / np.maximum(sn, 1e-9), 1 - w); k1 = np.where(sn > 1e-6, np.sin(w * th) / np.maximum(sn, 1e-9), w)
+    q = a * k0[:, None] + b * k1[:, None]; return q / np.linalg.norm(q, axis=1, keepdims=True)
+def qmul_axis(q, ax, ang):
+    """q * axis-angle(ax local, ang [n])"""
+    h = ang / 2; r = np.concatenate([ax[None] * np.sin(h)[:, None], np.cos(h)[:, None]], 1); x1, y1, z1, w1 = q.T; x2, y2, z2, w2 = r.T
+    return np.stack([w1 * x2 + x1 * w2 + y1 * z2 - z1 * y2, w1 * y2 - x1 * z2 + y1 * w2 + z1 * x2, w1 * z2 + x1 * y2 - y1 * x2 + z1 * w2, w1 * w2 - x1 * x2 - y1 * y2 - z1 * z2], 1)
+CAP_GAIN = float(os.environ.get('FINGER_CAP_GAIN', '.6')); CAP_MAX = float(os.environ.get('FINGER_CAP_MAX', '.4'))
+_HP = {k: json.load(open(os.path.join(D, 'tools', 'roto', 'hand_pose_%s.json' % k)))['q'] for k in ('hang', 'raised')}
+def fallback_hands(clip, s, n, fps):
+    """context hand for frames the tracker can't see: authored HANG (forearm down) <-> RAISED (forearm level/up) by forearm pitch,
+    plus 'lag' (0..1): fingers trail/open slightly on fast wrist motion (low-pass of the hand's angular speed) so they never look frozen"""
+    Q = np.repeat(np.asarray(SF['q'], float)[None], n, 0)
+    for b, v in clip['q'].items():
+        if b in SF['i']: a = np.array(v, float).reshape(-1, 4) / 1e4; Q[:, SF['i'][b]] = a[np.arange(n) % len(a)]
+    P = R.Pose(SF, Q, np.repeat(np.asarray(SF['t'], float)[None], n, 0))
+    fa = P.p('NPC %s Forearm [%sLar]' % (s, s)); hd = P.p('NPC %s Hand [%sHnd]' % (s, s)); dz = nrm(hd - fa)[:, 2]
+    w = np.clip((dz + .6) / .9, 0, 1); w = w * w * (3 - 2 * w); w = savgol_filter(w, max(5, int(fps * .3) | 1), 2, mode='wrap').clip(0, 1)
+    hq = P.wq('NPC %s Hand [%sHnd]' % (s, s)); v = np.degrees(2 * np.arccos(np.clip(np.abs((hq * np.roll(hq, 1, 0)).sum(1)), 0, 1))) * fps
+    o = np.clip(v / 400.0, 0, 1); lag = np.zeros(n); a_ = 1 - math.exp(-1 / (fps * .15))
+    for _ in range(2):
+        for t in range(n): lag[t] = lag[t - 1] + a_ * (o[t] - lag[t - 1])
+    out = {}
+    for b in _HP['hang']:
+        if not b.startswith('NPC %s ' % s): continue
+        h0 = np.array(_HP['hang'][b], float) / 1e4; r0 = np.array(_HP['raised'][b], float) / 1e4
+        out[b] = qslerp(np.repeat(h0[None], n, 0), np.repeat(r0[None], n, 0), w)
+    return {'q': out, 'lag': lag}
+
 def main():
     cp = os.path.join(D, 'tools', 'roto', 'mocap_clips', ID + '.json'); C = json.load(open(cp)); clip, log = C['clip'], C['log']
     H = np.load(os.path.join(D, 'tools', 'roto', 'hands_kp', ID + '.npz')); K3 = H['kp3d']; conf = H['conf'].copy(); fps = float(log['fps'])
@@ -128,13 +160,15 @@ def main():
         if Xs is None: print(s, 'no hand seen -> relaxed'); Xs = np.tile(np.concatenate([RELAX.reshape(-1), RELAX_SP]), (len(X), 1))
         # away from any valid detection: eased to the relaxed hand from 0.15 s, fully by 0.4 s: ease toward the relaxed hand instead of holding a stale guess
         dist = np.array([np.min(np.abs((np.where(ok)[0] - t + len(ok) // 2) % len(ok) - len(ok) // 2)) if ok.any() else 1e9 for t in range(len(ok))])
-        wr = np.clip((dist / fps - .15) / .25, 0, 1)[:, None]; wr = wr * wr * (3 - 2 * wr); Xs = Xs * (1 - wr) + np.concatenate([RELAX.reshape(-1), RELAX_SP])[None] * wr
+        wr = np.clip((dist / fps - .15) / .25, 0, 1)[:, None]; wr = wr * wr * (3 - 2 * wr)   # weight of the authored fallback hand (blended in quaternion space below)
+        if not ok.any(): wr = np.ones((len(ok), 1))
+        wrc = np.clip(crop_blend1(wr, i, j, B)[:n, 0], 0, 1)
         Xc = crop_blend1(Xs, i, j, B)[:n]
         cu = Xc[:, :15].reshape(n, 5, 3); sp = Xc[:, 15:]
         for f in range(5):
             sp[:, f] = np.clip(sp[:, f], *SPREAD_LIM[f])
             for jj in range(3): cu[:, f, jj] = np.clip(cu[:, f, jj], *CURL_LIM[f][jj])
-        cu, sp, nchg = naturalize(cu, sp); res[s] = (cu, sp, float(ok.mean())); print(s, 'naturalize changed %.0f%% of frames' % (100 * nchg))
+        cu, sp, nchg = naturalize(cu, sp); res[s] = (cu, sp, float(ok.mean()), wrc); print(s, 'naturalize changed %.0f%% of frames' % (100 * nchg))
     ov = os.path.join(D, 'tools', 'roto', 'finger_overrides', ID + '.json')
     if os.path.exists(ov):   # poser corrections: keyframed curl offsets (rad), linearly interpolated, cyclic
         O = json.load(open(ov)); tt = np.arange(n) / fps
@@ -144,9 +178,10 @@ def main():
                 res[s][0][:, f, jj] += np.interp(tt, ts, vs, period=n / fps)
     RG = rig()
     for s in 'LR':
-        cu, sp, _ = res[s]
+        cu, sp, _, wrc = res[s]; FB = fallback_hands(clip, s, n, fps)
         if os.environ.get('FINGER_TEST') == 'flat': cu = cu * 0; sp = sp * 0   # mapping test: a true flat hand must render flat
         if os.environ.get('FINGER_TEST') == 'relax': cu = cu * 0 + RELAX[None]; sp = sp * 0 + RELAX_SP[None]
+        cu_raw, sp_raw = cu.copy(), sp.copy()   # true-space angles (for the relative mode)
         cu = cu - BIND[s][0][None]; sp = sp - BIND[s][1][None]
         if os.environ.get('FINGER_POSE'):   # tuning: constant pose given directly as deltas on her bind hand ("15 curls;5 spreads")
             c_, s_ = os.environ['FINGER_POSE'].split(';'); cu = cu * 0 + np.array([float(x) for x in c_.split(',')]).reshape(5, 3)[None]; sp = sp * 0 + np.array([float(x) for x in s_.split(',')])[None]   # true pose -> delta on her pre-curled bind hand
@@ -155,6 +190,18 @@ def main():
                 q0, axL, nL, b = RG[(s, f, jj)]
                 M = q2m(q0)[None] @ (rodrigues(nL[None] * sp[:, f:f + 1]) if jj == 0 else np.eye(3)[None]) @ rodrigues(axL[None] * cu[:, f, jj:jj + 1])
                 q = m2q(M); q = q * np.sign(q[:, 3:4] + 1e-12)
+                if os.environ.get('FINGER_FALLBACK', 'authored') == 'authored' and not os.environ.get('FINGER_POSE') and not os.environ.get('FINGER_TEST'):
+                    # captured motion RELATIVE to her authored hand: the capture's absolute curl is biased (captured hands read as claws, claw
+                    # 22-25 deg vs bind 2-4); its frame-to-frame changes (gestures, curling, opening) are real -> applied around the context hand
+                    sw_ = (wrc < .5); cu0 = np.median(cu_raw[sw_, f, jj]) if sw_.any() else 0.0; sp0 = np.median(sp_raw[sw_, f]) if (sw_.any() and jj == 0) else 0.0
+                    qc = FB['q'][b]
+                    # small phone-video hands: WiLoR deltas are noisy -> keep the broad gestures only (0.3 s low-pass, x CAP_GAIN, +-CAP_MAX rad)
+                    dcu = np.clip(CAP_GAIN * savgol_filter(cu_raw[:, f, jj] - cu0, max(5, int(fps * .3) | 1), 2, mode='wrap'), -CAP_MAX, CAP_MAX)
+                    if jj == 0: qc = qmul_axis(qc, nL, np.clip(CAP_GAIN * savgol_filter(sp_raw[:, f] - sp0, max(5, int(fps * .3) | 1), 2, mode='wrap'), -CAP_MAX / 2, CAP_MAX / 2))
+                    qc = qmul_axis(qc, axL, dcu)
+                    q = qslerp(FB['q'][b], qc, 1 - wrc)   # captured (relative) where seen, authored context hand elsewhere (eased)
+                    if f and jj < 2: q = qmul_axis(q, axL, -FB['lag'] * (.22 if jj == 0 else .12))   # fingers trail/open slightly on fast wrist motion
+                q = q * np.sign(q[:, 3:4] + 1e-12)
                 clip['q'][b] = [int(round(x * 1e4)) for x in q.reshape(-1)]
     for b_, v_ in json.load(open(os.path.join(D, 'tools', 'roto', 'finger_tc_bind.json')))['tc'].items(): clip.setdefault('tc', {})[b_] = v_   # bind finger offsets (QA-006)
     log['fingers'] = {s: dict(seen=round(res[s][2], 2), curl_mean=np.round(res[s][0].mean((0,)), 2).tolist()) for s in 'LR'}

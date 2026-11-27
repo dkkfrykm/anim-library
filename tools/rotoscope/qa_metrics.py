@@ -24,4 +24,24 @@ def jit(b):
 for b, lim in (('COM ', 6), ('Spn1', 6), ('Head', 6), ('LClf', 8), ('RClf', 8), ('LHnd', 14), ('RHnd', 14)): chk('jitter %s p99' % b.strip(), jit(b), lim)
 if l['ground']['feet_tracked']:
     chk('foot skate mean cm', max(l['feet']['L']['skate_cm_mean'], l['feet']['R']['skate_cm_mean']), .5, '%.2f')
+# hand gate (Animator): mean over fingers 1-4 of PIP + DIP angle vs her BIND hand (deg); old RELAX claw 20, authored kiss 7, bind 0.
+# FAIL if a hanging hand (forearm pointing down) stays > 12 for > 0.5 s.
+import roto_bake as RB_
+from mocap_lib import nrm as nrm_
+SFq = np.asarray(RB_.SF['q'], float); n = clip['n']; fps = clip['fps']; Qa = np.repeat(SFq[None], n, 0)
+for b, v in clip['q'].items():
+    if b in RB_.SF['i']: a_ = np.array(v, float).reshape(-1, 4) / 1e4; Qa[:, RB_.SF['i'][b]] = a_[np.arange(n) % len(a_)]
+Pa = RB_.Pose(RB_.SF, Qa, np.repeat(np.asarray(RB_.SF['t'], float)[None], n, 0))
+BINDH = json.load(open(os.path.join(D, 'tools', 'roto', 'hand_pose_hang.json')))['q']   # her bind hand (Animator: the separating reference)
+def bind_ang(b):
+    i = RB_.SF['i'][b]; q = Qa[:, i]; r = np.array(BINDH[b], float) / 1e4; r /= np.linalg.norm(r); return np.degrees(2 * np.arccos(np.clip(np.abs((q * r).sum(1)), 0, 1)))
+def rest_ang(b):
+    i = RB_.SF['i'][b]; q = Qa[:, i]; r = SFq[i]; return np.degrees(2 * np.arccos(np.clip(np.abs((q * r).sum(1)), 0, 1)))
+for s_ in 'LR':
+    claw = np.mean([bind_ang('NPC %s Finger%d1 [%sF%d1]' % (s_, f, s_, f)) + bind_ang('NPC %s Finger%d2 [%sF%d2]' % (s_, f, s_, f)) for f in range(1, 5)], 0)   # PIP+DIP vs her BIND hand
+    dz = nrm_(Pa.p('NPC %s Hand [%sHnd]' % (s_, s_)) - Pa.p('NPC %s Forearm [%sLar]' % (s_, s_)))[:, 2]; bad = (claw > 12) & (dz < -.6)
+    run = 0; mx = 0
+    for b_ in np.concatenate([bad, bad]): run = run + 1 if b_ else 0; mx = max(mx, run)
+    print('  %s hand claw p50 %.0f p95 %.0f (hanging frames %d)' % (s_, np.percentile(claw, 50), np.percentile(claw, 95), int((dz < -.6).sum())))
+    chk('%s hand claw while hanging, longest run s' % s_, min(mx, n) / fps, .5, '%.2f')
 print('OVERALL', 'PASS' if all(res) else 'FAIL (%d)' % res.count(False))
