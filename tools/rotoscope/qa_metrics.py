@@ -22,6 +22,18 @@ def jit(b):
         if q[i] @ q[i - 1] < 0: q[i] = -q[i]
     return float(np.percentile(np.degrees(2 * np.linalg.norm(q[2:] - 2 * q[1:-1] + q[:-2], axis=1)), 99))
 for b, lim in (('COM ', 6), ('Spn1', 6), ('Head', 6), ('LClf', 8), ('RClf', 8), ('LHnd', 14), ('RHnd', 14)): chk('jitter %s p99' % b.strip(), jit(b), lim)
+def seam():
+    """loop seam: largest per-frame rotation step of any bone within 3 frames of the wrap, minus that bone's own interior p99 step
+    (a natural fast move is not a pop). dance_2 had a 134 deg thigh pop here that the p99 jitter checks could not see."""
+    worst, wb = 0.0, ''
+    for k, v in clip['q'].items():
+        q = np.array(v, float).reshape(-1, 4) / 1e4
+        if len(q) < 12: continue
+        q /= np.linalg.norm(q, axis=1, keepdims=True); st = np.degrees(2 * np.arccos(np.clip(np.abs((q * np.roll(q, -1, 0)).sum(1)), 0, 1)))
+        near = np.r_[st[-3:], st[:3]]; ex = float(near.max() - np.percentile(st[3:-3], 99))
+        if ex > worst: worst, wb = ex, k
+    return worst, wb
+sw, sb = seam(); chk('loop seam pop deg (%s)' % sb.split('[')[-1].rstrip(']'), sw, 15)
 if l['ground']['feet_tracked']:
     chk('foot skate mean cm', max(l['feet']['L']['skate_cm_mean'], l['feet']['R']['skate_cm_mean']), .5, '%.2f')
 # hand gate (Animator): mean over fingers 1-4 of PIP + DIP angle vs her BIND hand (deg); old RELAX claw 20, authored kiss 7, bind 0.
